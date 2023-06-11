@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ruby UY</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="application.css"/>
+  </head>
+  <body>
+    <header>
+      <section>
+        <picture>
+          <img src="logo.svg" alt="Ruby UY" style="width:10em;"/>
+        </picture>
+        <h1> Ruby UY </h1>
+        <h2> Sponsors </h2>
+        <ul class="sponsors-list">
+          <li class="sponsors-listitem"><a href="https://www.rootstrap.com/" class="sponsors-link"><img src="sponsors/rootstrap.png" alt="Rootstrap"/></a></li>
+          <li class="sponsors-listitem"><a href="https://xmartlabs.com/" class="sponsors-link"><img src="sponsors/xmartlabs.png" alt="Xmartlabs"/></a></li>
+          <li class="sponsors-listitem"><a href="https://ingenious.agency/" class="sponsors-link"><img src="sponsors/ingenious.png" alt="Ingenious"/></a></li>
+          <li class="sponsors-listitem"><a href="https://decemberlabs.com/" class="sponsors-link"><img src="sponsors/decemberlabs.png" alt="December Labs"/></a></li>
+          <li class="sponsors-listitem"><a href="https://www.cedarcode.com/" class="sponsors-link"><img src="sponsors/cedarcode.png" alt="Cedarcode"/></a></li>
+          <li class="sponsors-listitem"><a href="https://www.gogrow.dev/" class="sponsors-link"><img src="sponsors/gogrow.png" alt="GoGrow"/></a></li>
+          <li class="sponsors-listitem"><a href="https://eagerworks.com/" class="sponsors-link"><img src="sponsors/eagerworks.png" alt="Eagerworks"/></a></li>
+          <li class="sponsors-listitem"><a href="https://www.effectussoftware.com/" class="sponsors-link"><img src="sponsors/effectussoftware.png" alt="Effectus Software"/></a></li>
+        </ul>
+      </section>
+    </header>
+  </body>
+  <script type="text/javascript">
+    var ul = document.querySelector('ul');
+    for (var i = ul.children.length; i >= 0; i--) {
+      ul.appendChild(ul.children[Math.random() * i | 0]);
+    }
+  </script>
+</html>
