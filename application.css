@@ -23,6 +23,7 @@ h2 {
 
 .sponsors-listitem {
   height: 4em;
+  overflow: hidden;
 }
 
 .sponsors-link {
