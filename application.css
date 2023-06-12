@@ -1,0 +1,42 @@
+body {
+  padding: 10em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10pt;
+}
+
+h1 {
+  font-size: 24pt;
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 13pt;
+  font-weight: normal;
+}
+
+.sponsors-list {
+  column-count: 2;
+  column-width: 17em;
+  max-width: 40em;
+}
+
+.sponsors-listitem {
+  height: 4em;
+  overflow: hidden;
+}
+
+.sponsors-link {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.sponsors-link img {
+  display: block;
+  max-height: 15em;
+  max-width: 15em;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
