@@ -40,3 +40,15 @@ h2 {
   top: 50%;
   transform: translateY(-50%);
 }
+
+@media (max-width: 350px) {
+  body {
+    padding: 1em;
+  }
+}
+
+@media (min-width: 350px) and (max-width: 550px) {
+  body {
+    padding: 3em;
+  }
+}
