@@ -2,4 +2,4 @@
 
 ![](logo.svg)
 
-Sitio de la comunidad de Ruby de Uruguay
+Sitio de la comunidad Ruby en Uruguay
