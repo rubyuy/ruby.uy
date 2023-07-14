@@ -13,6 +13,7 @@
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             ruby_3_2
+            gnumake
           ];
         };
       });
