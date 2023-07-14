@@ -1,29 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Ruby UY</title>
-    <meta charset='utf-8' />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="view-transition" content="same-origin" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="/application.css"/>
-  </head>
+  {% include head.html %}
 
   <body>
-    <header>
-      <section>
-        <picture>
-          <a href="/"><img src="/logo.svg" alt="Ruby UY" style="width:10em;"/></a>
-        </picture>
+    {% include header.html %}
+
+    <article>
+      <header>
         <h1> Ruby UY </h1>
         <h2> Comunidad Ruby en Uruguay &#127482;&#127486; </h2>
-        <section>
-          {{ content }}
-        </section>
-      </section>
-    </header>
+      </header>
+
+      <section> {{ content }} </section>
+
+    </article>
   </body>
 
 </html>
