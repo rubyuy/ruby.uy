@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+
+    <article>
+      <section>
+        <p>Host: {{ page.host }}</p>
+
+        Speakers:
+        <ul>
+          {% for talk in page.talks %}
+            <li>{{ talk.speaker }}</li>
+          {% endfor %}
+        </ul>
+
+        {% for talk in page.talks %}
+          <h2>{{ talk.title }} - {{ talk.speaker }}</h2>
+          {{ talk.description }}
+          {% if talk.recording %}
+            <iframe src="{{ talk.recording }}" width="640" height="480" allow="autoplay"></iframe>
+          {% endif %}
+        {% endfor %}
+      </section>
+
+      <section> {{ content }} </section>
+    </article>
+  </body>
+
+</html>
