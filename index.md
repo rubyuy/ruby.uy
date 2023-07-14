@@ -4,3 +4,11 @@
   <li>Sponsors: <a href="/sponsors">List</a></li>
   <li>Github: <a href="https://github.com/rubyuy/ruby.uy" target="_blank">Repo</a></li>
 </ul>
+
+## Meetups
+
+<ul>
+{% for meetup in site.meetups %}
+    <li><a href="{{ meetup.url }}"> {{ meetup.date | date_to_string }} - {{ meetup.title }} </a></li>
+{% endfor %}
+</ul>
