@@ -7,18 +7,24 @@
 
     <article>
       <section>
-        <p>Host: {{ page.host }}</p>
+        <p>
+          Host: <a href="{{ page.host.url }}">{{ page.host.name }}</a>
+        </p>
 
-        Speakers:
+        <h2>Speakers:</h2>
         <ul>
           {% for talk in page.talks %}
-            <li>{{ talk.speaker }}</li>
+            <li>
+              <a href="{{ talk.speaker.url }}">{{ talk.speaker.name }}</a>
+            </li>
           {% endfor %}
         </ul>
 
+        <h2>Charlas:</h2>
         {% for talk in page.talks %}
-          <h2>{{ talk.title }} - {{ talk.speaker }}</h2>
-          {{ talk.description }}
+          <h3>{{ talk.title }} - {{ talk.speaker.name }}</h3>
+          <p>{{ talk.description }}<p>
+
           {% if talk.recording %}
             <iframe src="{{ talk.recording }}" width="640" height="480" allow="autoplay"></iframe>
           {% endif %}
