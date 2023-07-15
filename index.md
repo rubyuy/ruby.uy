@@ -12,7 +12,7 @@
 ## Meetups
 
 <ul>
-{% for meetup in site.meetups %}
+{% for meetup in site.meetups reversed %}
     <li><a href="{{ meetup.url }}"> {{ meetup.date | date_to_string }} - {{ meetup.title }} </a></li>
 {% endfor %}
 </ul>
