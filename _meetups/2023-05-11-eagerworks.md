@@ -12,7 +12,7 @@ talks:
      url: https://github.com/ignaciogrondona
 
  - title: Developer Experience in Ruby
-   slides: https://speakerdeck.com/maicolben/developer-experience-in-ruby
+   slides: https://speakerdeck.com/player/b98a3c0bc61247b28ca3c462c09d190f
    speaker:
      name: Maicol Bentancor
      url: https://github.com/MaicolBen
