@@ -15,6 +15,13 @@ h2 {
   font-weight: normal;
 }
 
+iframe {
+  background:url(./images/loading.gif) center center no-repeat;
+  background-size: 4em;
+  background-color: #F6F6F6;
+  border: 0;
+}
+
 .sponsors-list {
   column-count: 2;
   column-width: 17em;
