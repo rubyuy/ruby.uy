@@ -7,12 +7,10 @@ host:
 
 talks:
  - title: Event Collaboration in a Modular Rails App
-   speaker:
-     name: Guillermo Aguirre
-     url: https://github.com/guillermoap
+   speakers:
+     - guillermo_aguirre
 
  - title: Our experience at RailsConf 2022
-   speaker:
-     name: Emilio Cristalli
-     url: https://github.com/EmilioCristalli
+   speakers:
+     - emilio_cristalli
 ---

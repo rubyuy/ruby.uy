@@ -7,12 +7,10 @@ host:
 
 talks:
  - title: Who wants to be a Ruby Engineer?
-   speaker: 
-     name: Antonieta Alvarez
-     url: https://github.com/antoalconti
+   speakers:
+     - antonieta_alvarez
 
  - title: ActiveRecord::RecordNotFound
-   speaker:
-     name: Martín Morón
-     url: https://github.com/martinjaimem
+   speakers:
+     - martín_moron
 ---

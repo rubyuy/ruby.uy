@@ -7,13 +7,11 @@ host:
 
 talks:
  - title: "Peeking Under the Hood: Profiling Your Rails App for Peak Performance"
-   speaker:
-     name: Ignacio Grondona
-     url: https://github.com/ignaciogrondona
+   speakers:
+     - ignacio_grondona
 
  - title: Developer Experience in Ruby
    slides: https://speakerdeck.com/player/b98a3c0bc61247b28ca3c462c09d190f
-   speaker:
-     name: Maicol Bentancor
-     url: https://github.com/MaicolBen
+   speakers:
+     - maicol_bentancor
 ---

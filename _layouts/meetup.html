@@ -14,15 +14,21 @@
         <h2>Speakers:</h2>
         <ul>
           {% for talk in page.talks %}
-            <li>
-              <a href="{{ talk.speaker.url }}">{{ talk.speaker.name }}</a>
-            </li>
+            {% for speaker in talk.speakers %}
+              <li>
+                <a href="{{ site.data.people[speaker].github }}">{{ site.data.people[speaker].name }}</a>
+              </li>
+            {% endfor %}
           {% endfor %}
         </ul>
 
         <h2>Charlas:</h2>
         {% for talk in page.talks %}
-          <h3>{{ talk.title }} - {{ talk.speaker.name }}</h3>
+          {% assign speakers = "" | split: ',' %}
+          {% for speaker in talk.speakers %}
+            {% assign speakers = speakers | push: site.data.people[speaker].name %}
+          {% endfor %}
+          <h3>{{ talk.title }} - {{ speakers | join: ", " }}</h3>
           <p>{{ talk.description }}<p>
 
           {% if talk.recording %}
