@@ -1,9 +1,7 @@
 ---
 collection: meetups
 layout: meetup
-host:
- name: Ingenious
- url: https://ingenious.agency
+host: ingenious
 
 talks:
  - title: View Components & Alpine.js

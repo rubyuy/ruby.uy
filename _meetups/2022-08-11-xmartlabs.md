@@ -1,9 +1,7 @@
 ---
 collection: meetups
 layout: meetup
-host:
- name: Xmartlabs
- url: https://xmartlabs.com
+host: xmartlabs
 
 talks:
  - title: Introduction to Sorbet and its impact on large projects

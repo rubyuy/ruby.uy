@@ -1,9 +1,7 @@
 ---
 collection: meetups
 layout: meetup
-host:
- name: Effectus Software
- url: https://www.effectussoftware.com
+host: effectussoftware
 
 talks:
  - title: RSpec vs Minitest

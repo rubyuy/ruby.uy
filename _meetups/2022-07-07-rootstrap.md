@@ -1,9 +1,7 @@
 ---
 collection: meetups
 layout: meetup
-host:
- name: Rootstrap
- url: https://www.rootstrap.com
+host: rootstrap
 
 talks:
  - title: Event Collaboration in a Modular Rails App

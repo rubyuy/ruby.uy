@@ -1,9 +1,7 @@
 ---
 collection: meetups
 layout: meetup
-host:
- name: December Labs
- url: https://decemberlabs.com
+host: decemberlabs
 
 talks:
  - title: GraphQL on Rails

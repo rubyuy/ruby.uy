@@ -1,9 +1,7 @@
 ---
 collection: meetups
 layout: meetup
-host:
- name: Eagerworks
- url: https://eagerworks.com
+host: eagerworks
 
 talks:
  - title: "Peeking Under the Hood: Profiling Your Rails App for Peak Performance"

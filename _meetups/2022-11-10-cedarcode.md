@@ -1,9 +1,7 @@
 ---
 collection: meetups
 layout: meetup
-host:
- name: Cedarcode
- url: https://www.cedarcode.com
+host: cedarcode
 
 talks:
  - title: WebAuthn in Ruby

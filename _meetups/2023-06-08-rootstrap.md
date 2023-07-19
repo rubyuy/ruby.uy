@@ -1,9 +1,7 @@
 ---
 collection: meetups
 layout: meetup
-host:
- name: Rootstrap
- url: https://rootstrap.com
+host: rootstrap
 
 talks:
  - title: Who wants to be a Ruby Engineer?
