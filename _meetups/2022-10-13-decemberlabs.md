@@ -1,18 +1,14 @@
 ---
 collection: meetups
 layout: meetup
-host:
- name: December Labs
- url: https://decemberlabs.com
+host: decemberlabs
 
 talks:
  - title: GraphQL on Rails
-   speaker:
-     name: Franco Bottero
-     url: https://github.com/francobottero
+   speakers:
+     - franco_bottero
 
  - title: Functional Programming with Ruby
-   speaker:
-     name: Julian Pasquale
-     url: https://github.com/JulianPasquale
+   speakers:
+     - julian_pasquale
 ---

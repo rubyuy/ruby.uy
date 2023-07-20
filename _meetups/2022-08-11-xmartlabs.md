@@ -1,17 +1,15 @@
 ---
 collection: meetups
 layout: meetup
-host:
- name: Xmartlabs
- url: https://xmartlabs.com
+host: xmartlabs
 
 talks:
  - title: Introduction to Sorbet and its impact on large projects
-   speaker:
-     name: Micaela Wolman
-     url: https://github.com/mwolman
+   speakers:
+     - micaela_wolman
 
  - title: "Hotwire: Turboframes & Stimulus"
-   speaker:
-     name: Guillermo Zorron y Felipe Facio
+   speakers:
+     - guillermo_zorron
+     - felipe_facio
 ---

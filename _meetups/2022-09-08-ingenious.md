@@ -1,18 +1,14 @@
 ---
 collection: meetups
 layout: meetup
-host:
- name: Ingenious
- url: https://ingenious.agency
+host: ingenious
 
 talks:
  - title: View Components & Alpine.js
-   speaker:
-     name: Gabriel Chertok
-     url: https://github.com/cherta
+   speakers:
+     - gabriel_chertok
 
  - title: "Active Record: good or evil?"
-   speaker:
-     name: Santiago Bertinat
-     url: https://github.com/santiago-bertinat
+   speakers:
+     - santiago_bertinat
 ---

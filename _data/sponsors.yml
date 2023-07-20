@@ -1,31 +1,8 @@
-- name: Rootstrap
-  url: https://www.rootstrap.com
-  image: /sponsors/rootstrap.svg
-
-- name: Xmartlabs
-  url: https://xmartlabs.com
-  image: /sponsors/xmartlabs.svg
-
-- name: Ingenious
-  url: https://ingenious.agency
-  image: /sponsors/ingenious.svg
-
-- name: December Labs
-  url: https://decemberlabs.com
-  image: /sponsors/decemberlabs.svg
-
-- name: Cedarcode
-  url: https://www.cedarcode.com
-  image: /sponsors/cedarcode.svg
-
-- name: GoGrow
-  url: https://www.gogrow.dev
-  image: /sponsors/gogrow.svg
-
-- name: Eagerworks
-  url: https://eagerworks.com
-  image: /sponsors/eagerworks.svg
-
-- name: Effectus Software
-  url: https://www.effectussoftware.com
-  image: /sponsors/effectussoftware.svg
+- rootstrap
+- xmartlabs
+- ingenious
+- qubika
+- cedarcode
+- gogrow
+- eagerworks
+- effectussoftware

@@ -8,21 +8,34 @@
     <article>
       <section>
         <p>
-          Host: <a href="{{ page.host.url }}">{{ page.host.name }}</a>
+          Host: <a href="{{ site.data.companies[page.host].url }}">{{ site.data.companies[page.host].name }}</a>
         </p>
 
         <h2>Speakers:</h2>
         <ul>
           {% for talk in page.talks %}
-            <li>
-              <a href="{{ talk.speaker.url }}">{{ talk.speaker.name }}</a>
-            </li>
+            {% for speaker in talk.speakers %}
+              <li>
+                {% if site.data.people[speaker].github %}
+                  <a href="{{ site.data.people[speaker].github }}">
+                    <img src="{{ site.data.people[speaker].github }}.png?size=30" alt="{{ site.data.people[speaker].name }}" style="border-radius: 50%"/>
+                    {{ site.data.people[speaker].name }}
+                  </a>
+                {% else %}
+                  {{ site.data.people[speaker].name }}
+                {% endif %}
+              </li>
+            {% endfor %}
           {% endfor %}
         </ul>
 
         <h2>Charlas:</h2>
         {% for talk in page.talks %}
-          <h3>{{ talk.title }} - {{ talk.speaker.name }}</h3>
+          {% assign speakers = "" | split: ',' %}
+          {% for speaker in talk.speakers %}
+            {% assign speakers = speakers | push: site.data.people[speaker].name %}
+          {% endfor %}
+          <h3>{{ talk.title }} - {{ speakers | join: ", " }}</h3>
           <p>{{ talk.description }}<p>
 
           {% if talk.recording %}
