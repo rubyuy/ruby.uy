@@ -10,5 +10,5 @@ talks:
 
  - title: ActiveRecord::RecordNotFound
    speakers:
-     - martín_moron
+     - martin_moron
 ---
