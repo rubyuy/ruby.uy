@@ -6,7 +6,7 @@ locale: en
   <li>Meetup: <a href="https://www.meetup.com/ruby-montevideo/" target="_blank">Montevideo</a></li>
   <li>
     Slack: <a href="https://owu.slack.com/archives/C52L2AK8W" target="_blank">Open Web Uruguay - Ruby</a> |
-    <a href="https://owu.uy">{{ site.data.i18n[page.locale].join_owu }}</a>
+    <a href="https://owu.uy">{{ site.data.i18n[page.locale].index.join_owu }}</a>
   </li>
 
   <li>Sponsors: <a href="/sponsors">List</a></li>

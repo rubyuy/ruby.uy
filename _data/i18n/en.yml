@@ -1,1 +1,5 @@
-join_owu: Join OWU
+index:
+  join_owu: Join OWU
+layouts:
+  default:
+    site_description: Ruby Community in Uruguay &#127482;&#127486;
