@@ -35,6 +35,11 @@ plugins:
   - jekyll-relative-links
   - jekyll-sitemap
 
+
+i18n_path:
+  es: ""
+  en: "en/"
+
 defaults:
   -
     scope:

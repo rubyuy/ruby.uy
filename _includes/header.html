@@ -1,9 +1,9 @@
 <header>
   <picture>
-    <a href="/{{ page.locale }}"><img src="/images/logo.svg" alt="Ruby UY" style="width:10em;"/></a>
+    <a href="/{{ site.i18n_path[page.locale] }}"><img src="/images/logo.svg" alt="Ruby UY" style="width:10em;"/></a>
   </picture>
   <div class="language-switcher">
-    <a href="{{ page.url | replace: page.locale, '' | replace: '//', '/' }}">🇪🇸</a>
-    <a href="/en{{ page.url | replace: page.locale, '' | replace: '//', '/' }}">🇺🇸</a>
+    <a href="{{ page.url | replace: site.i18n_path[page.locale], '' | replace: '//', '/' }}">🇪🇸</a>
+    <a href="/en{{ page.url | replace: site.i18n_path[page.locale], '' | replace: '//', '/' }}">🇺🇸</a>
   </div>
 </header>
