@@ -1,1 +1,2 @@
 bundle exec ruby i18n_pages.rb
+git add en/
