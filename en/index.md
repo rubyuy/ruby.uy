@@ -1,7 +1,3 @@
----
-locale: en
----
-
 <ul>
   <li>Meetup: <a href="https://www.meetup.com/ruby-montevideo/" target="_blank">Montevideo</a></li>
   <li>
@@ -16,7 +12,7 @@ locale: en
 ## Meetups
 
 <ul>
-{% for meetup in site.meetups reversed %}
+{% for meetup in site.meetups_en reversed %}
     <li><a href="{{ meetup.url }}"> {{ meetup.date | date_to_string }} - {{ meetup.title }} </a></li>
 {% endfor %}
 </ul>

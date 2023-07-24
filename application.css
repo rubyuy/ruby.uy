@@ -59,3 +59,12 @@ iframe {
     padding: 3em;
   }
 }
+
+.language-switcher {
+  float: right;
+}
+
+.language-switcher a {
+  font-size: 2em;
+  text-decoration: none;
+}

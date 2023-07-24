@@ -1,7 +1,3 @@
----
-locale: es
----
-
 <ul>
   <li>Meetup: <a href="https://www.meetup.com/ruby-montevideo/" target="_blank">Montevideo</a></li>
   <li>

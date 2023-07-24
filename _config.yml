@@ -35,6 +35,18 @@ plugins:
   - jekyll-relative-links
   - jekyll-sitemap
 
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      locale: "es"
+  -
+    scope:
+      path: "en"
+    values:
+      locale: "en"
+
 collections:
   meetups:
     output: true
