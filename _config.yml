@@ -39,3 +39,6 @@ collections:
   meetups:
     output: true
     permalink: /meetups/:year-:month-:day/:title
+  meetups_en:
+    output: true
+    permalink: /en/meetups/:year-:month-:day/:title
