@@ -40,7 +40,7 @@ pages.each do |page|
     content.gsub!(%r{href=(.)/}, "href=\\1/#{language}/")
 
     # i18n collections
-    collections.each do |collection|
+    collections.keys.each do |collection|
       content.gsub!(%r{site.#{collection}}, "site.#{collection}_#{language}")
     end
 
