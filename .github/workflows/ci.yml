@@ -1,0 +1,21 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Re-generate translations
+        run: ruby i18n_pages.rb --all
+      - name: Check for untracked translations
+        uses: rootstrap/check_untracked_changes@v1
+        with:
+          path: "./en/"

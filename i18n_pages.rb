@@ -1,3 +1,4 @@
+require 'fileutils'
 require 'optparse'
 require 'yaml'
 
