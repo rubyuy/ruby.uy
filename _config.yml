@@ -51,6 +51,11 @@ defaults:
       path: "en"
     values:
       locale: "en"
+  -
+    scope:
+      path: "*_en"
+    values:
+      locale: "en"
 
 collections:
   meetups:

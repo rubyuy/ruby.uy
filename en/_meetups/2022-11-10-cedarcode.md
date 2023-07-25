@@ -1,6 +1,5 @@
 ---
 collection: meetups
-locale: en
 layout: meetup
 host: cedarcode
 

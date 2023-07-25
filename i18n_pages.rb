@@ -35,7 +35,6 @@ pages.each do |page|
 
     # i18n collections
     COLLECTIONS.each do |collection|
-      content.gsub!(%r{collection: #{collection}}, "collection: #{collection}\nlocale: #{language}")
       content.gsub!(%r{site.#{collection}}, "site.#{collection}_#{language}")
     end
 
