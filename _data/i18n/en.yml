@@ -3,3 +3,5 @@ index:
 layouts:
   default:
     site_description: Ruby Community in Uruguay &#127482;&#127486;
+  meetup:
+    talks: Talks

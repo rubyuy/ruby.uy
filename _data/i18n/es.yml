@@ -3,3 +3,5 @@ index:
 layouts:
   default:
     site_description: Comunidad Ruby en Uruguay &#127482;&#127486;
+  meetup:
+    talks: Charlas
