@@ -32,4 +32,4 @@ The solution includes:
   - You can still run `bundle exec ruby i18n_pages.rb --all` to re-generate all the translated files
   - It automatically translate links so to navigate the site in the same language
   - It automatically translate collections
-  - A binary `rubyuy-server` to automatically run the script before starting the Jekyll server
+- A binary `rubyuy-server` to automatically run the script before starting the Jekyll server
