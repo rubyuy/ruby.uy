@@ -24,9 +24,9 @@ The solution includes:
   - By default Spanish
   - URLs prefixed with /en/ for English
 - Translating text in pages
--   Add translated text in YML files under `_data/i18n/[lang].yml`
--   Calling the translated texts with `site.data.i18n[page.locale].whatever_key_in_your_yml_file`
--   Note: `page.locale` is automatically set in every page
+  - Add translated text in YML files under `_data/i18n/[lang].yml`
+  - Calling the translated texts with `site.data.i18n[page.locale].whatever_key_in_your_yml_file`
+  - Note: `page.locale` is automatically set in every page
 - A script to automatically generate translated files
   - The script is ran in the pre-commit hook so it's transparent for devs
   - You can still run `bundle exec ruby i18n_pages.rb --all` to re-generate all the translated files
