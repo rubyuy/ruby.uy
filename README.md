@@ -23,13 +23,13 @@ The solution includes:
 - Language switcher in the UI
   - By default Spanish
   - URLs prefixed with /en/ for English
-- Translating text in pages
+- Translating text on pages
   - Add translated text in YML files under `_data/i18n/[lang].yml`
   - Calling the translated texts with `site.data.i18n[page.locale].whatever_key_in_your_yml_file`
-  - Note: `page.locale` is automatically set in every page
+  - Note: `page.locale` is automatically set on every page
 - A script to automatically generate translated files
-  - The script is ran in the pre-commit hook so it's transparent for devs
+  - The script is run in the pre-commit hook, so it's transparent for devs
   - You can still run `bundle exec ruby i18n_pages.rb --all` to re-generate all the translated files
-  - It automatically translate links so to navigate the site in the same language
-  - It automatically translate collections
+  - It automatically translates links to navigate the site in the same language
+  - It automatically translates collections
 - A binary `rubyuy-server` to automatically run the script before starting the Jekyll server
