@@ -16,8 +16,10 @@ jobs:
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
-        with: [ bundler-cache: true ]
-        env: [ JEKYLL_ENV: production ]
+        with:
+          bundler-cache: true
+        env:
+          JEKYLL_ENV: production
 
       - name: Build the website
         run: bundle exec jekyll build
