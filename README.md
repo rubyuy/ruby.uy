@@ -1,6 +1,6 @@
 # Ruby.uy
 
-![](logo.svg)
+![](images/logo.svg)
 
 Sitio de la comunidad Ruby en Uruguay
 
