@@ -28,9 +28,12 @@ url: https://ruby.uy # the base hostname & protocol for your site, e.g. http://e
 github_username:  rubyuy
 
 # Build settings
-theme: minima
 plugins:
+  - jekyll-default-layout
   - jekyll-feed
+  - jekyll-optional-front-matter
+  - jekyll-relative-links
+  - jekyll-sitemap
 
 collections:
   meetups:
