@@ -5,7 +5,7 @@
     <a href="https://owu.uy">Unirse a OWU</a>
   </li>
 
-  <li>Sponsors: <a href="/sponsors">List</a></li>
+  <li>Sponsors: <a href="/sponsors">List</a> | <a href="/sponsorship_details">Detalles de sponsoreo</a></li>
   <li>Github: <a href="https://github.com/rubyuy/ruby.uy" target="_blank">Repo</a></li>
 </ul>
 
