@@ -1,14 +1,14 @@
 guillermo_aguirre:
   name: Guillermo Aguirre
-  github: https://github.com/guillermoap
+  github: guillermoap
 
 emilio_cristalli:
   name: Emilio Cristalli
-  github: https://github.com/EmilioCristalli
+  github: EmilioCristalli
 
 micaela_wolman:
   name: Micaela Wolman
-  github: https://github.com/mwolman
+  github: mwolman
 
 guillermo_zorron:
   name: Guillermo Zorron
@@ -18,59 +18,67 @@ felipe_facio:
 
 gabriel_chertok:
   name: Gabriel Chertok
-  github: https://github.com/cherta
+  github: cherta
 
 santiago_bertinat:
   name: Santiago Bertinat
-  github: https://github.com/santiago-bertinat
+  github: santiago-bertinat
 
 franco_bottero:
   name: Franco Bottero
-  github: https://github.com/francobottero
+  github: francobottero
 
 julian_pasquale:
   name: Julian Pasquale
-  github: https://github.com/JulianPasquale
+  github: JulianPasquale
 
 braulio_martinez:
   name: Braulio Martinez
-  github: https://github.com/brauliomartinezlm
+  github: brauliomartinezlm
 
 juan_pablo_balarini:
   name: Juan Pablo Balarini
-  github: https://github.com/jpbalarini
+  github: jpbalarini
 
 juan_aparicio:
   name: Juan Aparicio
-  github: https://github.com/juan-apa
+  github: juan-apa
 
 santiago_bartesaghi:
   name: Santiago Bartesaghi
-  github: https://github.com/santib
+  github: santib
 
 camila_martinez:
   name: Camila Martinez
 
 elcuervo:
   name: elcuervo
-  github: https://github.com/elcuervo
+  github: elcuervo
 
 ignacio_grondona:
   name: Ignacio Grondona
-  github: https://github.com/ignaciogrondona
+  github: ignaciogrondona
 
 maicol_bentancor:
   name: Maicol Bentancor
-  github: https://github.com/MaicolBen
+  github: MaicolBen
 
 antonieta_alvarez:
   name: Antonieta Alvarez
-  github: https://github.com/antoalconti
+  github: antoalconti
 
 martin_moron:
   name: Martín Morón
-  github: https://github.com/martinjaimem
+  github: martinjaimem
 
 juan_diego_rosales:
   name: Juan Diego Rosales
-  github: https://github.com/jdrosales17
+  github: jdrosales17
+
+julio_foulquie:
+  name: Julio Foulquie
+  github: j3j5
+
+sebastian_passaro:
+  name: Sebastián Passaro
+  github: spassarop
