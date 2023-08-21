@@ -18,7 +18,7 @@ title: Detalles de sponsoreo
       <li>Logo en el banner del evento</li>
       <li>Posibilidad de poner banners y dar swag</li>
       <li>Posibilidad de hacer regalos (sorteos, a los speakers, etc)</li>
-      <li>Mención en las redes (Slack OWU y Twitter/X)</li>
+      <li>Mención en las redes (Slack OWU, Twitter/X y Bluesky)</li>
     </ul>
   </li>
 </ul>
