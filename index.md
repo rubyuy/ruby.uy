@@ -1,16 +1,12 @@
-<ul>
-  <li>Meetup: <a href="https://www.meetup.com/ruby-montevideo/" target="_blank">Montevideo</a></li>
-  <li>
-    Slack: <a href="https://owu.slack.com/archives/C52L2AK8W" target="_blank">Open Web Uruguay - Ruby</a> |
-    <a href="https://owu.uy">Unirse a OWU</a>
-  </li>
-  <li>Tareas de la comunidad: <a href="/community_tasks">Lista</a></li>
-  <li>Sponsors: <a href="/sponsors">Lista</a> | <a href="/sponsorship_details">Detalles de sponsoreo</a></li>
-  <li>Github: <a href="https://github.com/rubyuy/ruby.uy" target="_blank">Repo</a></li>
-  <li>Analytics: <a href="https://analytics.umami.is/share/MbC0PW7QoyfeUQU8/RubyUY" target="_blank">Ver</a></li>
-  <li>Twitter/X: <a href="https://twitter.com/rubymontevideo">Ver</a></li>
-  <li>Instagram: <a href="https://www.instagram.com/ruby_uruguay/">Ver</a></li>
-</ul>
+- Meetup: [Montevideo](https://www.meetup.com/ruby-montevideo/){:target="_blank"}
+- Slack [Open Web Uruguay - Ruby](https://owu.slack.com/archives/C52L2AK8W){:target="_blank"} |
+  [Unirse a OWU](https://owu.uy)
+- Tareas de la comunidad: [Lista](/community_tasks)
+- Sponsors: [Lista](/sponsors) | [Detalles de sponsoreo](/sponsorship_details)
+- Github: [Repo](https://github.com/rubyuy/ruby.uy){:target="_blank"}
+- Analytics: [Ver](https://analytics.umami.is/share/MbC0PW7QoyfeUQU8/RubyUY){:target="_blank"}
+- Twitter/X: [Ver](https://twitter.com/rubymontevideo){:target="_blank"}
+- Instagram: [Ver](https://www.instagram.com/ruby_uruguay/){:target="_blank"}
 
 ## Meetups
 
