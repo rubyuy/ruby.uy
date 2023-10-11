@@ -4,8 +4,8 @@
     Slack: <a href="https://owu.slack.com/archives/C52L2AK8W" target="_blank">Open Web Uruguay - Ruby</a> |
     <a href="https://owu.uy">Unirse a OWU</a>
   </li>
-  <li>Tareas de la comunidad: <a href="/community_tasks">List</a></li>
-  <li>Sponsors: <a href="/sponsors">List</a> | <a href="/sponsorship_details">Detalles de sponsoreo</a></li>
+  <li>Tareas de la comunidad: <a href="/community_tasks">Lista</a></li>
+  <li>Sponsors: <a href="/sponsors">Lista</a> | <a href="/sponsorship_details">Detalles de sponsoreo</a></li>
   <li>Github: <a href="https://github.com/rubyuy/ruby.uy" target="_blank">Repo</a></li>
   <li>Analytics: <a href="https://analytics.umami.is/share/MbC0PW7QoyfeUQU8/RubyUY" target="_blank">Ver</a></li>
   <li>Twitter/X: <a href="https://twitter.com/rubymontevideo">Ver</a></li>
