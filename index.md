@@ -5,8 +5,11 @@
     <a href="https://owu.uy">Unirse a OWU</a>
   </li>
   <li>Tareas de la comunidad: <a href="/community_tasks">List</a></li>
-  <li>Sponsors: <a href="/sponsors">List</a></li>
+  <li>Sponsors: <a href="/sponsors">List</a> | <a href="/sponsorship_details">Detalles de sponsoreo</a></li>
   <li>Github: <a href="https://github.com/rubyuy/ruby.uy" target="_blank">Repo</a></li>
+  <li>Analytics: <a href="https://analytics.umami.is/share/MbC0PW7QoyfeUQU8/RubyUY" target="_blank">Ver</a></li>
+  <li>Twitter/X: <a href="https://twitter.com/rubymontevideo">Ver</a></li>
+  <li>Instagram: <a href="https://www.instagram.com/ruby_uruguay/">Ver</a></li>
 </ul>
 
 ## Meetups
