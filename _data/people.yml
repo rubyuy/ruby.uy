@@ -12,6 +12,7 @@ micaela_wolman:
 
 guillermo_zorron:
   name: Guillermo Zorron
+  github: guillezorron
 
 felipe_facio:
   name: Felipe Facio
@@ -90,3 +91,11 @@ marcos_bellucci:
 agustin_peluffo:
   name: Agustin Peluffo
   github: agustin-peluffo
+
+maximiliano_diaz:
+  name: Maximiliano Diaz
+  github: mdiaz25
+
+ignacio_chiazzo:
+  name: Ignacio Chiazzo
+  github: ignacio-chiazzo
