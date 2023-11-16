@@ -11,7 +11,7 @@ talks:
      - maximiliano_diaz
 
  - title: "Efficiency at Scale: Optimizing Ruby on Rails Applications"
-   recording: https://drive.google.com/file/d/1lrnEoE-PHY2vgdioTNXQ_CknTdLSo_nY/preview
+   slides: https://docs.google.com/presentation/d/10rDjFfYK7Jc4ulgePvrzriN--siFqHqM/embed
    speakers:
      - ignacio_chiazzo
 ---
