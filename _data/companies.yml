@@ -47,3 +47,8 @@ neocoast:
   name: Neocoast
   url: https://neocoast.com
   image: /images/sponsors/neocoast.svg
+
+howdy:
+  name: Howdy
+  url: https://www.howdy.com
+  image: /images/sponsors/howdy.svg
