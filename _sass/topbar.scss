@@ -1,0 +1,71 @@
+a { 
+  color: inherit;
+  text-decoration: none;
+}
+
+.topBar {
+  display: flex;
+  height: 100px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  width: 100%;
+  align-items: center;
+  color: #2E2E2E;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 106.102%;
+  text-transform: capitalize;
+  font-family: 'Syncopate', sans-serif;
+}
+
+.blackStarBox {
+  width: 40px;
+  height: 40px;
+  padding: 26px;
+  border: 4px solid #2E2E2E;
+  background: #F6EEEC;
+}
+
+.barTitle {
+  display: inline-flex;
+  height: 30px;
+  width: 215px;
+  padding: 31px 81px;
+  align-items: center;
+  flex-shrink: 0;
+  border: 4px #2E2E2E;
+  border-style: solid solid solid none;
+  background: #F6EEEC;
+}
+
+.barLinks {
+  display: flex;
+  flex-grow: 1;
+  height: 12px;
+  padding: 40px 68px;
+  justify-content: center;
+  align-items: center;
+  gap: 12.5%;
+  flex-shrink: 0;
+  border: 4px solid #2E2E2E;
+  border-style: solid none solid none;
+  background: #FFF;
+  text-align: center;
+}
+
+.barMenu {
+  width: 40px;
+  height: 40px;
+  padding: 26px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 4px solid #2E2E2E;
+  background: #F6EEEC;
+}
+
+.barBurger {
+  padding-top: 6px;
+}
