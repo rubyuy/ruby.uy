@@ -1,0 +1,2 @@
+bundle exec ruby i18n_pages.rb &&
+bundle exec jekyll server
