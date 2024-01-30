@@ -6,9 +6,29 @@
     {% include header.html %}
 
     <article>
-      <header>
-        <h1> Ruby UY </h1>
-        <h2> Comunidad Ruby en Uruguay &#127482;&#127486; </h2>
+      <header class='mainHeader'>
+        <div class='mainTitleBox'>
+          <h2 class='mainTitle'> COMUNIDAD RUBY EN URUGUAY </h2>
+          <img class='mainLogo' src='/assets/images/logo.svg'/>
+        </div>
+        <div class='mainInfo'>
+          <div class='mainInvitationBox'>
+            <h1 class='mainInvitation'> Sé parte_ </h1> 
+          </div>
+          <div class='mainLinksBox'>
+            <div class='mainLinks'>
+              <div class='linkRow'>
+                <a class='shapeLink' href="https://www.meetup.com/ruby-montevideo/"> Meetup <img src='/assets/images/arrow.svg'/></a>
+                <a class='shapeLink' href="https://www.instagram.com/ruby_uruguay/"> Instagram <img src='/assets/images/arrow.svg'/></a>
+              </div>
+              <div class='linkRow'>
+                <a class='shapeLink' href="https://twitter.com/rubymontevideo"> Twitter <img src='/assets/images/arrow.svg'/></a>
+                <a class='shapeLink' href="https://owu.slack.com/archives/C52L2AK8W"> Slack <img src='/assets/images/arrow.svg'/></a>
+                <a class='shapeLink' href="https://github.com/rubyuy/ruby.uy"> Github <img src='/assets/images/arrow.svg'/></a>
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
 
       <section> {{ content }} </section>

@@ -1,3 +1,4 @@
+<div class='oldSection'>
 <ul>
   <li>Meetup: <a href="https://www.meetup.com/ruby-montevideo/" target="_blank">Montevideo</a></li>
   <li>
@@ -19,3 +20,5 @@
     <li><a href="{{ meetup.url }}"> {{ meetup.date | date_to_string }} - {{ meetup.title }} </a></li>
 {% endfor %}
 </ul>
+
+</div>
