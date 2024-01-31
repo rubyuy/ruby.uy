@@ -1,8 +1,3 @@
-a { 
-  color: inherit;
-  text-decoration: none;
-}
-
 .topBar {
   display: flex;
   height: 100px;
@@ -53,6 +48,11 @@ a {
   border-style: solid none solid none;
   background: #FFF;
   text-align: center;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .barMenu {
