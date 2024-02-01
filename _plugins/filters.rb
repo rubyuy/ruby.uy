@@ -1,10 +1,6 @@
 require 'digest'
 
 module Filters
-  # Usage example:
-  #
-  # {{ "/style.css" | buster }}
-  # {{ "/style.css" | buster | absolute_url }}
   def buster(filename)
     filepath = File.join(@context.registers[:site].dest, filename)
 
@@ -13,7 +9,6 @@ module Filters
       .then { |sha| sha.hexdigest }
       .then { |digest| "#{filename}?#{digest}" }
   rescue Errno::ENOENT
-    # Return filename unmodified if file was not found
     filename
   end
 
