@@ -18,11 +18,11 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-        env:
-          JEKYLL_ENV: production
 
       - name: Build the website
         run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
 
       - name: Publish
         uses: cloudflare/pages-action@1
