@@ -1,6 +1,6 @@
 require 'digest'
 
-module Filters
+module CustomFilters
   def buster(filename)
     filepath = File.join(@context.registers[:site].dest, filename)
 
@@ -8,13 +8,11 @@ module Filters
       .file(filepath)
       .then { |sha| sha.hexdigest }
       .then { |digest| "#{filename}?#{digest}" }
-  rescue Errno::ENOENT
-    filename
   end
 
-  def css(filename)
-    buster("/assets/css/#{filename}.css")
+  def css_asset(filename)
+    "/assets/css/#{filename}.css"
   end
 end
 
-Liquid::Template.register_filter(Filters)
+Liquid::Template.register_filter(CustomFilters)
