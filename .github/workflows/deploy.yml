@@ -32,3 +32,4 @@ jobs:
           projectName: ruby-uy
           directory: _site
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          wranglerVersion: '3'
