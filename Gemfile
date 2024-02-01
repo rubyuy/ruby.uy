@@ -10,6 +10,7 @@ source "https://rubygems.org"
 gem "jekyll", "~> 4.3.2"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+  gem "jekyll-assets", github: "envygeeks/jekyll-assets"
   gem "jekyll-default-layout", "~> 0.1"
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-optional-front-matter", "~> 0.3"
