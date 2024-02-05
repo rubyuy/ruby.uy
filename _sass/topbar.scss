@@ -1,13 +1,13 @@
 .topBar {
   display: flex;
-  height: 100px;
-  left: 0px;
-  top: 0px;
+  height: 5rem;
+  left: 0;
+  top: 4px;
   position: absolute;
   width: 100%;
   align-items: center;
   color: #2E2E2E;
-  font-size: 35px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: 106.102%;
@@ -16,36 +16,45 @@
 }
 
 .blackStarBox {
-  width: 40px;
-  height: 40px;
-  padding: 26px;
+  height: 100%;
+  width: 5rem;
   border: 4px solid #2E2E2E;
   background: #F6EEEC;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 35px;
+  }
 }
 
 .barTitle {
   display: inline-flex;
-  height: 30px;
-  width: 215px;
-  padding: 31px 81px;
+  height: 100%;
   align-items: center;
+  flex: 3;
   flex-shrink: 0;
   border: 4px #2E2E2E;
   border-style: solid solid solid none;
   background: #F6EEEC;
+  justify-content: center;
+
+  @media (max-width: 712px) {
+    flex: 4;
+  }
 }
 
 .barLinks {
   display: flex;
   flex-grow: 1;
-  height: 12px;
-  padding: 40px 68px;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  gap: 12.5%;
-  flex-shrink: 0;
+  justify-content: space-evenly;
+  flex: 6;
   border: 4px solid #2E2E2E;
-  border-style: solid none solid none;
+  border-style: solid solid solid none;
   background: #FFF;
   text-align: center;
 
@@ -53,19 +62,37 @@
     color: inherit;
     text-decoration: none;
   }
+
+  @media (max-width: 712px) {
+    display: none;
+  }
 }
 
 .barMenu {
-  width: 40px;
-  height: 40px;
-  padding: 26px;
+  display: flex;
+  flex: 1;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   border: 4px solid #2E2E2E;
+  border-style: solid solid solid none;
   background: #F6EEEC;
-}
 
-.barBurger {
-  padding-top: 6px;
+  img {
+    width: 35px;
+  }
+
+  @media (min-width: 713px) {
+    display: none;
+  }
+
+  .barLinks {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: calc(100% - 8px);
+    flex-direction: column;
+    border: 4px solid #2E2E2E;
+    height: 12rem;
+  }
 }

@@ -8,6 +8,10 @@ module CustomFilters
   def css_asset(filename)
     "/assets/css/#{filename}.css"
   end
+
+  def js_asset(filename)
+    "/assets/js/#{filename}.js"
+  end
 end
 
 Liquid::Template.register_filter(CustomFilters)
