@@ -50,6 +50,7 @@ nav {
           border-right: 4px solid #2E2E2E;
           left: 0;
           display: none;
+          z-index: 10;
         }
 
         &:nth-last-child(2) {
