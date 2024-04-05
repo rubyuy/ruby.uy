@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   {% include head.html %}
 
   <body>
-    {% include header.html %}
+    {% include nav.html %}
 
-    <article>
-      <header>
-        <h1> Ruby UY </h1>
-        <h2> Comunidad Ruby en Uruguay &#127482;&#127486; </h2>
-      </header>
+    {% include default_header.html %}
+    <main>
+      <article>
+        <header>
+          <h1> Ruby UY </h1>
+          <h2> Comunidad Ruby en Uruguay &#127482;&#127486; </h2>
+        </header>
 
-      <section> {{ content }} </section>
+        <section> {{ content }} </section>
 
-    </article>
+      </article>
+    </main>
   </body>
 
 </html>
