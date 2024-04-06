@@ -1,0 +1,120 @@
+.next-meetup {
+  header {
+    width: 100%;
+    background: #ABC2FB;
+    display: flex;
+    font-weight: 900;
+    padding: 16px 0;
+    overflow: hidden;
+
+    .example {
+      text-wrap: nowrap;
+      display: flex;
+      align-items: center;
+
+      &:first-child {
+        margin-left: -4rem;
+      }
+
+      @media (max-width: 768px) {
+        &:first-child {
+          width: 100%;
+          justify-content: center;
+          margin: 0;
+        }
+
+        &:nth-child(n+2) {
+          display: none;
+        }
+      }
+
+      h1 {
+        margin: 0 12px;
+        font-size: 2rem;
+
+        @media (max-width: 992px) {
+          font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  > article {
+    display: flex;
+    padding: 5rem 3rem;
+    background-color: #F6EEEC;
+    justify-content: center;
+
+    .next-meetup__details {
+      width: 40%;
+
+      h2 {
+        font-weight: 900;
+        color: #3967D1;
+        font-size: 1.8rem;
+      }
+
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          margin-top: 1rem;
+
+          &:first-child {
+            margin-top: 3rem;
+          }
+
+          svg {
+            width: 50px;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+
+    .next-meetup__speakers {
+      display: flex;
+
+      li {
+        margin-right: 3rem;
+        position: relative;
+
+        &:first-child {
+          svg {
+            position: absolute;
+            left: -67px;
+            top: -60px;
+          }
+        }
+
+        img {
+          width: 330px;
+          height: 360px;
+          object-fit: cover;
+        }
+
+        article {
+          padding: 1rem;
+          position: relative;
+          width: 280px;
+          background-color: #FFC24D;
+          height: 150px;
+          margin-top: -75px;
+          z-index: 1;
+
+          h1 {
+            font-size: 1.2rem;
+            font-weight: 900;
+            border-bottom: 1px solid black;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
