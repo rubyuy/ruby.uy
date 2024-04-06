@@ -16,7 +16,7 @@
         margin-left: -4rem;
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 992px) {
         &:first-child {
           width: 100%;
           justify-content: center;
@@ -36,7 +36,7 @@
           font-size: 1.5rem;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
           font-size: 1rem;
         }
       }
@@ -49,8 +49,23 @@
     background-color: #F6EEEC;
     justify-content: center;
 
+    @media (max-width: 1300px) {
+      padding: 5rem 2rem;
+      flex-direction: column;
+    }
+
     .next-meetup__details {
       width: 40%;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: 1300px) {
+        align-self: center;
+      }
+
+      @media (max-width: 992px) {
+        width: 80%;
+      }
 
       h2 {
         font-weight: 900;
@@ -78,16 +93,35 @@
 
     .next-meetup__speakers {
       display: flex;
+      justify-content: center;
+
+      @media (max-width: 1300px) {
+        margin-top: 3rem;
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+      }
 
       li {
         margin-right: 3rem;
         position: relative;
+
+        @media (max-width: 768px) {
+          margin-right: 0;
+          margin-bottom: 3rem;
+        }
 
         &:first-child {
           svg {
             position: absolute;
             left: -67px;
             top: -60px;
+
+            @media (max-width: 1300px) {
+              display: none;
+            }
           }
         }
 
