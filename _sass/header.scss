@@ -122,6 +122,10 @@ body {
                       padding: 0.43vw 1.719vw;
                       text-decoration: none;
 
+                      &:hover {
+                        background-color: rgba(0,0,0,0.5);
+                      }
+
                       @media (max-width: 992px) {
                         font-size: 14px;
                         margin-top: 12px;
