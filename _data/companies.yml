@@ -2,53 +2,64 @@ rootstrap:
   name: Rootstrap
   url: https://www.rootstrap.com
   image: /images/sponsors/rootstrap.svg
+  address: Sarandí 690
 
 xmartlabs:
   name: Xmartlabs
   url: https://xmartlabs.com
   image: /images/sponsors/xmartlabs.svg
+  address: Bv. España 2529
 
 ingenious:
   name: Ingenious
   url: https://ingenious.agency
   image: /images/sponsors/ingenious.svg
+  address: Circunvalacion Plaza Cagancha 1335, Office 1002
 
 decemberlabs:
   name: December Labs
   url: https://decemberlabs.com
   image: /images/sponsors/decemberlabs.svg
+  address: José Agustín Iturriaga 3597
 
 cedarcode:
   name: Cedarcode
   url: https://www.cedarcode.com
   image: /images/sponsors/cedarcode.svg
+  address: Marco Bruto 1066
 
 gogrow:
   name: GoGrow
   url: https://www.gogrow.dev
   image: /images/sponsors/gogrow.svg
+  address: Ejido 1275
 
 eagerworks:
   name: Eagerworks
   url: https://eagerworks.com
   image: /images/sponsors/eagerworks.svg
+  address: Juan Paullier 1218
 
 effectussoftware:
   name: Effectus Software
   url: https://www.effectussoftware.com
   image: /images/sponsors/effectussoftware.svg
+  address: Av. Luis Alberto de Herrera 1609
 
 qubika:
   name: Qubika
   url: https://qubika.com
   image: /images/sponsors/qubika.svg
+  address: José Agustín Iturriaga 3597
 
 neocoast:
   name: Neocoast
   url: https://neocoast.com
   image: /images/sponsors/neocoast.svg
+  address: C. Joaquin de Salterain 1081
 
 howdy:
   name: Howdy
   url: https://www.howdy.com
   image: /images/sponsors/howdy.svg
+  address: F. García Cortinas 2357

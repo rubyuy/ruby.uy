@@ -83,7 +83,7 @@
             margin-top: 3rem;
           }
 
-          svg {
+          img {
             width: 50px;
             margin-right: 0.5rem;
           }
@@ -114,10 +114,12 @@
         }
 
         &:first-child {
-          svg {
+          .stars {
             position: absolute;
             left: -67px;
             top: -60px;
+            width: 134px;
+            height: 121px;
 
             @media (max-width: 1300px) {
               display: none;

@@ -1,0 +1,9 @@
+show: true
+date: 15 de Abril
+time: 19 hrs
+host: rootstrap
+talks:
+  - speaker: guillermo_aguirre
+    name: Ruby on Wasm
+  - speaker: emilio_cristalli
+    name: Ruby on Wasm
