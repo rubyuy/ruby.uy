@@ -1,0 +1,159 @@
+.next-meetup {
+  header {
+    width: 100%;
+    background: #ABC2FB;
+    display: flex;
+    font-weight: 900;
+    padding: 16px 0;
+    overflow: hidden;
+
+    .next-meetup-callout {
+      text-wrap: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: justify-start;
+      margin: 0;
+
+      &__title {
+        font-size: 2rem;
+
+        @media (max-width: 992px) {
+          font-size: 1.5rem;
+        }
+      }
+
+      &__icon {
+        margin: 0 12px;
+
+        @media (max-width: 992px) {
+          transform: scale(0.8);
+        }
+      }
+
+      &--infinite-horizontal-animation {
+        animation: scroll-horizontal 20s linear infinite;
+
+        @keyframes scroll-horizontal {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+
+      }
+    }
+  }
+
+  > article {
+    display: flex;
+    padding: 5rem 3rem;
+    background-color: #F6EEEC;
+    justify-content: center;
+
+    @media (max-width: 1300px) {
+      padding: 5rem 2rem;
+      flex-direction: column;
+    }
+
+    .next-meetup__details {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: 1300px) {
+        align-self: center;
+      }
+
+      @media (max-width: 992px) {
+        width: 80%;
+      }
+
+      h2 {
+        font-weight: 900;
+        color: #3967D1;
+        font-size: 1.8rem;
+      }
+
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          margin-top: 1rem;
+
+          &:first-child {
+            margin-top: 3rem;
+          }
+
+          img {
+            width: 50px;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+
+    .next-meetup__speakers {
+      display: flex;
+      justify-content: center;
+
+      @media (max-width: 1300px) {
+        margin-top: 3rem;
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      li {
+        margin-right: 3rem;
+        position: relative;
+
+        @media (max-width: 768px) {
+          margin-right: 0;
+          margin-bottom: 3rem;
+        }
+
+        &:first-child {
+          .stars {
+            position: absolute;
+            left: -67px;
+            top: -60px;
+            width: 134px;
+            height: 121px;
+
+            @media (max-width: 1300px) {
+              display: none;
+            }
+          }
+        }
+
+        img {
+          width: 330px;
+          height: 360px;
+          object-fit: cover;
+        }
+
+        article {
+          padding: 1rem;
+          position: relative;
+          width: 280px;
+          background-color: #FFC24D;
+          height: 150px;
+          margin-top: -75px;
+          z-index: 1;
+
+          h1 {
+            font-size: 1.2rem;
+            font-weight: 900;
+            border-bottom: 1px solid black;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

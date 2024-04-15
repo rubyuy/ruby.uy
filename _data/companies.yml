@@ -2,53 +2,68 @@ rootstrap:
   name: Rootstrap
   url: https://www.rootstrap.com
   image: /images/sponsors/rootstrap.svg
+  address: Sarandí 690
+  address_url: https://maps.app.goo.gl/ZRqsng5ADjZVEixz5
 
 xmartlabs:
   name: Xmartlabs
   url: https://xmartlabs.com
   image: /images/sponsors/xmartlabs.svg
+  address: Bv. España 2529
+  address_url: https://maps.app.goo.gl/Ws8WSakn1g5wFJh1A
 
 ingenious:
   name: Ingenious
   url: https://ingenious.agency
   image: /images/sponsors/ingenious.svg
-
-decemberlabs:
-  name: December Labs
-  url: https://decemberlabs.com
-  image: /images/sponsors/decemberlabs.svg
+  address: Circunvalacion Plaza Cagancha 1335, Office 1002
+  address_url: https://maps.app.goo.gl/4ggwcRFnb6Vd8E19A
 
 cedarcode:
   name: Cedarcode
   url: https://www.cedarcode.com
   image: /images/sponsors/cedarcode.svg
+  address: Marco Bruto 1066
+  address_url: https://maps.app.goo.gl/WWB7uJydXecjkw1QA
 
 gogrow:
   name: GoGrow
   url: https://www.gogrow.dev
   image: /images/sponsors/gogrow.svg
+  address: Ejido 1275
+  address_url: https://maps.app.goo.gl/nJEwMoYJrKdz3RPM7
 
 eagerworks:
   name: Eagerworks
   url: https://eagerworks.com
   image: /images/sponsors/eagerworks.svg
+  address: Juan Paullier 1218
+  address_url: https://maps.app.goo.gl/7XYMiYtETMtb4AJk8
 
 effectussoftware:
   name: Effectus Software
   url: https://www.effectussoftware.com
   image: /images/sponsors/effectussoftware.svg
+  address: Av. Luis Alberto de Herrera 1609
+  address_url: https://maps.app.goo.gl/RMv6wvB91RjqHRqT7
 
 qubika:
   name: Qubika
   url: https://qubika.com
   image: /images/sponsors/qubika.svg
+  address: José Agustín Iturriaga 3597
+  address_url: https://maps.app.goo.gl/vEyUSSb78Ne19WVf7
 
 neocoast:
   name: Neocoast
   url: https://neocoast.com
   image: /images/sponsors/neocoast.svg
+  address: C. Joaquin de Salterain 1081
+  address_url: https://maps.app.goo.gl/nZezoGuuQdpYawCv5
 
 howdy:
   name: Howdy
   url: https://www.howdy.com
   image: /images/sponsors/howdy.svg
+  address: F. García Cortinas 2357
+  address_url: https://maps.app.goo.gl/V9VASexXVijNw64p7
