@@ -7,38 +7,41 @@
     padding: 16px 0;
     overflow: hidden;
 
-    .example {
+    .next-meetup-callout {
       text-wrap: nowrap;
       display: flex;
       align-items: center;
+      justify-content: justify-start;
+      margin: 0;
 
-      &:first-child {
-        margin-left: -4rem;
-      }
-
-      @media (max-width: 992px) {
-        &:first-child {
-          width: 100%;
-          justify-content: center;
-          margin: 0;
-        }
-
-        &:nth-child(n+2) {
-          display: none;
-        }
-      }
-
-      h1 {
-        margin: 0 12px;
+      &__title {
         font-size: 2rem;
 
         @media (max-width: 992px) {
           font-size: 1.5rem;
         }
+      }
+
+      &__icon {
+        margin: 0 12px;
 
         @media (max-width: 992px) {
-          font-size: 1rem;
+          transform: scale(0.8);
         }
+      }
+
+      &--infinite-horizontal-animation {
+        animation: scroll-horizontal 20s linear infinite;
+
+        @keyframes scroll-horizontal {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+
       }
     }
   }
