@@ -1,15 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   const nextMeetupCallout = document.querySelector(".next-meetup-callout")
-  const nextMeetupCalloutTitle = document.querySelector(".next-meetup-callout__title")
-  const nextMeetupCalloutIcon = document.querySelector(".next-meetup-callout__icon")
 
-  for(let i = 0; i < 5; i++) {
-    duplicate(nextMeetupCalloutTitle)
-    duplicate(nextMeetupCalloutIcon)
+  if (nextMeetupCallout != null) {
+    const nextMeetupCalloutTitle = document.querySelector(".next-meetup-callout__title")
+    const nextMeetupCalloutIcon = document.querySelector(".next-meetup-callout__icon")
+
+    for(let i = 0; i < 5; i++) {
+      duplicate(nextMeetupCalloutTitle)
+      duplicate(nextMeetupCalloutIcon)
+    }
+
+    duplicate(nextMeetupCallout)
+    addAnimationToCallouts()
   }
-
-  duplicate(nextMeetupCallout)
-  addAnimationToCallouts()
 })
 
 function addAnimationToCallouts() {
