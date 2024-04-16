@@ -17,5 +17,6 @@
 
 
     {% include meetups.html %}
+    {% include sponsors.html %}
   </section>
 </article>
