@@ -1,0 +1,22 @@
+<section id="meetups">
+  <header>
+    <h1>EDICIONES PASADAS</h1>
+    <p>Conocé el contenido de las ediciones pasadas.</p>
+  </header>
+
+  <ul>
+    {% for meetup in site.meetups reversed %}
+      <li class="meetup-event">
+        <a href="{{ meetup.url }}" class="meetup-event__link">
+          <span class="meetup-event__date">
+            {{ meetup.date | date_to_string }}
+          </span>
+          <span class="meetup-event__company">
+            {{ meetup.title }}
+            <img src="/assets/images/arrow.svg" aria-hidden="true">
+          </span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

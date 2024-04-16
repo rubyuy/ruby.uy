@@ -2,12 +2,6 @@ body {
   font-family: 'Syncopate', sans-serif;
 }
 
-main {
-  padding: 10em;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 10pt;
-}
-
 h1 {
   font-size: 24pt;
   margin-bottom: 0;
@@ -50,16 +44,4 @@ iframe {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-}
-
-@media (max-width: 350px) {
-  main {
-    padding: 1em;
-  }
-}
-
-@media (min-width: 350px) and (max-width: 550px) {
-  main {
-    padding: 3em;
-  }
 }

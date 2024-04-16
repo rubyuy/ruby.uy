@@ -7,8 +7,9 @@ Sitio de la comunidad Ruby en Uruguay
 
 ## Local
 
+Run server:
 ```bash
-make server
+bundle exec jekyll serve
 ```
 
 ## Adding slides

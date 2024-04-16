@@ -1,0 +1,36 @@
+#sponsors-list {
+  display: flex;
+  overflow: hidden;
+
+  ul {
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-top: 2px solid black;
+    background-color: #F6EEEC;
+
+    &.infinite-horizontal-animation {
+      animation: scroll-horizontal 20s linear infinite;
+
+      @keyframes scroll-horizontal {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    }
+
+    li {
+      img {
+        width: 12rem;
+
+        @media (max-width: 425px) {
+          width: 8rem;
+        }
+      }
+    }
+  }
+}

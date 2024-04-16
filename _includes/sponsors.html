@@ -1,0 +1,10 @@
+<section id="sponsors-list">
+  <ul>
+    {% for sponsor in site.data.sponsors %}
+      {% assign company = site.data.companies[sponsor] %}
+      <li>
+        <img src="{{ company.image }}" alt="{{ company.name }}"/>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
