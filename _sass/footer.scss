@@ -20,19 +20,10 @@ footer {
       h1 {
         font-size: 2rem;
         font-weight: bold;
+        margin-bottom: 1rem;
 
         @media (max-width: 768px) {
           font-size: 1rem;
-        }
-      }
-
-      h2 {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin: 1rem 0;
-
-        @media (max-width: 712px) {
-          font-size: 0.9rem;
         }
       }
 
