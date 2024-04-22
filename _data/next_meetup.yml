@@ -1,9 +1,9 @@
-show: false
-date: 15 de Abril
+show: true
+date: 9 de Mayo
 time: 19 hrs
-host: rootstrap
+host: eagerworks
 talks:
-  - speaker: guillermo_aguirre
-    name: Ruby on Wasm
-  - speaker: emilio_cristalli
-    name: Ruby on Wasm
+  - speaker: maicol_bentancor
+    name: Demystifying Auth
+  - speaker: jorge_leites
+    name: "View Components the right way: creating reusable component libraries"
