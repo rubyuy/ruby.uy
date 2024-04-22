@@ -3,6 +3,7 @@ footer {
   padding: 6rem 3rem;
   background-color: #F6EEEC;
   display: flex;
+  justify-content: space-between;
 
   @media (max-width: 768px) {
     padding: 2rem 1rem;
