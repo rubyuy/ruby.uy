@@ -40,6 +40,10 @@
       display: flex;
       padding: 1.5rem 8rem;
 
+      &:hover {
+        background-color: rgb(57, 126, 120, 0.5);
+      }
+
       @media (max-width: 425px) {
         padding: 1.5rem 1rem;
       }
