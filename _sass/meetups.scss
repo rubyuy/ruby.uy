@@ -38,6 +38,7 @@
     li {
       align-items: center;
       display: flex;
+      overflow: hidden;
 
       &:hover {
         background-color: rgb(57, 126, 120, 0.5);
@@ -61,8 +62,12 @@
         @media (max-width: 425px) {
           align-items: center;
           flex-direction: column;
+          padding: 1.5rem 0;
         }
 
+        @media (max-width: 768px) {
+          padding: 1.5rem 3rem;
+        }
 
         &, &:active, &:visited, &:focus, &:hover {
           color: #3967D1;
