@@ -1,4 +1,8 @@
 nav {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+
   ul {
     display: flex;
     height: 5rem;
