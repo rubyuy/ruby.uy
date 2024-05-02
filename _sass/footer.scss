@@ -4,6 +4,7 @@ footer {
   background-color: #F6EEEC;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   @media (max-width: 768px) {
     padding: 2rem 1rem;
@@ -21,14 +22,15 @@ footer {
       h1 {
         font-size: 2rem;
         font-weight: bold;
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
+        text-align: center;
 
         &:hover {
           filter: drop-shadow(-0.5rem 0.5rem 0.5rem rgb(57, 126, 120));
         }
 
         @media (max-width: 768px) {
-          font-size: 1rem;
+          font-size: 1.5rem;
         }
       }
 
