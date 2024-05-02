@@ -23,6 +23,10 @@ footer {
         font-weight: bold;
         margin-bottom: 1rem;
 
+        &:hover {
+          filter: drop-shadow(-0.5rem 0.5rem 0.5rem rgb(57, 126, 120));
+        }
+
         @media (max-width: 768px) {
           font-size: 1rem;
         }
@@ -33,6 +37,10 @@ footer {
 
         li {
           margin-right: 1rem;
+
+          &:hover {
+            filter: drop-shadow(-0.5rem 0.5rem 0.5rem rgb(57, 126, 120));
+          }
 
           svg {
             @media (max-width: 768px) {
