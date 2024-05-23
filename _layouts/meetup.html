@@ -6,7 +6,7 @@
     {% include nav.html %}
 
     <main>
-      <article>
+      <article id="view-meetup">
         <section>
           <p>
             Host: <a href="{{ site.data.companies[page.host].url }}">{{ site.data.companies[page.host].name }}</a>
@@ -40,7 +40,7 @@
             <p>{{ talk.description }}<p>
 
             {% if talk.recording %}
-              <iframe src="{{ talk.recording }}" width="640" height="480" allow="autoplay"></iframe></br>
+            <iframe width="560" height="315" src="{{ talk.recording }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             {% endif %}
 
             {% if talk.slides %}
