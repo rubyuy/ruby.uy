@@ -10,24 +10,11 @@
       <h2>Sé parte_</h2>
     </div>
     <div>
-      <a href="https://www.meetup.com/ruby-montevideo/" target="_blank">
-        Meetup <img src='/assets/images/arrow.svg' aria-hidden="true" focuseable="false"/>
-      </a>
-      <a href="https://owu.slack.com/archives/C52L2AK8W" target="_blank">
-        Slack <img src="/assets/images/arrow.svg" aria-hidden="true" focuseable="false"/>
-      </a>
-      <a href="https://github.com/rubyuy/ruby.uy" target="_blank">
-        Github <img src="/assets/images/arrow.svg" aria-hidden="true" focuseable="false"/>
-      </a>
-      <a href="https://twitter.com/rubymontevideo" target="_blank">
-        Twitter <img src="/assets/images/arrow.svg" aria-hidden="true" focuseable="false"/>
-      </a>
-      <a href="https://www.instagram.com/ruby_uruguay/" target="_blank">
-        Instagram <img src='/assets/images/arrow.svg' aria-hidden="true" focuseable="false"/>
-      </a>
-      <a href="https://analytics.umami.is/share/MbC0PW7QoyfeUQU8/RubyUY" target="_blank">
-        Analytics <img src="/assets/images/arrow.svg" aria-hidden="true" focuseable="false"/>
-      </a>
+      {% for service in site.data.socials %}
+        <a href="{{ service[1] }}" target="_blank">
+          {{ service[0] }}<img src='/assets/images/arrow.svg' aria-hidden="true" focuseable="false"/>
+        </a>
+      {% endfor %}
     </div>
   </div>
 </header>
