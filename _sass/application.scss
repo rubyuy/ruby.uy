@@ -14,7 +14,7 @@ h2 {
 }
 
 iframe {
-  background:url(./images/loading.gif) center center no-repeat;
+  background:url(/images/loading.gif) center center no-repeat;
   background-size: 4em;
   background-color: #F6F6F6;
   border: 0;
@@ -44,4 +44,9 @@ iframe {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+#view-meetup {
+  margin: 0 auto;
+  width: 85%;
 }
