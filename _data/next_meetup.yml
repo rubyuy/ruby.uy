@@ -1,9 +1,9 @@
-show: true
-date: 9 de Mayo
-time: 19 hrs
-host: eagerworks
+show: false
+date: TBD
+time: TBD
+host: TBD
 talks:
-  - speaker: maicol_bentancor
-    name: Demystifying Auth
-  - speaker: jorge_leites
-    name: "View Components the right way: creating reusable component libraries"
+  - speaker: TBD
+    name: TBD
+  - speaker: TBD
+    name: TBD
