@@ -1,9 +1,9 @@
-show: true
-date: 6 de Junio
-time: 19 hs
-host: effectussoftware
+show: false
+date: TBD
+time: TBD
+host: TBD
 talks:
-  - speaker: pablo_duran
-    name: Building real time features with Action Cable
-  - speaker: vicky_madrid
-    name: Clasificando residuos con el Garbage Collector de Ruby
+  - speaker: TBD
+    name: TBD
+  - speaker: TBD
+    name: TBD
