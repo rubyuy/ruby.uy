@@ -1,9 +1,9 @@
-show: false
-date: TBD
-time: TBD
-host: TBD
-talks:
-  - speaker: TBD
-    name: TBD
-  - speaker: TBD
-    name: TBD
+show: true
+date: 13 de Agosto
+time: 19 hs
+host: gogrow
+# Use the following format for talks
+# talks:
+#   - speaker: github_username
+#     name: Speker Name
+talks: []
