@@ -4,6 +4,12 @@ time: 19 hs
 host: gogrow
 # Use the following format for talks
 # talks:
-#   - speaker: github_username
-#     name: Speker Name
-talks: []
+#   - speaker: Speaker name taken from people.yml file
+#     name: Talk name
+# Or if the speakers are TBD
+# talks: []
+talks:
+  - speaker: mauricio_szabo
+    name: Lazuli, un plug-in de desarrollo interactivo con Ruby
+  - speaker: daniel_susviela
+    name: Escribiendo specs rápidos de la mano de TestProf
