@@ -1,0 +1,50 @@
+#view-meetup {
+  margin: 0 auto;
+  width: 85%;
+
+  @media (min-width: 1024px) {
+    width: 65%;
+  }
+
+  section {
+    width: 100%;
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    font-size: 1.25rem;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+  
+  h3 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    overflow-wrap: break-word;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  .keep-aspect-ratio {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    margin-bottom: 1.25rem;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
