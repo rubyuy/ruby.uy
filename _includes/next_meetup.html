@@ -13,6 +13,7 @@
     </header>
     <article>
       <div class="next-meetup__details">
+        <img src="/assets/images/stars.svg" aria-hidden="true" focusable="false" class="stars">
         <h2>Podés ser parte de la próxima meetup!</h2>
         <ul aria-label="Next Meetup Details">
           <li aria-label="When">
@@ -36,30 +37,22 @@
         </ul>
       </div>
       <ul class="next-meetup__speakers" aria-label="Next Meetup Speakers">
-        {% assign first_talk = next_meetup.talks[0] %}
-        {% assign first_speaker = site.data.people[first_talk.speaker] %}
-        {% assign second_talk = next_meetup.talks[1] %}
-        {% assign second_speaker = site.data.people[second_talk.speaker] %}
-        {% if first_talk %}
-          <li aria-label="First Speaker">
-            <img src="/assets/images/stars.svg" aria-hidden="true" focusable="false" class="stars">
-
-            <img src="https://github.com/{{ first_speaker.github }}.png" alt="First Speaker Photo">
-            <article aria-label="First Speaker Description">
-              <h1 aria-label="First Speaker Name">{{ first_speaker.name }}</h1>
-              <p aria-label="First Speaker Talk">{{ first_talk.name }}</p>
+        {% for talk in next_meetup.talks %}
+          <li>
+            {% for speaker in talk.speakers %}
+              <img src="https://github.com/{{ site.data.people[speaker].github }}.png" alt="Speaker Photo" style="width: calc(100% / {{ talk.speakers.size }} - 1%)">
+            {% endfor %}
+            <article>
+              <h1 aria-label="First Speaker Name">
+                {% for speaker in talk.speakers %}
+                  {{ site.data.people[speaker].name }}
+                  {% unless forloop.last %}<br><br>{% endunless %}
+                {% endfor %}
+              </h1>
+              <p aria-label="First Speaker Talk">{{ talk.name }}</p>
             </article>
           </li>
-        {% endif %}
-        {% if second_talk %}
-          <li aria-label="Second Speaker">
-            <img src="https://github.com/{{ second_speaker.github }}.png" alt="Second Speaker Photo">
-            <article aria-label="Second Speaker Description">
-              <h1 aria-label="Second Speaker Name">{{ second_speaker.name }}</h1>
-              <p aria-label="Second Speaker Talk">{{ second_talk.name }}</p>
-            </article>
-          </li>
-        {% endif %}
+        {% endfor %}
       </ul>
     </article>
   </section>

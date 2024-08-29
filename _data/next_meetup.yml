@@ -1,7 +1,7 @@
 show: true
-date: 13 de Agosto
+date: Miércoles 11 de Setiembre
 time: 19 hs
-host: gogrow
+host: rootstrap
 # Use the following format for talks
 # talks:
 #   - speaker: Speaker name taken from people.yml file
@@ -9,7 +9,10 @@ host: gogrow
 # Or if the speakers are TBD
 # talks: []
 talks:
-  - speaker: mauricio_szabo
-    name: Lazuli, un plug-in de desarrollo interactivo con Ruby
-  - speaker: daniel_susviela
-    name: Escribiendo specs rápidos de la mano de TestProf
+  - speakers:
+    - laura_peralta
+    - juan_pascual
+    name: Speed up your CI for Ruby applications
+  - speakers:
+    - agustin_fornio 
+    name: Philippines teaches me how to code. Da fak?
