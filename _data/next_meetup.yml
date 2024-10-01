@@ -1,7 +1,7 @@
 show: true
-date: Miércoles 11 de Setiembre
+date: Miércoles 9 de Octubre
 time: 19 hs
-host: rootstrap
+host: neocoast
 # Use the following format for talks
 # talks:
 #   - speaker: Speaker name taken from people.yml file
@@ -10,9 +10,9 @@ host: rootstrap
 # talks: []
 talks:
   - speakers:
-    - laura_peralta
-    - juan_pascual
-    name: Speed up your CI for Ruby applications
+    - agustin_peluffo
+    - facundo_busto
+    name: Ran out of eggs? Fix it with Strada!
   - speakers:
-    - agustin_fornio 
-    name: "Rescuing a Software Project: My experience"
+    - santiago_behak
+    name: "MultiMultiTenancy"
