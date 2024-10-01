@@ -11,6 +11,11 @@
     margin-top: 1.25rem;
     display: flex;
     flex-direction: column;
+    margin-bottom: 3rem;
+
+    &:first-child {
+      margin-top: 4rem;
+    }
   }
 
   a {
@@ -22,7 +27,7 @@
     font-weight: bold;
     font-size: 2.5rem;
   }
-  
+
   h3 {
     margin-bottom: 1rem;
     font-size: 1.25rem;
@@ -46,5 +51,9 @@
       width: 100%;
       height: 100%;
     }
+  }
+
+  .talk {
+    margin-bottom: 2rem;
   }
 }
