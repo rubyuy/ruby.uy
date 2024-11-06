@@ -1,7 +1,7 @@
 show: true
-date: Miércoles 9 de Octubre
+date: Miércoles 12 de Noviembre
 time: 19 hs
-host: neocoast
+host: xmartlabs
 # Use the following format for talks
 # talks:
 #   - speaker: Speaker name taken from people.yml file
@@ -10,9 +10,8 @@ host: neocoast
 # talks: []
 talks:
   - speakers:
-    - agustin_peluffo
-    - facundo_busto
-    name: Ran out of eggs? Fix it with Strada!
+    - matias_lorenzo
+    name: ActiveStorage + Cloudfront
   - speakers:
-    - santiago_behak
-    name: "MultiMultiTenancy"
+    - nicolas_erlichman
+    name: Navigating Polymorphism
