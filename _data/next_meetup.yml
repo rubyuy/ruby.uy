@@ -1,17 +1,11 @@
-show: true
-date: Miércoles 12 de Noviembre
-time: 19 hs
-host: xmartlabs
+show: false
+date:
+time:
+host:
 # Use the following format for talks
 # talks:
 #   - speaker: Speaker name taken from people.yml file
 #     name: Talk name
 # Or if the speakers are TBD
 # talks: []
-talks:
-  - speakers:
-    - matias_lorenzo
-    name: ActiveStorage + Cloudfront
-  - speakers:
-    - nicolas_erlichman
-    name: Navigating Polymorphism
+talks: []
