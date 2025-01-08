@@ -67,3 +67,10 @@ howdy:
   image: /images/sponsors/howdy.svg
   address: F. García Cortinas 2357
   address_url: https://maps.app.goo.gl/V9VASexXVijNw64p7
+
+mimiquate:
+  name: Mimiquate
+  url: https://www.mimiquate.com
+  image: /images/sponsors/mimiquate.svg
+  address: Bv. España 2480
+  address_url: https://maps.app.goo.gl/KUqohrMxJdLubP596
