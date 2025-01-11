@@ -74,3 +74,10 @@ mimiquate:
   image: /images/sponsors/mimiquate.svg
   address: Bv. España 2480
   address_url: https://maps.app.goo.gl/KUqohrMxJdLubP596
+
+wyeworks:
+  name: WyeWorks
+  url: https://www.wyeworks.com
+  image: /images/sponsors/wyeworks.svg
+  address: Solano García 2470
+  address_url: https://maps.app.goo.gl/CfFaLFXYbiSq1k2V7
