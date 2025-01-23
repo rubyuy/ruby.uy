@@ -81,3 +81,13 @@ wyeworks:
   image: /images/sponsors/wyeworks.svg
   address: Solano García 2470
   address_url: https://maps.app.goo.gl/CfFaLFXYbiSq1k2V7
+
+rubycentral:
+  name: Ruby Central
+  url: https://rubycentral.org/
+  image: /images/sponsors/rubycentral.svg
+
+fastly:
+  name: Fastly
+  url: https://www.fastly.com/
+  image: /images/sponsors/fastly.svg
