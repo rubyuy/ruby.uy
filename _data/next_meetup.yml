@@ -1,11 +1,22 @@
-show: false
-date:
-time:
-host:
+show: true
+date: Martes 25 de Marzo
+time: 19 hs
+host: howdy
 # Use the following format for talks
 # talks:
 #   - speaker: Speaker name taken from people.yml file
 #     name: Talk name
 # Or if the speakers are TBD
 # talks: []
-talks: []
+talks:
+  - speakers:
+    - marco_roth
+    name: "Scaling RubyVideo.dev: The mission to index all Ruby conferences"
+
+  - speakers:
+    - seth_horsley
+    name: "Building beautiful UIs with Ruby: A Rails-native approach"
+
+  - speakers:
+    - nicolas_buero
+    name: "Pursuing the Fix: A Rails Bug story"
