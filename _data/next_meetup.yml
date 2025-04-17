@@ -4,8 +4,16 @@ time: 19 hs
 host: qubika
 # Use the following format for talks
 # talks:
-#   - speaker: Speaker name taken from people.yml file
-#     name: Talk name
+#   - name: Talk name
+#     speakers:
+#     - ... (Speaker name taken from people.yml file)
+#
 # Or if the speakers are TBD
 # talks: []
 talks:
+  - name: Modularizando con Packwerk
+    speakers:
+    - diego_algorta
+  - name: xi-livecode | música en ruby
+    speakers:
+    - rapo
