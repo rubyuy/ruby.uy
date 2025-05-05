@@ -1,7 +1,7 @@
 show: true
-date: Jueves 24 de Abril
+date: Miércoles 21 de Mayo
 time: 19 hs
-host: qubika
+host: neocoast
 # Use the following format for talks
 # talks:
 #   - name: Talk name
@@ -10,10 +10,4 @@ host: qubika
 #
 # Or if the speakers are TBD
 # talks: []
-talks:
-  - name: Modularizando con Packwerk
-    speakers:
-    - diego_algorta
-  - name: xi-livecode | música en ruby
-    speakers:
-    - rapo
+talks: []
