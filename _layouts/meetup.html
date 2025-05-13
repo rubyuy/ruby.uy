@@ -42,8 +42,10 @@
                   {% assign speakers = speakers | push: site.data.people[speaker].name %}
                 {% endfor %}
 
-                <h3>
-                  <span>{{ talk.title }}</span>
+                <h3 id="{{ talk.title | slugify }}">
+                  <a href="#{{ talk.title | slugify }}">
+                    <span>{{ talk.title }}</span>
+                  </a>
                   <p>{{ speakers | join: ", " }}</p>
                 </h3>
 
