@@ -10,4 +10,10 @@ host: neocoast
 #
 # Or if the speakers are TBD
 # talks: []
-talks: []
+talks:
+  - name: OpenAI Usage & Function Calling
+    speakers:
+    - franco_olivera
+  - name: Building a chatbot the Rails Way with RubyLLM
+    speakers:
+    - agustin_peluffo
