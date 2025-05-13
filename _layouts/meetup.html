@@ -51,19 +51,20 @@
 
                 <p>{{ talk.description }}<p>
 
-                <div class="keep-aspect-ratio">
-
                 {% if talk.recording %}
+                <div class="keep-aspect-ratio">
                   <iframe src="{{ talk.recording }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                   </iframe>
+                </div>
                 {% endif %}
 
                 {% if talk.slides %}
+                <div class="keep-aspect-ratio">
                   <iframe src="{{ talk.slides }}" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
                   </iframe>
+                </div>
                 {% endif %}
 
-                </div>
               </div>
             {% endfor %}
           </section>
