@@ -4,19 +4,30 @@
     <p>Conocé el contenido de las ediciones pasadas.</p>
   </header>
 
-  <ul>
-    {% for meetup in site.meetups reversed %}
-      <li class="meetup-event">
-        <a href="{{ meetup.url }}" class="meetup-event__link">
-          <span class="meetup-event__date">
-            {{ meetup.date | date_to_string }}
-          </span>
-          <span class="meetup-event__company">
-            {{ meetup.title }}
-            <img src="/assets/images/arrow.svg" aria-hidden="true">
-          </span>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+  {% assign meetups_sorted = site.meetups | sort: "date" | reverse %}
+
+  {% assign meetups_by_year = meetups_sorted
+        | group_by_exp: "m", "m.date | date: '%Y'"
+        | sort: "name"
+        | reverse %}
+
+  {% for year in meetups_by_year | reverse %}
+    <h2 class="meetup-event__date_year">{{ year.name }}</h2>
+
+    <ul>
+      {% for meetup in year.items %}
+        <li class="meetup-event">
+          <a href="{{ meetup.url }}" class="meetup-event__link">
+            <span class="meetup-event__date">
+              {{ meetup.date | date_to_string }}
+            </span>
+            <span class="meetup-event__company">
+              {{ meetup.title }}
+              <img src="/assets/images/arrow.svg" aria-hidden="true">
+            </span>
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endfor -%}
 </section>

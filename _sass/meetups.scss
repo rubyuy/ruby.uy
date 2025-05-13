@@ -34,6 +34,14 @@
     }
   }
 
+  .meetup-event__date_year {
+    align-items: center;
+    display: flex;
+    padding: 1.5rem 8rem;
+    font-weight: bold;
+    justify-content: space-between;
+  }
+
   ul {
     li {
       align-items: center;
