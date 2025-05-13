@@ -33,23 +33,34 @@
 
           <section>
             <h2>Charlas</h2>
+
             {% for talk in page.talks %}
               <div class="talk">
                 {% assign speakers = "" | split: ',' %}
+
                 {% for speaker in talk.speakers %}
                   {% assign speakers = speakers | push: site.data.people[speaker].name %}
                 {% endfor %}
-                <h3><span>{{ talk.title }}</span> - {{ speakers | join: ", " }}</h3>
+
+                <h3>
+                  <span>{{ talk.title }}</span>
+                  <p>{{ speakers | join: ", " }}</p>
+                </h3>
+
                 <p>{{ talk.description }}<p>
 
-                {% if talk.recording %}
                 <div class="keep-aspect-ratio">
-                  <iframe src="{{ talk.recording }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                  {% endif %}
 
-                  {% if talk.slides %}
-                    <iframe src="{{ talk.slides }}" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></br>
-                  {% endif %}
+                {% if talk.recording %}
+                  <iframe src="{{ talk.recording }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                  </iframe>
+                {% endif %}
+
+                {% if talk.slides %}
+                  <iframe src="{{ talk.slides }}" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                  </iframe>
+                {% endif %}
+
                 </div>
               </div>
             {% endfor %}
