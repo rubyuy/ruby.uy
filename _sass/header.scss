@@ -19,7 +19,7 @@ body {
           color: #fcc24e;
           font: 700 6rem/1 'Syncopate', sans-serif;
           margin-left: 52px;
-          padding: 250px 0;
+          padding: 150px 0;
           width: 55%;
 
           @media (max-width: 992px) {
@@ -27,16 +27,13 @@ body {
           }
 
           @media (max-width: 768px) {
-            font-size: 2rem;
-            margin: 0;
-            padding: 36px 0;
-            width: 85%;
+            display: none;
           }
         }
 
         img {
           position: absolute;
-          top: 53%;
+          top: 36%;
           left: 57%;
           width: 550px;
           z-index: 1;
@@ -53,7 +50,9 @@ body {
           }
 
           @media (max-width: 768px) {
-            display: none;
+            position: relative;
+            left: 0;
+            padding: 15px;
           }
         }
 
