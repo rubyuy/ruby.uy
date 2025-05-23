@@ -1,7 +1,7 @@
-show: true
-date: Miércoles 21 de Mayo
+show: false
+date:
 time: 19 hs
-host: neocoast
+host:
 # Use the following format for talks
 # talks:
 #   - name: Talk name
@@ -10,10 +10,4 @@ host: neocoast
 #
 # Or if the speakers are TBD
 # talks: []
-talks:
-  - name: OpenAI Usage & Function Calling
-    speakers:
-    - franco_olivera
-  - name: Building a chatbot the Rails Way with RubyLLM
-    speakers:
-    - agustin_peluffo
+talks: []
