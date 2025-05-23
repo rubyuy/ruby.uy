@@ -1,7 +1,8 @@
 {% assign next_meetup = site.data.next_meetup %}
 {% assign host = site.data.companies[next_meetup.host] %}
+{% assign today = "now" | date: "%Y-%m-%d" %}
 
-{% if next_meetup.show %}
+{% if next_meetup.show and next_meetup.date_iso >= today %}
   <section class="next-meetup">
     <header>
       <div class="next-meetup-callout" aria-hidden=true>
