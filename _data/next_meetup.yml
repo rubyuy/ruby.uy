@@ -1,8 +1,9 @@
 show: true
-date: Miércoles 21 de Mayo
-date_iso: "2025-05-21"
+date: Jueves 21 de Agosto
+date_iso: "2025-08-21"
 time: 19 hs
-host: neocoast
+host: rootstrap
+location: Juncal 1327, Edificio Ciudadela
 # Use the following format for talks
 # talks:
 #   - name: Talk name
@@ -12,9 +13,9 @@ host: neocoast
 # Or if the speakers are TBD
 # talks: []
 talks:
-  - name: OpenAI Usage & Function Calling
+  - name: Building AI Workflows with Roast
     speakers:
-    - franco_olivera
-  - name: Building a chatbot the Rails Way with RubyLLM
+    - laura_peralta
+  - name: El Encantador de Bestias
     speakers:
-    - agustin_peluffo
+    - rodrigo_ponce_de_leon
