@@ -1,9 +1,9 @@
-show: false
-date: Jueves 21 de Agosto
-date_iso: "2025-08-21"
+show: true
+date: Jueves 25 de Septiembre
+date_iso: "2025-09-25"
 time: 19 hs
-host: rootstrap
-location: Juncal 1327, Edificio Ciudadela
+host: xmartlabs
+location: Bv. España 2529
 # Use the following format for talks
 # talks:
 #   - name: Talk name
@@ -13,9 +13,9 @@ location: Juncal 1327, Edificio Ciudadela
 # Or if the speakers are TBD
 # talks: []
 talks:
-  - name: Building AI Workflows with Roast
+  - name: "From Medical Records to Answers: RAG on Rails"
     speakers:
-    - laura_peralta
-  - name: El Encantador de Bestias
+    - guillermo_zorron
+  - name: Un tipo de Ruby
     speakers:
-    - rodrigo_ponce_de_leon
+    - elcuervo
