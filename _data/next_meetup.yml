@@ -1,8 +1,8 @@
-show: false
-date: Jueves 25 de Septiembre
-date_iso: "2025-09-25"
+show: true
+date: Miercoles 15 de Octubre
+date_iso: "2025-10-15"
 time: 19 hs
-host: xmartlabs
+host: effectussoftware
 location: Bv. España 2529
 # Use the following format for talks
 # talks:
@@ -13,9 +13,9 @@ location: Bv. España 2529
 # Or if the speakers are TBD
 # talks: []
 talks:
-  - name: "From Medical Records to Answers: RAG on Rails"
+  - name: Del código al instinto, conversemos sobre Alfas y Omegas
     speakers:
-    - guillermo_zorron
-  - name: Un tipo de Ruby
+    - victoria_perez
+  - name: The power of feature flags
     speakers:
-    - elcuervo
+    - alejandro_monetti
