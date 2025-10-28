@@ -13,7 +13,7 @@ location: Bv. España 2529
 # Or if the speakers are TBD
 # talks: []
 talks:
-  - name: Poly-table Inheritance
+  - name: Modeling class hierarchies in active record
     speakers:
     - nicolas_erlichman
   - name: 'Authentication in Rails: The Current Landscape'
