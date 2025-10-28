@@ -1,8 +1,8 @@
 show: true
-date: Miercoles 15 de Octubre
+date: Jueves 13 de Noviembre
 date_iso: "2025-10-15"
 time: 19 hs
-host: effectussoftware
+host: cedarcode
 location: Bv. España 2529
 # Use the following format for talks
 # talks:
@@ -13,9 +13,9 @@ location: Bv. España 2529
 # Or if the speakers are TBD
 # talks: []
 talks:
-  - name: Del código al instinto, conversemos sobre Alfas y Omegas
+  - name: Poly-table Inheritance
     speakers:
-    - victoria_perez
-  - name: The power of feature flags
+    - nicolas_erlichman
+  - name: 'Authentication in Rails: The Current Landscape'
     speakers:
-    - alejandro_monetti
+    - joaquin_tomas
