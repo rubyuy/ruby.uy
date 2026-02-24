@@ -1,9 +1,9 @@
 show: false
-date: Jueves 13 de Noviembre
-date_iso: "2025-10-15"
+date: Miércoles 4 de Marzo
+date_iso: "2026-03-04"
 time: 19 hs
-host: cedarcode
-location: Bv. España 2529
+host: howdy
+location: F. García Cortinas 2472
 # Use the following format for talks
 # talks:
 #   - name: Talk name
@@ -13,9 +13,9 @@ location: Bv. España 2529
 # Or if the speakers are TBD
 # talks: []
 talks:
-  - name: Modeling class hierarchies in active record
+  - name: Database views in Rails - a real-world example
     speakers:
-    - nicolas_erlichman
-  - name: 'Authentication in Rails: The Current Landscape'
+    - jonathan_javiel
+  - name: 'Rápido no es suficiente - cómo ser veloz codificando con AI'
     speakers:
-    - joaquin_tomas
+    - dario_macchi
