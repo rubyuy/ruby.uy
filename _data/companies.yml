@@ -91,3 +91,10 @@ fastly:
   name: Fastly
   url: https://www.fastly.com/
   image: /images/sponsors/fastly.svg
+
+crunchloop:
+  name: Crunchloop
+  url: https://www.crunchloop.io/
+  image: /images/sponsors/crunchloop.svg
+  address: Jamaica 2144, 11500 Montevideo
+  address_url: https://maps.app.goo.gl/XvXBoYAavc5kCzc59
