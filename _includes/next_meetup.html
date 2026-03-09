@@ -1,9 +1,8 @@
 {% assign next_meetup = site.data.next_meetup %}
 {% assign host = site.data.companies[next_meetup.host] %}
-{% assign today = "now" | date: "%Y-%m-%d" %}
 
-{% if next_meetup.show and next_meetup.date_iso >= today %}
-  <section class="next-meetup">
+{% if next_meetup.show %}
+  <section class="next-meetup" style="display:none" data-meetup-date="{{ next_meetup.date_iso }}">
     <header>
       <div class="next-meetup-callout" aria-hidden=true>
         <h1 class="next-meetup-callout__title">Próxima meetup</h1>
@@ -57,4 +56,12 @@
       </ul>
     </article>
   </section>
+  <script>
+    (function() {
+      var el = document.querySelector('[data-meetup-date]');
+      if (!el) return;
+      var meetupDate = new Date(el.dataset.meetupDate + 'T23:59:59');
+      if (new Date() <= meetupDate) el.style.display = '';
+    })();
+  </script>
 {% endif %}
