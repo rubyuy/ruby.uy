@@ -5,7 +5,7 @@ host: xmartlabs
 
 talks:
  - title: "From Medical Records to Answers: RAG on Rails"
-   recording: https://www.youtube.com/watch?v=ExXQM-YDd24
+   recording: https://www.youtube.com/embed/ExXQM-YDd24?si=6UiZxpXLbmzFkcjC
    speakers:
      - guillermo_zorron
 
