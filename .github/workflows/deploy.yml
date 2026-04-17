@@ -16,7 +16,9 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -29,7 +31,7 @@ jobs:
           JEKYLL_ENV: production
 
       - name: Publish
-        uses: cloudflare/pages-action@v1.5.0
+        uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -37,3 +39,4 @@ jobs:
           directory: _site
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           wranglerVersion: '3'
+          branch: ${{ github.event.pull_request.head.ref || github.ref_name }}
