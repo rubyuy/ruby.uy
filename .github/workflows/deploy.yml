@@ -1,4 +1,7 @@
-on: [push]
+on:
+  push:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
 
 jobs:
   deploy:
@@ -7,6 +10,7 @@ jobs:
     permissions:
       contents: read
       deployments: write
+      pull-requests: write
 
     name: Deploy to Cloudflare Pages
 
