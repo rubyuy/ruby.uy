@@ -54,34 +54,12 @@
 
             <div class="hero__right" aria-hidden="true">
               <div class="hero__illustration">
-                <svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
-                  <g fill="#3967D1" opacity="0.16">
-                    {% for row in (0..7) %}
-                      {% for col in (0..8) %}
-                        <circle cx="{{ col | times: 20 | plus: 145 }}" cy="{{ row | times: 20 | plus: 15 }}" r="2"/>
-                      {% endfor %}
-                    {% endfor %}
-                  </g>
-                  <g transform="translate(160, 110)">
-                    <polygon points="-140,-20 -90,-90 90,-90 140,-20 0,90"
-                             fill="#E63946"
-                             stroke="#9B1F2D"
-                             stroke-width="1.6"
-                             stroke-linejoin="round"/>
-                    <polygon points="-80,-20 -45,-90 45,-90 80,-20"
-                             fill="#FF6B7A"
-                             fill-opacity="0.55"/>
-                    <polygon points="-140,-20 140,-20 0,90"
-                             fill="#9B1F2D"
-                             fill-opacity="0.2"/>
-                    <g stroke="#9B1F2D" stroke-width="0.9" fill="none" opacity="0.42">
-                      <line x1="-80" y1="-20" x2="-45" y2="-90"/>
-                      <line x1="80" y1="-20" x2="45" y2="-90"/>
-                      <line x1="-80" y1="-20" x2="0" y2="90"/>
-                      <line x1="80" y1="-20" x2="0" y2="90"/>
-                      <line x1="-140" y1="-20" x2="140" y2="-20"/>
-                    </g>
-                  </g>
+                <svg viewBox="0 0 280 185" xmlns="http://www.w3.org/2000/svg">
+                  <polygon points="0,70 50,0 230,0 280,70 140,185"
+                           fill="#E63946"
+                           stroke="#9B1F2D"
+                           stroke-width="2"
+                           stroke-linejoin="round"/>
                 </svg>
               </div>
             </div>
