@@ -3,75 +3,273 @@
   {% include head.html %}
 
   <body>
+    {% assign host = site.data.companies[page.host] %}
+    {% assign host_name = host.name | default: page.host %}
+    {% assign host_domain = host.url | remove: 'https://' | remove: 'http://' | remove: 'www.' | split: '/' | first %}
+    {% assign year = page.date | date: '%Y' %}
+    {% assign months_es = "ENE,FEB,MAR,ABR,MAY,JUN,JUL,AGO,SEP,OCT,NOV,DIC" | split: ',' %}
+    {% assign month_idx = page.date | date: '%m' | minus: 1 %}
+    {% assign month_name = months_es[month_idx] %}
+
     {% include nav.html %}
 
     <main>
       <article id="view-meetup">
-        <section>
-          <h2>Host</h2>
-          <a href="{{ site.data.companies[page.host].url }}">{{ site.data.companies[page.host].name }}</a>
-        </section>
-
-        <section>
-          <h2>Speakers</h2>
-          <ul>
-            {% for talk in page.talks %}
-            {% for speaker in talk.speakers %}
-            <li>
-              {% if site.data.people[speaker].github %}
-              <a href="https://github.com/{{ site.data.people[speaker].github }}">
-                <img src="https://github.com/{{ site.data.people[speaker].github }}.png?size=30" alt="{{ site.data.people[speaker].name }}" style="border-radius: 50%; width: 30px"/>{{ site.data.people[speaker].name }}
-              </a>
-              {% else %}
-              {{ site.data.people[speaker].name }}
-              {% endif %}
-            </li>
-            {% endfor %}
-            {% endfor %}
-          </ul>
-        </section>
-
-        <section>
-          <h2>Charlas</h2>
-
-          {% for talk in page.talks %}
-          <div class="talk">
-            {% assign speakers = "" | split: ',' %}
-
-            {% for speaker in talk.speakers %}
-            {% assign speakers = speakers | push: site.data.people[speaker].name %}
-            {% endfor %}
-
-            <h3 id="{{ talk.title | slugify }}">
-              <a href="#{{ talk.title | slugify }}">
-                <span class="talk-title">{{ talk.title }}</span>
-              </a>
-              <p>{{ speakers | join: ", " }}</p>
-            </h3>
-
-            <p>{{ talk.description }}<p>
-
-            {% if talk.recording %}
-            <div class="keep-aspect-ratio">
-              <iframe src="{{ talk.recording }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
-            </div>
-            {% endif %}
-
-            {% if talk.slides %}
-            <div class="keep-aspect-ratio">
-              <iframe src="{{ talk.slides }}" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
-              </iframe>
-            </div>
-            {% endif %}
-
+        <nav class="view-meetup__breadcrumb" aria-label="breadcrumb">
+          <div class="breadcrumb__inner">
+            <ol class="breadcrumb__trail">
+              <li><a href="/">RUBY.UY</a></li>
+              <li><span aria-hidden="true">/</span></li>
+              <li><a href="/#meetups">MEETUPS</a></li>
+              <li><span aria-hidden="true">/</span></li>
+              <li><a href="/#meetups-{{ year }}">{{ year }}</a></li>
+              <li><span aria-hidden="true">/</span></li>
+              <li class="breadcrumb__current">{{ host_name | upcase }}</li>
+            </ol>
           </div>
-          {% endfor %}
+        </nav>
+
+        <section class="view-meetup__hero">
+          <div class="hero__inner">
+            <div class="hero__left">
+              <div class="hero__heading">
+                <div class="date-badge" aria-label="{{ page.date | date: '%Y-%m-%d' }}">
+                  <span class="date-badge__day">{{ page.date | date: '%d' }}</span>
+                  <span class="date-badge__month">{{ month_name }}</span>
+                  <span class="date-badge__year">{{ year }}</span>
+                </div>
+                <div class="hero__title-block">
+                  <span class="hero__pill">MEETUP</span>
+                  <h1 class="hero__title">
+                    <span class="hero__title-line">RUBY MEETUP</span>
+                    <span class="hero__title-line">@ {{ host_name | upcase }}</span>
+                  </h1>
+                </div>
+              </div>
+
+              {% if page.description %}
+              <p class="hero__description">{{ page.description }}</p>
+              {% endif %}
+            </div>
+
+            <div class="hero__right" aria-hidden="true">
+              <div class="hero__illustration">
+                <svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="#3967D1" opacity="0.16">
+                    {% for row in (0..7) %}
+                      {% for col in (0..8) %}
+                        <circle cx="{{ col | times: 20 | plus: 145 }}" cy="{{ row | times: 20 | plus: 15 }}" r="2"/>
+                      {% endfor %}
+                    {% endfor %}
+                  </g>
+                  <g transform="translate(160, 110)">
+                    <polygon points="-140,-20 -90,-90 90,-90 140,-20 0,90"
+                             fill="#E63946"
+                             stroke="#9B1F2D"
+                             stroke-width="1.6"
+                             stroke-linejoin="round"/>
+                    <polygon points="-80,-20 -45,-90 45,-90 80,-20"
+                             fill="#FF6B7A"
+                             fill-opacity="0.55"/>
+                    <polygon points="-140,-20 140,-20 0,90"
+                             fill="#9B1F2D"
+                             fill-opacity="0.2"/>
+                    <g stroke="#9B1F2D" stroke-width="0.9" fill="none" opacity="0.42">
+                      <line x1="-80" y1="-20" x2="-45" y2="-90"/>
+                      <line x1="80" y1="-20" x2="45" y2="-90"/>
+                      <line x1="-80" y1="-20" x2="0" y2="90"/>
+                      <line x1="80" y1="-20" x2="0" y2="90"/>
+                      <line x1="-140" y1="-20" x2="140" y2="-20"/>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
         </section>
-        <section> {{ content }} </section>
+
+        <section class="view-meetup__grid-section">
+          <div class="grid-section__inner">
+            <div class="view-meetup__grid">
+              <div class="view-meetup__col view-meetup__col--left">
+                <section class="card host-card">
+                  <span class="card__label card__label--host">HOST</span>
+                  <div class="host-card__body">
+                    {% if host.image %}
+                    <div class="host-card__logo-tile">
+                      <img class="host-card__logo" src="{{ host.image }}" alt="{{ host_name }}">
+                    </div>
+                    {% endif %}
+                    <div class="host-card__info">
+                      <h2 class="host-card__name">{{ host_name | upcase }}</h2>
+                      {% if host.description %}
+                      <p class="host-card__description">{{ host.description }}</p>
+                      {% endif %}
+                      {% if host.url %}
+                      <a class="host-card__link" href="{{ host.url }}" target="_blank" rel="noopener">
+                        {{ host_domain }} <span class="host-card__link-icon" aria-hidden="true">↗</span>
+                      </a>
+                      {% endif %}
+                    </div>
+                  </div>
+                </section>
+
+                {% assign seen_speakers = "" | split: "," %}
+                {% assign any_speakers = false %}
+                {% for talk in page.talks %}
+                  {% for speaker_key in talk.speakers %}
+                    {% unless seen_speakers contains speaker_key %}
+                      {% assign seen_speakers = seen_speakers | push: speaker_key %}
+                      {% assign any_speakers = true %}
+                    {% endunless %}
+                  {% endfor %}
+                {% endfor %}
+
+                {% if any_speakers %}
+                <section class="card speakers-card">
+                  <span class="card__label card__label--speakers">SPEAKERS</span>
+                  <ul class="speakers-list">
+                    {% for speaker_key in seen_speakers %}
+                      {% assign speaker = site.data.people[speaker_key] %}
+                      <li class="speaker">
+                        {% if speaker.photo %}
+                          <img class="speaker__avatar" src="{{ speaker.photo }}" alt="{{ speaker.name }}">
+                        {% elsif speaker.github %}
+                          <img class="speaker__avatar" src="https://github.com/{{ speaker.github }}.png?size=200" alt="{{ speaker.name }}">
+                        {% else %}
+                          {% assign speaker_name_parts = speaker.name | split: " " %}
+                          {% assign speaker_initial_first = speaker_name_parts[0] | slice: 0 | upcase %}
+                          {% if speaker_name_parts.size > 1 %}
+                            {% assign speaker_last_part = speaker_name_parts | last %}
+                            {% assign speaker_initial_last = speaker_last_part | slice: 0 | upcase %}
+                            {% assign speaker_initials = speaker_initial_first | append: speaker_initial_last %}
+                          {% else %}
+                            {% assign speaker_initials = speaker_initial_first %}
+                          {% endif %}
+                          <span class="speaker__avatar speaker__avatar--placeholder" aria-hidden="true">{{ speaker_initials }}</span>
+                        {% endif %}
+                        <div class="speaker__info">
+                          <h3 class="speaker__name">{{ speaker.name | upcase }}</h3>
+                          {% if speaker.role %}
+                          <p class="speaker__role">{{ speaker.role }}</p>
+                          {% endif %}
+                          <ul class="speaker__socials">
+                            {% if speaker.github %}
+                            <li>
+                              <a href="https://github.com/{{ speaker.github }}" target="_blank" rel="noopener">
+                                GitHub <span class="speaker__socials-arrow" aria-hidden="true">↗</span>
+                              </a>
+                            </li>
+                            {% endif %}
+                            {% if speaker.twitter %}
+                            <li>
+                              <a href="https://twitter.com/{{ speaker.twitter }}" target="_blank" rel="noopener">
+                                Twitter <span class="speaker__socials-arrow" aria-hidden="true">↗</span>
+                              </a>
+                            </li>
+                            {% endif %}
+                          </ul>
+                        </div>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </section>
+                {% endif %}
+              </div>
+
+              <div class="view-meetup__col view-meetup__col--right">
+                <section class="card charla-destacada" id="charla-destacada">
+                  {% if page.talks.size > 0 %}
+                  <header class="charla-destacada__header">
+                    <span class="charla-destacada__counter" data-counter aria-live="polite">
+                      01 / {% if page.talks.size < 10 %}0{% endif %}{{ page.talks.size }}
+                    </span>
+                  </header>
+                  {% endif %}
+
+                  <div class="carousel" data-carousel>
+                    <ol class="carousel__track" data-track>
+                      {% for talk in page.talks %}
+                      <li class="slide" data-slide>
+                        <h3 class="slide__title" id="{{ talk.title | slugify }}">
+                          <a href="#{{ talk.title | slugify }}">
+                            {{ talk.title | upcase }}
+                          </a>
+                        </h3>
+
+                        <p class="slide__speakers">
+                          {% for speaker_key in talk.speakers %}
+                            {% assign speaker = site.data.people[speaker_key] %}
+                            {% if speaker.photo %}
+                              <img class="slide__speaker-avatar" src="{{ speaker.photo }}" alt="{{ speaker.name }}">
+                            {% elsif speaker.github %}
+                              <img class="slide__speaker-avatar" src="https://github.com/{{ speaker.github }}.png?size=60" alt="{{ speaker.name }}">
+                            {% else %}
+                              <span class="slide__speaker-avatar slide__speaker-avatar--placeholder" aria-hidden="true"></span>
+                            {% endif %}
+                            <span>{{ speaker.name }}</span>{% unless forloop.last %}<span class="slide__speaker-sep">, </span>{% endunless %}
+                          {% endfor %}
+                        </p>
+
+                        {% if talk.recording %}
+                        <div class="keep-aspect-ratio">
+                          <iframe src="{{ talk.recording }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        {% endif %}
+
+                        {% if talk.slides %}
+                        <div class="keep-aspect-ratio">
+                          <iframe src="{{ talk.slides }}" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" loading="lazy"></iframe>
+                        </div>
+                        {% endif %}
+
+                        {% if talk.topics or talk.duration %}
+                        <footer class="slide__footer">
+                          {% if talk.topics %}
+                          <div class="slide__meta slide__meta--tema">
+                            <span class="slide__meta-label">TEMA</span>
+                            <span class="slide__meta-value">{{ talk.topics | join: ', ' }}</span>
+                          </div>
+                          {% endif %}
+                          {% if talk.duration %}
+                          <div class="slide__meta slide__meta--duracion">
+                            <span class="slide__meta-label">DURACIÓN</span>
+                            <span class="slide__meta-value">{{ talk.duration }}</span>
+                          </div>
+                          {% endif %}
+                        </footer>
+                        {% endif %}
+                      </li>
+                      {% endfor %}
+                    </ol>
+
+                    {% if page.talks.size > 1 %}
+                    <button class="carousel__btn carousel__btn--prev" type="button" data-prev aria-label="Charla anterior">&lsaquo;</button>
+                    <button class="carousel__btn carousel__btn--next" type="button" data-next aria-label="Siguiente charla">&rsaquo;</button>
+                    {% endif %}
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {% if content and content != "" %}
+        <section class="view-meetup__content">{{ content }}</section>
+        {% endif %}
+
+        <nav class="view-meetup__footer-bar">
+          <div class="footer-bar__inner">
+            <a href="/#meetups">&larr; VER MÁS EDICIONES PASADAS</a>
+          </div>
+        </nav>
       </article>
     </main>
-  </body>
 
-  {% include footer.html %}
+    {% if page.talks.size > 0 %}
+    <script src="/assets/js/meetup_carousel.js" defer></script>
+    {% endif %}
+
+    {% include footer.html %}
+  </body>
 </html>
