@@ -1,0 +1,52 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:media="http://search.yahoo.com/mrss/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rubyuy="https://ruby.uy/ns">
+  <channel>
+    <title>{{ site.title }}</title>
+    <description>Charlas Ruby UY</description>
+    <link>{{ site.url }}</link>
+    <atom:link href="{{ site.url }}/talks.xml" rel="self" type="application/rss+xml"/>
+    <language>es-UY</language>
+    {% assign sorted_meetups = site.meetups | sort: 'date' | reverse %}
+    {% for meetup in sorted_meetups %}{% if meetup.talks %}{% for talk in meetup.talks %}
+    <item>
+      <title>{{ talk.title | xml_escape }}</title>
+      <link>{{ meetup.url | prepend: site.url }}</link>
+      <guid isPermaLink="false">{{ meetup.url | prepend: site.url }}#{{ talk.title | slugify }}</guid>
+      <pubDate>{{ meetup.date | date_to_rfc822 }}</pubDate>
+      <description><![CDATA[
+        {% if talk.speakers %}
+          <p>
+            {% for speaker_id in talk.speakers %}
+              {% assign speaker = site.data.people[speaker_id] %}
+              {% if speaker %}{% unless forloop.first %}, {% endunless %}{{ speaker.name }}{% endif %}
+            {% endfor %}
+          </p>
+        {% endif %}
+        {% if talk.recording %}<p><a href="{{ talk.recording }}">Ver charla</a></p>{% endif %}
+        {% if talk.slides %}<p><a href="{{ talk.slides }}">Ver slides</a></p>{% endif %}
+      ]]></description>
+      {% if talk.speakers %}
+        {% for speaker_id in talk.speakers %}
+          {% assign speaker = site.data.people[speaker_id] %}
+          {% if speaker %}<dc:creator>{{ speaker.name | xml_escape }}</dc:creator>{% endif %}
+        {% endfor %}
+      {% endif %}
+      {% if talk.recording %}
+      <media:content url="{{ talk.recording }}" medium="video">
+        <media:title>{{ talk.title | xml_escape }}</media:title>
+      </media:content>
+      {% endif %}
+      {% if talk.slides %}
+      <rubyuy:slides>{{ talk.slides | xml_escape }}</rubyuy:slides>
+      {% endif %}
+    </item>
+    {% endfor %}{% endif %}{% endfor %}
+  </channel>
+</rss>
