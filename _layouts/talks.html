@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  {% include head.html %}
+
+  <body>
+    {% include nav.html %}
+
+    <main>
+      <article id="view-talks" class="view">
+        <section>
+          <h2>Charlas</h2>
+
+          <input type="search" id="talks-search" class="talks-search" placeholder="Buscar charla o speaker..." autocomplete="off">
+        </section>
+
+        <section>
+          {% assign meetups_sorted = site.meetups | sort: "date" | reverse %}
+          {% assign meetups_grouped = meetups_sorted | group_by_exp: "m", "m.date | date: '%Y'" %}
+
+          {% for year in meetups_grouped %}
+            {% assign year_count = 0 %}
+            {% for meetup in year.items %}
+              {% assign year_count = year_count | plus: meetup.talks.size %}
+            {% endfor %}
+
+            <h3 class="talks-year">{{ year.name }} ({{ year_count }})</h3>
+
+            {% for meetup in year.items %}
+              {% for talk in meetup.talks %}
+              {% assign speakers = "" | split: ',' %}
+              {% for speaker in talk.speakers %}
+                {% assign speakers = speakers | push: site.data.people[speaker].name %}
+              {% endfor %}
+
+              {% capture search_text %}{{ talk.title }} {{ meetup.title }} {{ speakers | join: ' ' }} {{ talk.description }}{% endcapture %}
+
+              <div class="talk" data-search="{{ search_text | downcase | strip_html | strip_newlines }}">
+                <h3 id="{{ talk.title | slugify }}">
+                  <a href="{{ meetup.url }}#{{ talk.title | slugify }}">
+                    <span class="talk-title">{{ talk.title }}</span>
+                  </a>
+                  <p>
+                    {% for speaker in talk.speakers %}
+                      {% assign person = site.data.people[speaker] %}
+                      {% if person.github %}
+                        <img src="https://github.com/{{ person.github }}.png?size=30" alt="{{ person.name }}" style="border-radius: 50%; width: 30px; vertical-align: middle;"/>
+                      {% endif %}
+                      {{ person.name }}{% unless forloop.last %}, {% endunless %}
+                    {% endfor %}
+                  </p>
+                </h3>
+
+                <p>{{ talk.description }}</p>
+              </div>
+              {% endfor %}
+            {% endfor %}
+          {% endfor %}
+        </section>
+      </article>
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>
