@@ -2,6 +2,10 @@
   <header>
     <h1>EDICIONES PASADAS</h1>
     <p>Conocé el contenido de las ediciones pasadas.</p>
+    <a href="/charlas" class="meetup-event__search-link">
+      Buscar entre todas las charlas
+      <img src="/assets/images/arrow.svg" aria-hidden="true">
+    </a>
   </header>
 
   {% assign meetups_sorted = site.meetups | sort: "date" | reverse %}
