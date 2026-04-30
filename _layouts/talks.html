@@ -35,20 +35,20 @@
               {% capture search_text %}{{ talk.title }} {{ meetup.title }} {{ speakers | join: ' ' }} {{ talk.description }}{% endcapture %}
 
               <div class="talk" data-search="{{ search_text | downcase | strip_html | strip_newlines }}">
-                <h3 id="{{ talk.title | slugify }}">
+                <h4 id="{{ talk.title | slugify }}">
                   <a href="{{ meetup.url }}#{{ talk.title | slugify }}">
                     <span class="talk-title">{{ talk.title }}</span>
                   </a>
-                  <p>
-                    {% for speaker in talk.speakers %}
-                      {% assign person = site.data.people[speaker] %}
-                      {% if person.github %}
-                        <img src="https://github.com/{{ person.github }}.png?size=30" alt="{{ person.name }}" style="border-radius: 50%; width: 30px; vertical-align: middle;"/>
-                      {% endif %}
-                      {{ person.name }}{% unless forloop.last %}, {% endunless %}
-                    {% endfor %}
-                  </p>
-                </h3>
+                </h4>
+                <p>
+                  {% for speaker in talk.speakers %}
+                    {% assign person = site.data.people[speaker] %}
+                    {% if person.github %}
+                      <img src="https://github.com/{{ person.github }}.png?size=30" alt="{{ person.name }}" loading="lazy" style="border-radius: 50%; width: 30px; vertical-align: middle;"/>
+                    {% endif %}
+                    {{ person.name }}{% unless forloop.last %}, {% endunless %}
+                  {% endfor %}
+                </p>
 
                 <p>{{ talk.description }}</p>
               </div>
