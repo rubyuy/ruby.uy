@@ -1,0 +1,35 @@
+#view-talks {
+  .talks-year {
+    border-bottom: 2px solid #3967D1;
+    color: #3967D1;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 2rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .talks-search {
+    background-color: #F6EEEC;
+    border: 3px solid #2E2E2E;
+    box-shadow: 6px 6px 0 #3967D1;
+    color: #3967D1;
+    font: 700 1rem 'Syncopate', sans-serif;
+    letter-spacing: 0.05em;
+    padding: 1rem 1.25rem;
+    text-transform: uppercase;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+    width: 100%;
+
+    &::placeholder {
+      color: #3967D1;
+      opacity: 0.5;
+    }
+
+    &:focus {
+      box-shadow: 6px 6px 0 #FFC24D;
+      outline: none;
+      transform: translate(-2px, -2px);
+    }
+  }
+
+}

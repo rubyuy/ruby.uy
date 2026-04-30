@@ -11,8 +11,8 @@
     @media (max-width: 425px) {
       padding: 2rem 1.5rem;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     h1 {
@@ -30,6 +30,23 @@
     p {
       @media (max-width: 425px) {
         display: none;
+      }
+    }
+
+    .meetup-event__search-link {
+      align-items: center;
+      display: inline-flex;
+      font-weight: bold;
+      margin-top: 1rem;
+
+      &, &:active, &:visited, &:focus, &:hover {
+        color: #FFC24D;
+        text-decoration: none;
+      }
+
+      img {
+        margin-left: 0.5rem;
+        filter: brightness(0) saturate(100%) invert(85%) sepia(35%) saturate(831%) hue-rotate(338deg) brightness(102%) contrast(101%);
       }
     }
   }
