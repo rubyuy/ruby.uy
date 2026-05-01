@@ -1,0 +1,564 @@
+# Community Ruby/Rails open source projects by speakers and contributors from our community.
+
+last_updated: 2026-05-01
+
+projects:
+  - github_user: guillermoap
+    name: notion_rails
+    description: Notion HTML renderer for Rails
+    url: https://github.com/guillermoap/notion_rails
+    stars: 0
+    topics: []
+
+  - github_user: guillermoap
+    name: notion_to_html
+    description: Notion HTML renderer for Ruby and Rails
+    url: https://github.com/guillermoap/notion_to_html
+    stars: 9
+    topics: [notion, notion-blog, rails, renderer, ruby, ruby-on-rails]
+
+  - github_user: EmilioCristalli
+    name: test_db_selector
+    description: ""
+    url: https://github.com/EmilioCristalli/test_db_selector
+    stars: 0
+    topics: []
+
+  - github_user: JulianPasquale
+    name: fudo-rack
+    description: Rack app to solve Fudo's challenge
+    url: https://github.com/JulianPasquale/fudo-rack
+    stars: 0
+    topics: []
+
+  - github_user: JulianPasquale
+    name: venmo-api
+    description: Venmo is a mobile payment service which allows friends to transfer money to each other.
+    url: https://github.com/JulianPasquale/venmo-api
+    stars: 0
+    topics: []
+
+  - github_user: jpbalarini
+    name: rails-starter-docker
+    description: A Ruby on Rails with docker integration template
+    url: https://github.com/jpbalarini/rails-starter-docker
+    stars: 0
+    topics: [docker, nginx, rails, ruby, starter, starter-template, template]
+
+  - github_user: jpbalarini
+    name: twitter_image_downloader
+    description: A script that allows you to download the images of you Twitter feed
+    url: https://github.com/jpbalarini/twitter_image_downloader
+    stars: 0
+    topics: []
+
+  - github_user: jpbalarini
+    name: uruguayan_exchange_rates
+    description: Uruguayan exchange rates. Data is taken from Banco Republica
+    url: https://github.com/jpbalarini/uruguayan_exchange_rates
+    stars: 4
+    topics: []
+
+  - github_user: juan-apa
+    name: hyperui-view_component
+    description: ""
+    url: https://github.com/juan-apa/hyperui-view_component
+    stars: 4
+    topics: []
+
+  - github_user: santib
+    name: ar2dto
+    description: Convert ActiveRecord objects to DTOs
+    url: https://github.com/santib/ar2dto
+    stars: 56
+    topics: []
+
+  - github_user: santib
+    name: chaotic_order
+    description: Add random order to queries that do not have a specific order
+    url: https://github.com/santib/chaotic_order
+    stars: 18
+    topics: []
+
+  - github_user: santib
+    name: railsconf2021
+    description: Sample app for my RailsConf 2021 talk
+    url: https://github.com/santib/railsconf2021
+    stars: 15
+    topics: []
+
+  - github_user: elcuervo
+    name: airplay
+    description: Airplay bindings to Ruby
+    url: https://github.com/elcuervo/airplay
+    stars: 1065
+    topics: []
+
+  - github_user: elcuervo
+    name: cuba-sugar
+    description: Give cuba some sugar!
+    url: https://github.com/elcuervo/cuba-sugar
+    stars: 20
+    topics: []
+
+  - github_user: elcuervo
+    name: flag
+    description: Simple feature flags
+    url: https://github.com/elcuervo/flag
+    stars: 11
+    topics: []
+
+  - github_user: elcuervo
+    name: limelight_video
+    description: Limelight video platform ruby client
+    url: https://github.com/elcuervo/limelight_video
+    stars: 5
+    topics: []
+
+  - github_user: elcuervo
+    name: firma
+    description: Adds a secure signature to pdf
+    url: https://github.com/elcuervo/firma
+    stars: 4
+    topics: []
+
+  - github_user: elcuervo
+    name: dry-types-json-schema
+    description: ""
+    url: https://github.com/elcuervo/dry-types-json-schema
+    stars: 3
+    topics: []
+
+  - github_user: elcuervo
+    name: gliner
+    description: Ruby inference wrapper for the GLiNER2 ONNX model.
+    url: https://github.com/elcuervo/gliner
+    stars: 2
+    topics: [onnx]
+
+  - github_user: elcuervo
+    name: cachoo
+    description: ""
+    url: https://github.com/elcuervo/cachoo
+    stars: 2
+    topics: []
+
+  - github_user: MaicolBen
+    name: twilio_mock
+    description: Mock Twilio gem for Ruby
+    url: https://github.com/MaicolBen/twilio_mock
+    stars: 27
+    topics: [hacktoberfest, mocking, test, twilio]
+
+  - github_user: delbetu
+    name: hexa
+    description: Hexagonal Ruby Backend
+    url: https://github.com/delbetu/hexa
+    stars: 2
+    topics: [graphql, hacktoberfest, hexagonal-architecture, ruby, use-cases]
+
+  - github_user: delbetu
+    name: todo-app
+    description: Frontend and backend solution for a simple todo app.
+    url: https://github.com/delbetu/todo-app
+    stars: 5
+    topics: [backbonejs, demo-code, jquery, jwt, rails-api, rspec, underscorejs, webpack]
+
+  - github_user: delbetu
+    name: ruby_games
+    description: A set of educative games for kids written in Ruby
+    url: https://github.com/delbetu/ruby_games
+    stars: 0
+    topics: []
+
+  - github_user: ignacio-chiazzo
+    name: ruby_whatsapp_sdk
+    description: A lightweight, efficient Ruby gem for interacting with Whatsapp Cloud API.
+    url: https://github.com/ignacio-chiazzo/ruby_whatsapp_sdk
+    stars: 203
+    topics: [bot, chat, chatbots, cloud-api, ruby, ruby-gem, sdk, whatsapp, whatsapp-api]
+
+  - github_user: ignacio-chiazzo
+    name: ruby_on_rails_whatsapp_example
+    description: Ruby on Rails example application that communicates with Whatsapp
+    url: https://github.com/ignacio-chiazzo/ruby_on_rails_whatsapp_example
+    stars: 15
+    topics: [hacktoberfest, whatsapp]
+
+  - github_user: ignacio-chiazzo
+    name: ruby-minitest-analyzer
+    description: "Don't run duplicated test in Minitest! Analyzes Ruby Minitest repeated tests health."
+    url: https://github.com/ignacio-chiazzo/ruby-minitest-analyzer
+    stars: 6
+    topics: [minitest, rails, ruby, testing]
+
+  - github_user: ignacio-chiazzo
+    name: Cursor-vs-Page-Pagination-in-Shopify
+    description: Compare Shopify REST Admin API using Relative Cursor vs Page based pagination.
+    url: https://github.com/ignacio-chiazzo/Cursor-vs-Page-Pagination-in-Shopify
+    stars: 2
+    topics: [pagination, rest-api, shopify]
+
+  - github_user: letiesperon
+    name: concurrent_execution_queue_poc
+    description: Quick proof of concept for Ruby Concurrent Execution Queue.
+    url: https://github.com/letiesperon/concurrent_execution_queue_poc
+    stars: 4
+    topics: [concurrency, queue, ruby]
+
+  - github_user: letiesperon
+    name: ruby-patterns
+    description: Ruby Patterns Applied
+    url: https://github.com/letiesperon/ruby-patterns
+    stars: 2
+    topics: []
+
+  - github_user: AFornio
+    name: UruguayAPI
+    description: Ruby API with Uruguayan public data
+    url: https://github.com/AFornio/UruguayAPI
+    stars: 47
+    topics: []
+
+  - github_user: mauricioszabo
+    name: arel_operators
+    description: "Operators |, and, - for AREL."
+    url: https://github.com/mauricioszabo/arel_operators
+    stars: 7
+    topics: []
+
+  - github_user: mauricioszabo
+    name: jasper_on_rails
+    description: Sistema de relatórios - integração do Jasper com Rails
+    url: https://github.com/mauricioszabo/jasper_on_rails
+    stars: 9
+    topics: []
+
+  - github_user: oboxodo
+    name: aprende_a_programar
+    description: Traducción al español del tutorial de Chris Pine "Learn to Program"
+    url: https://github.com/oboxodo/aprende_a_programar
+    stars: 11
+    topics: []
+
+  - github_user: oboxodo
+    name: acts_as_extensible
+    description: Delegates columns of a has_one association and creates the proxy methods in the caller
+    url: https://github.com/oboxodo/acts_as_extensible
+    stars: 2
+    topics: []
+
+  - github_user: sethhorsley
+    name: ruby-clsx
+    description: ""
+    url: https://github.com/sethhorsley/ruby-clsx
+    stars: 12
+    topics: []
+
+  - github_user: marcoroth
+    name: bubbletea-ruby
+    description: "A powerful TUI framework for Ruby, based on Charm's bubbletea."
+    url: https://github.com/marcoroth/bubbletea-ruby
+    stars: 136
+    topics: []
+
+  - github_user: marcoroth
+    name: gem.sh
+    description: Beautiful documentation for any Ruby gem.
+    url: https://github.com/marcoroth/gem.sh
+    stars: 133
+    topics: [doc, docs, documentation, gem, ruby, rubygem]
+
+  - github_user: marcoroth
+    name: boxdrop
+    description: Dropbox Clone built with StimulusReflex
+    url: https://github.com/marcoroth/boxdrop
+    stars: 85
+    topics: [dropbox, rails, ruby, stimulus, stimulus-reflex]
+
+  - github_user: marcoroth
+    name: difftastic-ruby
+    description: A Ruby interface and wrapper for the wonderful Difftastic CLI tool.
+    url: https://github.com/marcoroth/difftastic-ruby
+    stars: 72
+    topics: [diffing, difftastic, ruby]
+
+  - github_user: marcoroth
+    name: bubbles-ruby
+    description: "TUI components for Bubble Tea, based on Charm's Bubbles."
+    url: https://github.com/marcoroth/bubbles-ruby
+    stars: 67
+    topics: []
+
+  - github_user: marcoroth
+    name: gum-ruby
+    description: "Ruby wrapper for Charm's Gum. A tool for glamorous scripts."
+    url: https://github.com/marcoroth/gum-ruby
+    stars: 59
+    topics: []
+
+  - github_user: marcoroth
+    name: huh-ruby
+    description: "Build Beautiful Terminal forms and prompts in Ruby, based on Charm's Huh."
+    url: https://github.com/marcoroth/huh-ruby
+    stars: 45
+    topics: []
+
+  - github_user: marcoroth
+    name: harmonica-ruby
+    description: "A simple, physics-based animation library for Ruby, based on Charm's Harmonica."
+    url: https://github.com/marcoroth/harmonica-ruby
+    stars: 41
+    topics: []
+
+  - github_user: marcoroth
+    name: bubblezone-ruby
+    description: Helper utility for Bubble Tea, allowing easy mouse event tracking in terminal applications.
+    url: https://github.com/marcoroth/bubblezone-ruby
+    stars: 37
+    topics: []
+
+  - github_user: marcoroth
+    name: rubocop-gradual
+    description: Gradually improve your code with RuboCop
+    url: https://github.com/skryukov/rubocop-gradual
+    stars: 38
+    topics: [linter, rubocop, ruby]
+
+  - github_user: marcoroth
+    name: glamour-ruby
+    description: "Stylesheet-based Markdown Rendering for Ruby, based on Charm's glamour."
+    url: https://github.com/marcoroth/glamour-ruby
+    stars: 50
+    topics: []
+
+  - github_user: marcoroth
+    name: lightpanda-ruby
+    description: Ruby client for the Lightpanda headless browser via CDP.
+    url: https://github.com/marcoroth/lightpanda-ruby
+    stars: 19
+    topics: []
+
+  - github_user: marcoroth
+    name: easy_enum
+    description: Turn any Ruby class in an easy to use enum.
+    url: https://github.com/marcoroth/easy_enum
+    stars: 14
+    topics: [enum, ruby]
+
+  - github_user: marcoroth
+    name: charm-ruby
+    description: The full Charm terminal toolkit for Ruby
+    url: https://github.com/marcoroth/charm-ruby
+    stars: 6
+    topics: [charm, cli, ruby]
+
+  - github_user: marcoroth
+    name: cable-streams-rails
+    description: Rails companion gem for the cable-streams NPM package
+    url: https://github.com/marcoroth/cable-streams-rails
+    stars: 6
+    topics: [hotwire, rails, ruby, turbo]
+
+  - github_user: marcoroth
+    name: dependabot-bump-together-action
+    description: GitHub Action to bump multiple dependencies with dependabot in a single pull request
+    url: https://github.com/marcoroth/dependabot-bump-together-action
+    stars: 8
+    topics: [dependabot, github-action]
+
+  - github_user: skryukov
+    name: turbo-mount
+    description: Use React, Vue, Svelte, and other components with Hotwire
+    url: https://github.com/skryukov/turbo-mount
+    stars: 472
+    topics: [hotwire, rails, react, stimulusjs, svelte, turbo, vue]
+
+  - github_user: skryukov
+    name: typelizer
+    description: Define once in Ruby. Generate everywhere in TypeScript.
+    url: https://github.com/skryukov/typelizer
+    stars: 231
+    topics: [rails, ruby, typescript]
+
+  - github_user: skryukov
+    name: skooma
+    description: Skooma is a Ruby library for validating API implementations against OpenAPI documents.
+    url: https://github.com/skryukov/skooma
+    stars: 202
+    topics: [openapi, rspec, ruby]
+
+  - github_user: skryukov
+    name: inertia_rails-contrib
+    description: A collection of extensions and developer tools for Inertia's Rails adapter.
+    url: https://github.com/skryukov/inertia_rails-contrib
+    stars: 165
+    topics: [inertiajs, rails]
+
+  - github_user: skryukov
+    name: rubocop-gradual
+    description: Gradually improve your code with RuboCop
+    url: https://github.com/skryukov/rubocop-gradual
+    stars: 38
+    topics: [linter, rubocop, ruby]
+
+  - github_user: skryukov
+    name: alba-inertia
+    description: Seamless integration between Alba and Inertia Rails.
+    url: https://github.com/skryukov/alba-inertia
+    stars: 30
+    topics: [inertiajs, rails]
+
+  - github_user: skryukov
+    name: json_skooma
+    description: JSONSkooma is a Ruby library for validating JSONs against JSON Schemas.
+    url: https://github.com/skryukov/json_skooma
+    stars: 29
+    topics: [json-schema, ruby]
+
+  - github_user: skryukov
+    name: openapi_rspec
+    description: Test your API against OpenApi v3 documentation
+    url: https://github.com/skryukov/openapi_rspec
+    stars: 13
+    topics: [api, openapi, rspec, ruby]
+
+  - github_user: skryukov
+    name: izzy
+    description: ""
+    url: https://github.com/skryukov/izzy
+    stars: 12
+    topics: []
+
+  - github_user: skryukov
+    name: uri-idna
+    description: A IDNA2008, UTS46 and Punycode implementation in pure Ruby
+    url: https://github.com/skryukov/uri-idna
+    stars: 16
+    topics: [ruby]
+
+  - github_user: palkan
+    name: logidze
+    description: Database changes log for Rails
+    url: https://github.com/palkan/logidze
+    stars: 1681
+    topics: [activerecord, postgresql, rails, versioning]
+
+  - github_user: palkan
+    name: action_policy
+    description: Authorization framework for Ruby/Rails applications
+    url: https://github.com/palkan/action_policy
+    stars: 1556
+    topics: [authorization, rails, ruby]
+
+  - github_user: palkan
+    name: isolator
+    description: Detect non-atomic interactions within DB transactions
+    url: https://github.com/palkan/isolator
+    stars: 1102
+    topics: [activerecord, developer-tools, rails, testing-tools]
+
+  - github_user: palkan
+    name: anyway_config
+    description: Configuration library for Ruby gems and applications
+    url: https://github.com/palkan/anyway_config
+    stars: 886
+    topics: [configuration, rails, ruby]
+
+  - github_user: palkan
+    name: active_delivery
+    description: Ruby framework for keeping all types of notifications in one place
+    url: https://github.com/palkan/active_delivery
+    stars: 653
+    topics: [mailers, notifications, rails, ruby]
+
+  - github_user: palkan
+    name: n_plus_one_control
+    description: RSpec and Minitest matchers to prevent N+1 queries problem
+    url: https://github.com/palkan/n_plus_one_control
+    stars: 577
+    topics: [database-testing, minitest, rspec, ruby, testing]
+
+  - github_user: palkan
+    name: litecable
+    description: Lightweight Action Cable implementation (Rails-free)
+    url: https://github.com/palkan/litecable
+    stars: 303
+    topics: [actioncable, sinatra, websockets]
+
+  - github_user: palkan
+    name: action-cable-testing
+    description: Action Cable testing utils
+    url: https://github.com/palkan/action-cable-testing
+    stars: 213
+    topics: [actioncable, minitest, rails, rspec, testing]
+
+  - github_user: palkan
+    name: acli
+    description: Action Cable command-line client
+    url: https://github.com/palkan/acli
+    stars: 233
+    topics: [actioncable, cli, rails, websockets]
+
+  - github_user: palkan
+    name: active_event_store
+    description: Rails Event Store in a more Rails way
+    url: https://github.com/palkan/active_event_store
+    stars: 204
+    topics: [event-sourcing, rails]
+
+  - github_user: palkan
+    name: action_policy-graphql
+    description: Action Policy integration for GraphQL
+    url: https://github.com/palkan/action_policy-graphql
+    stars: 149
+    topics: [authorization, graphql, ruby]
+
+  - github_user: palkan
+    name: engems
+    description: Rails component-based architecture on top of engines and gems
+    url: https://github.com/palkan/engems
+    stars: 138
+    topics: [architecture, engines, rails]
+
+  - github_user: palkan
+    name: abstract_notifier
+    description: ActionMailer-like interface for any type of notifications
+    url: https://github.com/palkan/abstract_notifier
+    stars: 115
+    topics: [notifications, rails, ruby]
+
+  - github_user: palkan
+    name: influxer
+    description: InfluxDB ActiveRecord-style
+    url: https://github.com/palkan/influxer
+    stars: 117
+    topics: [influxdb, rails, ruby]
+
+  - github_user: palkan
+    name: pgrel
+    description: ActiveRecord extension for querying hstore and jsonb
+    url: https://github.com/palkan/pgrel
+    stars: 93
+    topics: [activerecord, hstore, jsonb, postgresql]
+
+  - github_user: palkan
+    name: downstream
+    description: Straightforward way to implement communication between Rails Engines using Publish-Subscribe pattern.
+    url: https://github.com/palkan/downstream
+    stars: 75
+    topics: [event-driven-architecture, rails, rails-engines, ruby]
+
+  - github_user: palkan
+    name: faqueue
+    description: Researching background jobs fairness
+    url: https://github.com/palkan/faqueue
+    stars: 68
+    topics: []
+
+  - github_user: jmbejar
+    name: todo-rails-api-backbone-backend
+    description: Example backend implemented with Rails API to be used with a backbone frontend app
+    url: https://github.com/jmbejar/todo-rails-api-backbone-backend
+    stars: 19
+    topics: []

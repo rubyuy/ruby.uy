@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  {% include head.html %}
+
+  <body>
+    {% include nav.html %}
+
+    <main>
+      <article id="view-community" class="view">
+        <section>
+          <h2>Community</h2>
+          <p class="community-subtitle">Ruby & Rails open source projects built by our community</p>
+
+          <div class="community-controls">
+            <input type="search" id="community-search" class="community-search" placeholder="Search project or author..." autocomplete="off">
+
+            <div class="community-sort">
+              <button class="sort-btn active" data-sort="stars">By stars</button>
+              <button class="sort-btn" data-sort="user">By author</button>
+              <button class="sort-btn" data-sort="name">A–Z</button>
+            </div>
+          </div>
+
+          <p class="community-updated">Last updated: {{ site.data.community.last_updated | date: "%B %-d, %Y" }}</p>
+        </section>
+
+        <section id="community-list">
+          {% assign projects_sorted = site.data.community.projects | sort: "stars" | reverse %}
+          {% assign medals = "medal-gold,medal-silver,medal-bronze" | split: "," %}
+
+          {% for project in projects_sorted %}
+            {% assign person = nil %}
+            {% for p in site.data.people %}
+              {% if p[1].github == project.github_user %}
+                {% assign person = p[1] %}
+              {% endif %}
+            {% endfor %}
+
+            {% capture search_text %}{{ project.name }} {{ project.description }} {{ project.github_user }} {{ person.name }} {{ project.topics | join: ' ' }}{% endcapture %}
+
+            {% assign medal_name = "" %}
+            {% assign medal_class = "" %}
+            {% if forloop.index <= 3 %}
+              {% assign medal_name = medals[forloop.index0] %}
+              {% assign medal_class = "project--medal project--" | append: medal_name %}
+            {% endif %}
+
+            {% assign project_rank = forloop.index %}
+            {% include project_card.html %}
+          {% endfor %}
+        </section>
+      </article>
+    </main>
+
+    {% include footer.html %}
+    <script src="/assets/js/community.js"></script>
+  </body>
+</html>

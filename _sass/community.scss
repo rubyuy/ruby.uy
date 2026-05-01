@@ -1,0 +1,107 @@
+#view-community {
+  h2 {
+    overflow-wrap: break-word;
+
+    @media (max-width: 480px) {
+      font-size: 1.75rem;
+    }
+  }
+
+  .community-subtitle {
+    color: #2E2E2E;
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+  }
+
+  .community-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .community-search {
+    background-color: #F6EEEC;
+    border: 3px solid #2E2E2E;
+    box-shadow: 6px 6px 0 #3967D1;
+    color: #3967D1;
+    font: 700 1rem 'Syncopate', sans-serif;
+    letter-spacing: 0.05em;
+    padding: 1rem 1.25rem;
+    text-transform: uppercase;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+    width: 100%;
+
+    &::placeholder {
+      color: #3967D1;
+      opacity: 0.5;
+    }
+
+    &:focus {
+      box-shadow: 6px 6px 0 #FFC24D;
+      outline: none;
+      transform: translate(-2px, -2px);
+    }
+  }
+
+  .community-sort {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .sort-btn {
+      background-color: transparent;
+      border: 3px solid #2E2E2E;
+      box-shadow: 4px 4px 0 #2E2E2E;
+      cursor: pointer;
+      font: 700 0.75rem 'Syncopate', sans-serif;
+      letter-spacing: 0.05em;
+      padding: 0.5rem 1rem;
+      text-transform: uppercase;
+      transition: box-shadow 0.15s ease, transform 0.15s ease;
+      white-space: nowrap;
+
+      @media (max-width: 480px) {
+        font-size: 0.65rem;
+        letter-spacing: 0.02em;
+        padding: 0.5rem 0.75rem;
+      }
+
+      &:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 6px 6px 0 #2E2E2E;
+      }
+
+      &.active {
+        background-color: #3967D1;
+        border-color: #3967D1;
+        box-shadow: 4px 4px 0 #2E2E2E;
+        color: #fff;
+      }
+    }
+  }
+
+  .community-updated {
+    color: #2E2E2E;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-top: 1rem;
+    opacity: 0.6;
+    text-transform: uppercase;
+  }
+
+  .community-user-group {
+    border-bottom: 2px solid #3967D1;
+    color: #3967D1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &.sort-by-user {
+    .project-medal-wrap { display: none; }
+
+    [class*="project--medal-"] { box-shadow: 4px 4px 0 #2E2E2E; }
+  }
+}
