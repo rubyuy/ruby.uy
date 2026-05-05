@@ -1,0 +1,40 @@
+<div class="project {{ medal_class }}"
+  data-search="{{ search_text | downcase | strip_html | strip_newlines }}"
+  data-user="{{ project.github_user }}"
+  data-stars="{{ project.stars }}"
+  data-name="{{ project.name | downcase }}">
+
+  {% if medal_name != "" %}
+    <div class="project-medal-wrap">
+      <img src="/assets/images/{{ medal_name }}.svg" alt="Rank {{ project_rank }}" class="project-medal">
+    </div>
+  {% endif %}
+
+  <div class="project-body">
+    <div class="project-header">
+      <h4>
+        <a href="{{ project.url }}" target="_blank" rel="noopener">{{ project.name }}</a>
+      </h4>
+      <span class="project-stars">★ {{ project.stars }}</span>
+    </div>
+
+    {% if project.description != "" %}
+      <p class="project-description">{{ project.description }}</p>
+    {% endif %}
+
+    <div class="project-meta">
+      {% if person.github %}
+        <img src="https://github.com/{{ person.github }}.png?size=30" alt="{{ person.name }}" loading="lazy" style="border-radius: 50%; width: 30px; vertical-align: middle;"/>
+      {% endif %}
+      <span class="project-author">{{ person.name | default: project.github_user }}</span>
+
+      {% if project.topics.size > 0 %}
+        <div class="project-topics">
+          {% for topic in project.topics limit: 4 %}
+            <span class="project-topic">{{ topic }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
