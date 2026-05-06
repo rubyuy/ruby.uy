@@ -3,7 +3,7 @@
     {% for sponsor in site.data.sponsors %}
       {% assign company = site.data.companies[sponsor] %}
       <li>
-        <img src="{{ company.image }}" alt="{{ company.name }}"/>
+        <img src="{{ company.image }}" loading="lazy" width="240" height="80" alt="{{ company.name }}"/>
       </li>
     {% endfor %}
   </ul>

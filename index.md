@@ -6,6 +6,5 @@
   <section>
     {% include sponsors.html %}
     {% include meetups.html %}
-    {% include sponsors.html %}
   </section>
 </article>

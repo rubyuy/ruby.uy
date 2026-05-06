@@ -13,7 +13,7 @@
     </header>
     <article>
       <div class="next-meetup__details" id="meetup">
-        <img src="/assets/images/stars.svg" aria-hidden="true" focusable="false" class="stars">
+        <img src="/assets/images/stars.svg" width="56" height="56" aria-hidden="true" focusable="false" class="stars">
         <h2>Podés ser parte de la próxima meetup!</h2>
         <ul aria-label="Next Meetup Details">
           <li aria-label="When">
@@ -26,7 +26,7 @@
           </li>
           <li aria-label="Where">
             <img src="/assets/images/location_icon.svg" alt="Location Icon" width="34" height="42">
-            <a href="{{ host.address_url}}" target="_blank">{{ host.name }} | {{ host.address }}</a>
+            <a href="{{ host.address_url}}" target="_blank" rel="noopener noreferrer">{{ host.name }} | {{ host.address }}</a>
           </li>
           {% if next_meetup.talks.size < 1 %}
             <li aria-label="Speakers">
@@ -40,7 +40,7 @@
         {% for talk in next_meetup.talks %}
           <li>
             {% for speaker in talk.speakers %}
-              <img src="https://github.com/{{ site.data.people[speaker].github }}.png" alt="Speaker Photo" style="width: calc(100% / {{ talk.speakers.size }} - 1%)">
+              <img src="https://github.com/{{ site.data.people[speaker].github }}.png" alt="Speaker Photo" loading="lazy" width="160" height="160" style="width: calc(100% / {{ talk.speakers.size }} - 1%)">
             {% endfor %}
             <article>
               <h1 aria-label="First Speaker Name">
