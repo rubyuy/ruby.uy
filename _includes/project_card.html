@@ -6,14 +6,14 @@
 
   {% if medal_name != "" %}
     <div class="project-medal-wrap">
-      <img src="/assets/images/{{ medal_name }}.svg" alt="Rank {{ project_rank }}" class="project-medal">
+      <img src="/assets/images/{{ medal_name }}.svg" width="44" height="44" alt="Rank {{ project_rank }}" class="project-medal">
     </div>
   {% endif %}
 
   <div class="project-body">
     <div class="project-header">
       <h4>
-        <a href="{{ project.url }}" target="_blank" rel="noopener">{{ project.name }}</a>
+        <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.name }}</a>
       </h4>
       <span class="project-stars">★ {{ project.stars }}</span>
     </div>
@@ -24,7 +24,7 @@
 
     <div class="project-meta">
       {% if person.github %}
-        <img src="https://github.com/{{ person.github }}.png?size=30" alt="{{ person.name }}" loading="lazy" style="border-radius: 50%; width: 30px; vertical-align: middle;"/>
+        <img src="https://github.com/{{ person.github }}.png?size=30" alt="{{ person.name }}" loading="lazy" width="30" height="30" style="border-radius: 50%; width: 30px; vertical-align: middle;"/>
       {% endif %}
       <span class="project-author">{{ person.name | default: project.github_user }}</span>
 

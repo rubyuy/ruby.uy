@@ -4,7 +4,7 @@
     <p>Conocé el contenido de las ediciones pasadas.</p>
     <a href="/charlas" class="meetup-event__search-link">
       Buscar entre todas las charlas
-      <img src="/assets/images/arrow.svg" aria-hidden="true">
+      <img src="/assets/images/arrow.svg" width="30" height="27" aria-hidden="true">
     </a>
   </header>
 
@@ -20,14 +20,16 @@
 
     <ul>
       {% for meetup in year.items %}
+        {% assign meetup_host = site.data.companies[meetup.host] %}
+        {% assign meetup_sponsor_name = meetup_host.name | default: meetup.title %}
         <li class="meetup-event">
           <a href="{{ meetup.url }}" class="meetup-event__link">
             <span class="meetup-event__date">
               {{ meetup.date | date_to_string }}
             </span>
             <span class="meetup-event__company">
-              {{ meetup.title }}
-              <img src="/assets/images/arrow.svg" aria-hidden="true">
+              {{ meetup_sponsor_name }}
+              <img src="/assets/images/arrow.svg" width="30" height="27" aria-hidden="true">
             </span>
           </a>
         </li>
