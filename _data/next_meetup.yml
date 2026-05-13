@@ -1,8 +1,8 @@
-show: false
-date: Miércoles 4 de Marzo
-date_iso: "2026-03-04"
+show: true
+date: Martes 19 de Mayo
+date_iso: "2026-05-19"
 time: 19 hs
-host: howdy
+host: cedarcode
 location: F. García Cortinas 2472
 # Use the following format for talks
 # talks:
@@ -13,9 +13,10 @@ location: F. García Cortinas 2472
 # Or if the speakers are TBD
 # talks: []
 talks:
-  - name: Database views in Rails - a real-world example
+  - name: Tropical on Rails Experience
     speakers:
-    - jonathan_javiel
-  - name: 'Rápido no es suficiente - cómo ser veloz codificando con AI'
+    - braulio_martinez
+    - nicolas_erlichman
+  - name: 'Play Star Battle Puzzles whereever you go'
     speakers:
-    - dario_macchi
+    - santiago_rodriguez  
