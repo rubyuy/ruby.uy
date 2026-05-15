@@ -2,7 +2,7 @@
 <html lang="es">
   {% include head.html %}
 
-  <body>
+  <body class="page-meetup">
     {% assign host = site.data.companies[page.host] %}
     {% assign host_name = host.name | default: page.host %}
     {% assign host_domain = host.url | remove: 'https://' | remove: 'http://' | remove: 'www.' | split: '/' | first %}
@@ -52,17 +52,6 @@
               {% endif %}
             </div>
 
-            <div class="hero__right" aria-hidden="true">
-              <div class="hero__illustration">
-                <svg viewBox="0 0 280 185" xmlns="http://www.w3.org/2000/svg">
-                  <polygon points="0,70 50,0 230,0 280,70 140,185"
-                           fill="#E63946"
-                           stroke="#9B1F2D"
-                           stroke-width="2"
-                           stroke-linejoin="round"/>
-                </svg>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -183,7 +172,15 @@
                             {% elsif speaker.github %}
                               <img class="slide__speaker-avatar" src="https://github.com/{{ speaker.github }}.png?size=60" alt="{{ speaker.name }}">
                             {% else %}
-                              <span class="slide__speaker-avatar slide__speaker-avatar--placeholder" aria-hidden="true"></span>
+                              {% assign slide_name_parts = speaker.name | split: " " %}
+                              {% assign slide_initial_first = slide_name_parts[0] | slice: 0 | upcase %}
+                              {% if slide_name_parts.size > 1 %}
+                                {% assign slide_initial_last = slide_name_parts | last | slice: 0 | upcase %}
+                                {% assign slide_initials = slide_initial_first | append: slide_initial_last %}
+                              {% else %}
+                                {% assign slide_initials = slide_initial_first %}
+                              {% endif %}
+                              <span class="slide__speaker-avatar slide__speaker-avatar--placeholder" aria-hidden="true">{{ slide_initials }}</span>
                             {% endif %}
                             <span>{{ speaker.name }}</span>{% unless forloop.last %}<span class="slide__speaker-sep">, </span>{% endunless %}
                           {% endfor %}

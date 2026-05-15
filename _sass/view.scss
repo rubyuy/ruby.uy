@@ -9,6 +9,10 @@ $vm-white: #ffffff;
 $vm-container: 1600px;
 $vm-pad-x: 4rem;
 
+.page-meetup .meetup__default > div:first-child {
+  display: none;
+}
+
 #view-meetup,
 #view-meetup * {
   box-sizing: border-box;
@@ -64,7 +68,7 @@ $vm-pad-x: 4rem;
     }
   }
 
-  .breadcrumb__trail li[aria-hidden] {
+  .breadcrumb__trail span[aria-hidden] {
     color: rgba($vm-white, 0.55);
   }
 
@@ -96,7 +100,7 @@ $vm-pad-x: 4rem;
     border-bottom: 3px solid $vm-ink;
     display: grid;
     gap: 2.5rem;
-    grid-template-columns: minmax(0, 58fr) minmax(0, 42fr);
+    grid-template-columns: 1fr;
     margin: 0 auto;
     max-width: $vm-container;
     padding: 0.75rem $vm-pad-x 0.75rem;
@@ -201,43 +205,13 @@ $vm-pad-x: 4rem;
     max-width: 84%;
   }
 
-  .hero__right {
-    align-items: flex-start;
-    display: flex;
-    justify-content: flex-end;
-    min-width: 0;
-    position: relative;
-  }
-
-  .hero__illustration {
-    align-items: center;
-    display: flex;
-    height: 110px;
-    justify-content: center;
-    max-width: 160px;
-    width: 100%;
-  }
-
-  .hero__illustration svg {
-    height: 100%;
-    max-height: 100%;
-    max-width: 100%;
-    width: 100%;
-  }
-
   @media (max-width: 980px) {
     .hero__inner {
-      grid-template-columns: 1fr;
-      gap: 2rem;
       padding: 1rem 2rem 1rem;
     }
 
     .hero__left {
       max-width: none;
-    }
-
-    .hero__right {
-      display: none;
     }
   }
 
@@ -270,18 +244,18 @@ $vm-pad-x: 4rem;
   .grid-section__inner {
     margin: 0 auto;
     max-width: $vm-container;
-    padding: 2rem $vm-pad-x 3rem;
+    padding: 1rem $vm-pad-x 1.5rem;
     width: 100%;
   }
 }
 
 .view-meetup__grid {
   display: grid;
-  gap: 1.75rem;
+  gap: 1.5rem;
   grid-template-columns: minmax(0, 45fr) minmax(0, 55fr);
 
   @media (max-width: 980px) {
-    gap: 1.5rem;
+    gap: 1.25rem;
     grid-template-columns: 1fr;
   }
 }
@@ -291,6 +265,22 @@ $vm-pad-x: 4rem;
   flex-direction: column;
   gap: 1.375rem;
   min-width: 0;
+}
+
+.view-meetup__col--left {
+  .host-card {
+    flex: 1 1 auto;
+  }
+
+  .speakers-card {
+    flex: 1.5 1 auto;
+  }
+}
+
+.view-meetup__col--right {
+  .charla-destacada {
+    flex: 1;
+  }
 }
 
 // ============================================================
@@ -354,14 +344,13 @@ $vm-pad-x: 4rem;
 // ============================================================
 
 .host-card {
-  min-height: 220px;
-  padding: 1.75rem;
+  justify-content: center;
+  padding: 1.5rem 1.5rem;
 
   .host-card__body {
     align-items: center;
     display: flex;
     gap: 1.5rem;
-    height: 100%;
   }
 
   .host-card__logo-tile {
@@ -454,13 +443,13 @@ $vm-pad-x: 4rem;
 // ============================================================
 
 .speakers-card {
-  justify-content: center;
-  min-height: 370px;
-  padding: 1.625rem 1.75rem 1.75rem;
+  padding: 1.25rem 1.5rem 1.5rem;
 
   .speakers-list {
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
+    justify-content: space-evenly;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -469,16 +458,15 @@ $vm-pad-x: 4rem;
   .speaker {
     align-items: flex-start;
     display: flex;
-    gap: 1.375rem;
-    min-height: 128px;
-    padding: 1.125rem 0;
+    gap: 1.125rem;
+    padding: 0.375rem 0;
 
     & + .speaker {
       border-top: 1px solid rgba($vm-ink, 0.1);
     }
 
     &:first-child {
-      padding-top: 0.375rem;
+      padding-top: 0.25rem;
     }
   }
 
@@ -566,13 +554,12 @@ $vm-pad-x: 4rem;
 
 .charla-destacada {
   flex: 1 1 auto;
-  min-height: 560px;
-  padding: 1.625rem 1.75rem 1.75rem;
+  padding: 1.25rem 1.5rem 1.25rem;
 
   .charla-destacada__header {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 1.125rem;
+    margin-bottom: 0.5rem;
   }
 
   .charla-destacada__counter {
@@ -611,7 +598,8 @@ $vm-pad-x: 4rem;
     display: flex;
     flex: 0 0 100%;
     flex-direction: column;
-    min-height: 0;
+    gap: 0.75rem;
+    justify-content: flex-start;
     scroll-snap-align: start;
     width: 100%;
   }
@@ -621,7 +609,7 @@ $vm-pad-x: 4rem;
     font-weight: 700;
     letter-spacing: -0.005em;
     line-height: 1.2;
-    margin: 0 0 2.125rem;
+    margin: 0;
     max-width: 58%;
     overflow-wrap: break-word;
     text-wrap: balance;
@@ -645,7 +633,7 @@ $vm-pad-x: 4rem;
     font-family: 'DM Sans', system-ui, sans-serif;
     font-size: 0.9375rem;
     gap: 0.5rem;
-    margin: 0 0 1.5rem;
+    margin: 0;
     min-height: 36px;
     padding: 0;
   }
@@ -666,7 +654,8 @@ $vm-pad-x: 4rem;
     aspect-ratio: 16 / 9;
     background: #111;
     border-radius: 8px;
-    margin: 0 0 1.75rem;
+    margin: 0;
+    margin-top: auto;
     overflow: hidden;
     position: relative;
     width: 100%;
