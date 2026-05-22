@@ -1,3 +1,30 @@
+cubox:
+  name: Cubox
+  url: https://cuboxsa.com
+
+neo:
+  name: Neo
+  url: https://neo.com
+  address: Bulevar España 2529
+
+mooveit:
+  name: Moove-IT
+  url: https://mooveit.com
+  address: Bulevar Artigas 1112
+
+sinergia:
+  name: Sinergia
+  url: https://sinergia.com.uy
+  address: Gonzalo Ramírez 1676
+
+cowork:
+  name: CoWork Uruguay
+  url: https://coworkuruguay.com
+  address: Tiburcio Gómez 1330
+
+online:
+  name: Online
+
 rootstrap:
   name: Rootstrap
   url: https://www.rootstrap.com
