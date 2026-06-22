@@ -1,9 +1,9 @@
 show: true
-date: Martes 19 de Mayo
-date_iso: "2026-05-19"
+date: Martes 23 de Junio
+date_iso: "2026-06-23"
 time: 19 hs
-host: cedarcode
-location: F. García Cortinas 2472
+host: mimiquate
+location: Bv. España 2480
 # Use the following format for talks
 # talks:
 #   - name: Talk name
@@ -13,10 +13,9 @@ location: F. García Cortinas 2472
 # Or if the speakers are TBD
 # talks: []
 talks:
-  - name: Tropical on Rails Experience
+  - name: 'El camino que no tomé: Rails + Phoenix'
     speakers:
-    - braulio_martinez
-    - nicolas_erlichman
-  - name: 'Play Star Battle Puzzles whereever you go'
+    - juan_azambuja
+  - name: 'Spec Driven Development: dando un poco de orden al vibe coding'
     speakers:
-    - santiago_rodriguez  
+    - diego_salido  
