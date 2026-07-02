@@ -44,7 +44,7 @@
                   {% for speaker in talk.speakers %}
                     {% assign person = site.data.people[speaker] %}
                     {% if person.github %}
-                      <img src="https://github.com/{{ person.github }}.png?size=30" alt="{{ person.name }}" loading="lazy" style="border-radius: 50%; width: 30px; vertical-align: middle;"/>
+                      <img src="https://github.com/{{ person.github }}.png?size=30" alt="{{ person.name }}" loading="lazy" width="30" height="30" style="border-radius: 50%; width: 30px; vertical-align: middle;"/>
                     {% endif %}
                     {{ person.name }}{% unless forloop.last %}, {% endunless %}
                   {% endfor %}
