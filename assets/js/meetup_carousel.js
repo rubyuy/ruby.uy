@@ -18,8 +18,38 @@
 
     var total = slides.length;
     var current = 0;
+    var dots = [];
 
-    function updateCounter() {
+    function scrollToIndex(index) {
+      var target = slides[index];
+      if (!target) return;
+      target.scrollIntoView({ inline: 'start', behavior: 'smooth', block: 'nearest' });
+    }
+
+    // Build pagination dots so it is obvious at a glance that there are multiple talks.
+    if (total > 1) {
+      var dotsNav = document.createElement('div');
+      dotsNav.className = 'carousel__dots';
+      dotsNav.setAttribute('role', 'tablist');
+      dotsNav.setAttribute('aria-label', 'Charlas de la meetup');
+      for (var i = 0; i < total; i++) {
+        (function (index) {
+          var dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'carousel__dot';
+          dot.setAttribute('role', 'tab');
+          dot.setAttribute('aria-label', 'Ir a la charla ' + (index + 1) + ' de ' + total);
+          dot.addEventListener('click', function () {
+            scrollToIndex(index);
+          });
+          dotsNav.appendChild(dot);
+          dots.push(dot);
+        })(i);
+      }
+      root.appendChild(dotsNav);
+    }
+
+    function updateUI() {
       if (counter) {
         counter.textContent = pad2(current + 1) + ' / ' + pad2(total);
       }
@@ -29,12 +59,15 @@
       if (nextBtn) {
         nextBtn.disabled = current === total - 1;
       }
-    }
-
-    function scrollToIndex(index) {
-      var target = slides[index];
-      if (!target) return;
-      target.scrollIntoView({ inline: 'start', behavior: 'smooth', block: 'nearest' });
+      dots.forEach(function (dot, index) {
+        var active = index === current;
+        dot.classList.toggle('is-active', active);
+        if (active) {
+          dot.setAttribute('aria-current', 'true');
+        } else {
+          dot.removeAttribute('aria-current');
+        }
+      });
     }
 
     if (prevBtn) {
@@ -57,7 +90,7 @@
               var idx = Array.prototype.indexOf.call(slides, entry.target);
               if (idx !== -1 && idx !== current) {
                 current = idx;
-                updateCounter();
+                updateUI();
               }
             }
           });
@@ -69,7 +102,7 @@
       });
     }
 
-    updateCounter();
+    updateUI();
   }
 
   function init() {

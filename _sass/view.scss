@@ -745,6 +745,40 @@ $vm-pad-x: 4rem;
     right: 8px;
   }
 
+  .carousel__dots {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1.125rem;
+  }
+
+  .carousel__dot {
+    background: rgba($vm-blue, 0.28);
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    height: 8px;
+    padding: 0;
+    transition: background 0.2s ease, width 0.2s ease;
+    width: 8px;
+
+    &:hover {
+      background: rgba($vm-blue, 0.55);
+    }
+
+    &.is-active {
+      background: $vm-blue;
+      width: 26px;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $vm-blue;
+      outline-offset: 2px;
+    }
+  }
+
   @media (max-width: 640px) {
     .carousel__btn--prev {
       left: 4px;
