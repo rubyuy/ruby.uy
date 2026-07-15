@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  {% include head.html %}
+
+  <body>
+    <nav class="pv-breadcrumb" aria-label="breadcrumb">
+      <div class="pv-breadcrumb__inner">
+        <ol class="pv-breadcrumb__trail">
+          <li><a href="/">Ruby UY</a></li>
+          <li><span class="sep" aria-hidden="true">›</span></li>
+          <li><span class="pv-breadcrumb__current" aria-current="page">Primera vez</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <main>
+      <article id="view-primera-vez">
+        {{ content }}
+      </article>
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>

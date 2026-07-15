@@ -16,6 +16,15 @@ module CustomFilters
   def image_asset(filename)
     "/assets/images/#{filename}"
   end
+
+  def flat_map(array, key)
+    Array(array).flat_map { |item| item[key] || [] }
+  end
+
+  def sum_by(array, key)
+    Array(array).sum { |item| item[key].to_i }
+  end
+
 end
 
 Liquid::Template.register_filter(CustomFilters)

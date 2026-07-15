@@ -5,3 +5,4 @@ _site
 .jekyll-metadata
 vendor
 .DS_Store
+docs/superpowers/

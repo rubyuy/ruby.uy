@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+
+  <body>
+    {% include nav.html %}
+
+    <main>
+      <article id="view-stats" class="view">
+        <section>
+          <h2>Stats</h2>
+          <p class="stats-subtitle">The Ruby UY community in numbers</p>
+        </section>
+
+        {% comment %} Base data {% endcomment %}
+        {% assign projects = site.data.community.projects %}
+        {% assign meetups = site.meetups | sort: "date" %}
+
+        {% comment %} Talks {% endcomment %}
+        {% assign all_talks = meetups | flat_map: "talks" %}
+        {% assign all_talks_count = all_talks | size %}
+
+        {% comment %} Stamps {% endcomment %}
+        {% assign total_stars = projects | sum_by: "stars" %}
+        {% assign unique_authors = projects | map: "github_user" | uniq %}
+
+        {% comment %} Meetups {% endcomment %}
+        {% assign meetups_by_year = meetups | group_by_exp: "meetup", "meetup.date | date: '%Y'" %}
+        {% assign top_hosts_by_meetups = meetups | group_by: "host" | sort: "size" | reverse %}
+
+        {% comment %} Talks rankings {% endcomment %}
+        {% assign hosts_by_talk = "" | split: "" %}
+        {% for meetup in meetups %}
+          {% for talk in meetup.talks %}
+            {% assign hosts_by_talk = hosts_by_talk | push: meetup.host %}
+          {% endfor %}
+        {% endfor %}
+        {% assign top_hosts = hosts_by_talk | group_by_exp: "host_slug", "host_slug" | sort: "size" | reverse | slice: 0, 5 %}
+        {% assign all_speakers = all_talks | flat_map: "speakers" %}
+        {% assign grouped_speakers = all_speakers | group_by_exp: "speaker_id", "speaker_id" | sort: "size" | reverse | slice: 0, 5 %}
+
+        {% comment %} Projects rankings {% endcomment %}
+        {% assign top_projects = projects | sort: "stars" | reverse | slice: 0, 5 %}
+        {% assign top_contributors_by_count = projects | group_by: "github_user" | sort: "size" | reverse %}
+        {% assign all_topics = projects | flat_map: "topics" | compact %}
+        {% assign top_topics = all_topics | group_by_exp: "item", "item" | sort: "size" | reverse | slice: 0, 8 %}
+
+        <section class="stats-stamps">
+          <div class="stats-stamp stats-stamp--1">
+            <div class="stats-stamp-num">{{ meetups.size }}</div>
+            <div class="stats-stamp-label">Meetups</div>
+          </div>
+          <div class="stats-stamp stats-stamp--2">
+            <div class="stats-stamp-num">{{ all_talks_count }}</div>
+            <div class="stats-stamp-label">Talks</div>
+          </div>
+          <div class="stats-stamp stats-stamp--3">
+            <div class="stats-stamp-num">{{ site.data.people.size }}</div>
+            <div class="stats-stamp-label">Members</div>
+          </div>
+          <div class="stats-stamp stats-stamp--4">
+            <div class="stats-stamp-num">{{ projects.size }}</div>
+            <div class="stats-stamp-label">Projects</div>
+          </div>
+          <div class="stats-stamp stats-stamp--5">
+            <div class="stats-stamp-num">{{ total_stars }}</div>
+            <div class="stats-stamp-label">Stars</div>
+          </div>
+          <div class="stats-stamp stats-stamp--6">
+            <div class="stats-stamp-num">{{ unique_authors.size }}</div>
+            <div class="stats-stamp-label">Authors</div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Meetups</h3>
+
+          <h4 class="stats-subheading">Per year — each square = one meetup</h4>
+          <div class="stats-visualcount">
+            {% for year in meetups_by_year %}
+              {% assign year_meetup_count = year.items.size %}
+              <div class="stats-visualcount-row">
+                <span class="stats-visualcount-year">{{ year.name }}</span>
+                <div class="stats-visualcount-blocks">
+                  {% for meetup in year.items %}
+                    <a href="{{ meetup.url }}" class="stats-block" title="{{ meetup.host }} — {{ meetup.date | date: '%b %Y' }}"></a>
+                  {% endfor %}
+                </div>
+                <span class="stats-visualcount-total">{{ year_meetup_count }}</span>
+              </div>
+            {% endfor %}
+          </div>
+
+          <h4 class="stats-subheading">Top hosts (by meetups)</h4>
+          <ol class="stats-ranking">
+            {% for host_group in top_hosts_by_meetups limit: 5 %}
+              {% assign company = site.data.companies[host_group.name] %}
+              <li><strong>{{ company.name | default: host_group.name }}</strong> <span class="stats-value">{{ host_group.size }} meetups</span></li>
+            {% endfor %}
+          </ol>
+        </section>
+
+        <section>
+          <h3>Talks</h3>
+
+          <h4 class="stats-subheading">Per year — each dot = one talk</h4>
+          <div class="stats-visualcount">
+            {% for year in meetups_by_year %}
+              {% assign year_talk_count = year.items | flat_map: "talks" | size %}
+              <div class="stats-visualcount-row">
+                <span class="stats-visualcount-year">{{ year.name }}</span>
+                <div class="stats-visualcount-blocks">
+                  {% for meetup in year.items %}
+                    {% for talk in meetup.talks %}
+                      <a href="{{ meetup.url }}#{{ talk.title | slugify }}" class="stats-dot" title="{{ talk.title }}"></a>
+                    {% endfor %}
+                  {% endfor %}
+                </div>
+                <span class="stats-visualcount-total">{{ year_talk_count }}</span>
+              </div>
+            {% endfor %}
+          </div>
+
+          <h4 class="stats-subheading">Top hosting companies (by talks featured)</h4>
+          <ol class="stats-ranking">
+            {% for host in top_hosts %}
+              {% assign company = site.data.companies[host.name] %}
+              <li>
+                <strong>{{ company.name | default: host.name }}</strong> 
+                <span class="stats-value">{{ host.size }} talks</span>
+              </li>
+            {% endfor %}
+          </ol>
+
+          <h4 class="stats-subheading">Most active speakers</h4>
+          <ol class="stats-ranking">
+            {% for group in grouped_speakers %}
+              {% assign person = site.data.people[group.name] %}
+              <li><strong>{{ person.name | default: group.name }}</strong> <span class="stats-value">{{ group.size }} talks</span></li>
+            {% endfor %}
+          </ol>
+        </section>
+
+        <section>
+          <h3>Projects</h3>
+          <div class="stats-hero">
+            <div class="stats-hero-number">{{ total_stars }}</div>
+            <div class="stats-hero-label">GitHub stars across our community's projects</div>
+          </div>
+
+          <h4 class="stats-subheading">Top 5 by stars</h4>
+          <ol class="stats-ranking">
+            {% for project in top_projects %}
+              <li>
+                <a href="{{ project.url }}" target="_blank" rel="noopener"><strong>{{ project.name }}</strong></a>
+                <span class="stats-author">@{{ project.github_user }}</span>
+                <span class="stats-value">★ {{ project.stars }}</span>
+              </li>
+            {% endfor %}
+          </ol>
+
+          <h4 class="stats-subheading">Top contributors (by Ruby/Rails project count)</h4>
+          <table class="stats-table">
+            <thead><tr><th>Author</th><th>Projects</th><th>Total stars</th></tr></thead>
+            <tbody>
+              {% for contributor in top_contributors_by_count limit: 5 %}
+                <tr>
+                  <td>@{{ contributor.name }}</td>
+                  <td>{{ contributor.size }}</td>
+                  <td>{{ contributor.items | sum_by: "stars" }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+          <h4 class="stats-subheading">Most popular topics</h4>
+          <div class="stats-topics">
+            {% for entry in top_topics %}
+              <span class="stats-topic">{{ entry.name }} <em>{{ entry.size }}</em></span>
+            {% endfor %}
+          </div>
+        </section>
+
+        <section>
+          <h3>Here's your receipt</h3>
+          <div class="stats-receipt">
+            <div class="stats-receipt-header">
+              <div>RUBY UY</div>
+              <div>COMMUNITY RECEIPT</div>
+              <div>SINCE 2022 — {{ meetups.size }} EVENTS HOSTED</div>
+            </div>
+            <div class="stats-receipt-row"><span>Meetups hosted</span><span>{{ meetups.size }}</span></div>
+            <div class="stats-receipt-row"><span>Talks delivered</span><span>{{ all_talks_count }}</span></div>
+            <div class="stats-receipt-row"><span>Active members</span><span>{{ site.data.people.size }}</span></div>
+            <div class="stats-receipt-row"><span>Open source projects</span><span>{{ projects.size }}</span></div>
+            <div class="stats-receipt-row"><span>Total GitHub stars</span><span>{{ total_stars }}</span></div>
+            <div class="stats-receipt-row"><span>Unique authors</span><span>{{ unique_authors.size }}</span></div>
+            <div class="stats-receipt-divider">— — — — — — — — — —</div>
+            <div class="stats-receipt-row stats-receipt-total"><span>TOTAL IMPACT</span><span>∞</span></div>
+            <div class="stats-receipt-footer">THANK YOU FOR BEING PART OF THE COMMUNITY</div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>

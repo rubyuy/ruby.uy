@@ -1,31 +1,19 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
 title: Ruby UY
 email: admin@ruby.uy
 description: >- # this means to ignore newlines until "baseurl:"
   Sitio de la comunidad Ruby en Uruguay.
+lang: es_UY
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://ruby.uy # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: jekyllrb
 github_username:  rubyuy
+logo: /assets/images/logo.svg
+social:
+  name: Ruby UY
+  links:
+    - https://github.com/rubyuy/ruby.uy
+    - https://twitter.com/rubymontevideo
+    - https://www.instagram.com/ruby_uruguay/
+    - https://www.youtube.com/@ruby_uy
 
 # Build settings
 plugins:
@@ -33,9 +21,51 @@ plugins:
   - jekyll-feed
   - jekyll-optional-front-matter
   - jekyll-relative-links
+  - jekyll-seo-tag
   - jekyll-sitemap
 
 collections:
   meetups:
     output: true
     permalink: /meetups/:year-:month-:day/:title
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      description: "Comunidad Ruby en Uruguay: meetups, charlas y contenido de Ruby y Ruby on Rails para desarrolladores."
+      keywords: "comunidad ruby uruguay, meetup ruby uruguay, ruby on rails uruguay, charlas ruby"
+  - scope:
+      path: "index.md"
+    values:
+      title: "Comunidad Ruby Uruguay: Meetups y Charlas de Ruby on Rails"
+      page_scripts:
+        - next_meetup_callout
+        - sponsors
+  - scope:
+      path: "talks.html"
+    values:
+      title: "Charlas Ruby y Ruby on Rails en Uruguay"
+      description: "Explorá todas las charlas de Ruby UY: Ruby, Ruby on Rails y tecnología compartida por la comunidad de Uruguay."
+      keywords: "charlas ruby, charlas ruby on rails, comunidad ruby uruguay, meetup ruby uruguay"
+      page_scripts:
+        - talks
+  - scope:
+      path: "community.html"
+    values:
+      title: "Comunidad Ruby Uruguay: proyectos open source"
+      description: "Descubrí proyectos Ruby y Ruby on Rails creados por la comunidad de Ruby Uruguay, ordenados por estrellas y autor."
+      keywords: "comunidad ruby uruguay, proyectos ruby, proyectos ruby on rails, open source uruguay"
+      page_scripts:
+        - community
+  - scope:
+      path: "sponsors.md"
+    values:
+      description: "Empresas que apoyan a Ruby UY y hacen posibles nuestros meetups y charlas en Uruguay."
+      keywords: "sponsors ruby uruguay, comunidad ruby uruguay, meetup ruby uruguay"
+  - scope:
+      path: ""
+      type: "meetups"
+    values:
+      description: "Detalle de meetup de Ruby UY con charlas, speakers y recursos de la comunidad Ruby en Uruguay."
+      keywords: "meetup ruby uruguay, charlas ruby, comunidad ruby uruguay"
