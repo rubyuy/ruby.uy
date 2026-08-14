@@ -1,0 +1,18 @@
+<div class="skill" data-search="{{ search_text | downcase | strip_html | strip_newlines }}">
+  <h4>
+    <a href="{{ skill.url }}">{{ skill.name }}</a>
+    <span class="skill-type skill-type-{{ skill.type | default: "skill" }}">{{ skill.type | default: "skill" }}s</span>
+  </h4>
+
+  {% if skill.description != "" %}
+    <p class="skill-description">{{ skill.description }}</p>
+  {% endif %}
+
+  {% if skill.topics.size > 0 %}
+    <div class="skill-topics">
+      {% for topic in skill.topics limit: 4 %}
+        <span class="skill-topic">{{ topic }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

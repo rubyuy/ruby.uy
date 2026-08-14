@@ -1,0 +1,340 @@
+#view-skills {
+  h2 {
+    overflow-wrap: break-word;
+
+    @media (max-width: 480px) {
+      font-size: 1.75rem;
+    }
+  }
+
+  .skills-subtitle {
+    color: #2E2E2E;
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+  }
+
+  .skills-search {
+    background-color: #F6EEEC;
+    border: 3px solid #2E2E2E;
+    box-shadow: 6px 6px 0 #3967D1;
+    color: #3967D1;
+    font: 700 1rem 'Syncopate', sans-serif;
+    letter-spacing: 0.05em;
+    padding: 1rem 1.25rem;
+    text-transform: uppercase;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+    width: 100%;
+
+    &::placeholder {
+      color: #3967D1;
+      opacity: 0.5;
+    }
+
+    &:focus {
+      box-shadow: 6px 6px 0 #FFC24D;
+      outline: none;
+      transform: translate(-2px, -2px);
+    }
+  }
+
+  .skills-updated {
+    color: #2E2E2E;
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    opacity: 0.6;
+  }
+
+  .skills-contribute {
+    color: #2E2E2E;
+    font-size: 0.85rem;
+    margin-top: 1.5rem;
+    opacity: 0.8;
+
+    a {
+      color: #3967D1;
+    }
+  }
+
+  .skills-empty {
+    color: #2E2E2E;
+    opacity: 0.7;
+  }
+
+  .skills-category {
+    border-bottom: 2px solid #3967D1;
+    color: #3967D1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.5rem;
+
+    &:first-child { margin-top: 0; }
+  }
+
+  .skill {
+    border: 3px solid #2E2E2E;
+    box-shadow: 4px 4px 0 #2E2E2E;
+    margin: 1rem 0;
+    padding: 1.25rem 1.5rem;
+    position: relative;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+
+    &[hidden] { display: none; }
+
+    &:hover {
+      box-shadow: 6px 6px 0 #3967D1;
+      transform: translate(-2px, -2px);
+    }
+
+    h4 {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 1.1rem;
+      gap: 0.5rem;
+
+      a {
+        color: #2E2E2E;
+        text-decoration: none;
+
+        &:hover { color: #3967D1; }
+
+        // Stretches the link over the whole card
+        &::after {
+          content: "";
+          inset: 0;
+          position: absolute;
+        }
+      }
+    }
+  }
+
+  .skill-type {
+    background-color: #F6EEEC;
+    border: 2px solid #2E2E2E;
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    padding: 0.15rem 0.4rem;
+    text-transform: uppercase;
+
+    &-rule {
+      background-color: #FFC24D;
+    }
+  }
+
+  .skill-description {
+    color: #2E2E2E;
+    margin: 0.5rem 0;
+    opacity: 0.8;
+  }
+
+  .skill-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+  }
+
+  .skill-topic {
+    background-color: #F6EEEC;
+    border: 2px solid #2E2E2E;
+    color: #2E2E2E;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0.5rem;
+    text-transform: uppercase;
+  }
+}
+
+#view-skill {
+  section:first-child {
+    @media (min-width: 769px) {
+      max-width: 60%;
+    }
+  }
+
+  .skill-back {
+    color: #3967D1;
+    font-size: 0.85rem;
+    text-decoration: none;
+
+    &:hover { text-decoration: underline; }
+  }
+
+  h2 {
+    margin: 1.25rem 0 1rem;
+    overflow-wrap: break-word;
+  }
+
+  .skill-detail-description {
+    color: #2E2E2E;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+  }
+
+  .skill-toolbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .skill-tabs {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .skill-tab {
+    background: none;
+    border: 2px solid #2E2E2E;
+    color: #2E2E2E;
+    cursor: pointer;
+    font: 700 0.75rem 'Syncopate', sans-serif;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+
+    &.active {
+      background-color: #2E2E2E;
+      color: #F6EEEC;
+    }
+  }
+
+  .skill-copy-btn {
+    background-color: #FFC24D;
+    border: 2px solid #2E2E2E;
+    color: #2E2E2E;
+    cursor: pointer;
+    font: 700 0.75rem 'Syncopate', sans-serif;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1.25rem;
+    text-transform: uppercase;
+    transition: background-color 0.15s ease;
+
+    &:hover { background-color: #3967D1; color: #fff; }
+  }
+
+  .skill-markdown,
+  .skill-raw {
+    background-color: #fff;
+    border: 1px solid #ddd4d1;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .skill-markdown {
+    color: #2E2E2E;
+    counter-reset: skill-rule;
+    font-size: 1rem;
+    line-height: 1.65;
+    padding: 2.5rem 3rem;
+
+    h1 {
+      font: 700 1.6rem 'Syncopate', sans-serif;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.75rem;
+    }
+
+    h2 {
+      color: #3967D1;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 2rem 0 0.75rem;
+    }
+
+    p { margin: 0.85rem 0; }
+
+    ol {
+      list-style: none;
+      margin: 0 0 1.25rem;
+      padding-left: 0;
+
+      li {
+        border-top: 1px solid #eee2df;
+        counter-increment: skill-rule;
+        padding: 0.9rem 0 0.9rem 1.75rem;
+
+        &:first-child { border-top: none; }
+
+        &::before {
+          color: #3967D1;
+          content: counter(skill-rule) ".";
+          display: inline-block;
+          font-weight: 700;
+          margin-left: -1.75rem;
+          width: 1.75rem;
+        }
+
+        p {
+          display: inline;
+          margin: 0;
+        }
+      }
+    }
+
+    ul {
+      margin: 0.5rem 0 1.25rem;
+      padding-left: 0;
+
+      li {
+        margin: 0.4rem 0;
+        padding-left: 1.25rem;
+        position: relative;
+
+        &::before {
+          color: #3967D1;
+          content: "–";
+          left: 0;
+          position: absolute;
+        }
+      }
+    }
+
+    strong { font-weight: 700; }
+
+    code {
+      background-color: #F6EEEC;
+      font-family: 'Courier New', monospace;
+      font-size: 0.85em;
+      padding: 0.1rem 0.35rem;
+    }
+
+    pre {
+      background-color: #f6f8fa;
+      border: 1px solid #ddd4d1;
+      color: #2E2E2E;
+      margin: 1.1rem 0;
+      overflow-x: auto;
+      padding: 1.25rem 1.5rem;
+
+      code {
+        background: none;
+        color: inherit;
+        font-size: 0.85rem;
+        padding: 0;
+      }
+    }
+
+    // Rouge syntax highlighting tokens
+    .c, .c1 { color: #6a737d; font-style: italic; } // comments
+    .s2 { color: #b3372c; } // strings
+    .ss { color: #3967D1; } // symbols
+    .k, .kp { color: #7a3e9d; } // keywords
+    .no { color: #b3372c; } // constants
+    .p, .o { color: #6a737d; } // punctuation / operators
+    .nf { color: #397E78; } // method names
+    .mi, .mf { color: #b3372c; } // numbers
+  }
+
+  .skill-raw {
+    color: #F6EEEC;
+    background-color: #2E2E2E;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    overflow-x: auto;
+    padding: 2rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+}
