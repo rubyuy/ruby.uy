@@ -1,0 +1,14 @@
+# Community-made skills for coding agents (Claude Code, etc.) focused on Ruby on Rails.
+# Skills belong to the community — they are not attributed to a single author.
+#
+# To add one: drop a SKILL.md in _skills/<name>.md and add its entry here.
+
+last_updated: 2026-08-14
+
+skills:
+  - name: rspec-tests-for-rails
+    category: Tests
+    type: rule
+    description: Rules for writing fast, maintainable RSpec specs in Rails — build_stubbed over build/create, let over before, avoiding N+1s in specs, memoizing the subject.
+    url: /skills/rspec-tests-for-rails/
+    topics: [rspec, testing, factorybot]

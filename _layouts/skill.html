@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+
+  <body>
+    {% include nav.html %}
+
+    <main>
+      <article id="view-skill" class="view">
+        {% comment %} Catalog metadata lives only in _data/skills.yml {% endcomment %}
+        {% assign skill = site.data.skills.skills | where: "url", page.url | first %}
+
+        <section>
+          <a href="/skills/" class="skill-back">&larr; Skills</a>
+          <h2>{{ skill.name }}</h2>
+          <p class="skill-detail-description">{{ skill.description }}</p>
+        </section>
+
+        <section>
+          <div class="skill-toolbar">
+            <div class="skill-tabs">
+              <button class="skill-tab active" data-view="markdown" type="button">Markdown</button>
+              <button class="skill-tab" data-view="raw" type="button">Raw</button>
+            </div>
+            <button id="skill-copy" class="skill-copy-btn" type="button">Copy</button>
+          </div>
+
+          {% comment %} Rendered by Jekyll; the raw file is re-read below for the copy button {% endcomment %}
+          <div id="skill-markdown" class="skill-markdown">{{ content }}</div>
+
+          {% capture skill_source %}{% include_relative {{ page.slug }}.md %}{% endcapture %}
+          <pre id="skill-source" class="skill-raw" hidden>{{ skill_source | escape }}</pre>
+        </section>
+      </article>
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>
