@@ -230,9 +230,6 @@ vladimir_dementyev:
   name: Vladimir Dementyev
   github: palkan
 
-santiago_rodriguez:
-  name: Santiago Rodriguez
-
 mauricio_coniglio:
   name: Mauricio Coniglio
 
@@ -275,3 +272,4 @@ juan_azambuja:
 
 carlos_musetti:
   name: Carlos Musetti
+  github: carlos-musetti
