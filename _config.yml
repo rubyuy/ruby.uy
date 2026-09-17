@@ -28,6 +28,9 @@ collections:
   meetups:
     output: true
     permalink: /meetups/:year-:month-:day/:title
+  skills:
+    output: true
+    permalink: /skills/:name/
 
 defaults:
   - scope:
@@ -69,3 +72,10 @@ defaults:
     values:
       description: "Detalle de meetup de Ruby UY con charlas, speakers y recursos de la comunidad Ruby en Uruguay."
       keywords: "meetup ruby uruguay, charlas ruby, comunidad ruby uruguay"
+  - scope:
+      path: ""
+      type: "skills"
+    values:
+      layout: skill
+      page_scripts: [skill]
+      keywords: "skills ruby on rails, claude code skills, agentes ia ruby, comunidad ruby uruguay"
