@@ -1,0 +1,79 @@
+// ============================================================
+// Base — browser surfaces, focus, selection, motion defaults.
+// Loaded after reset so it can set the tone for the whole site.
+// ============================================================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem; // clears the sticky nav on anchor jumps
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+// Syncopate has exactly two weights (400, 700); the reset's `font: inherit`
+// drops headings to 400, so name the voice here instead of per-component.
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+img, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--amber);
+  color: var(--ink);
+}
+
+// The pieces you did not draw still carry the design.
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+// Dark/colored surfaces need a light ring so focus never disappears.
+.site-nav :focus-visible,
+.next-meetup :focus-visible,
+.view-meetup__breadcrumb :focus-visible,
+.stats-hero :focus-visible {
+  outline-color: var(--amber);
+}
+
+@supports (scrollbar-color: red blue) {
+  html {
+    scrollbar-color: var(--blue) var(--cream);
+    scrollbar-width: thin;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

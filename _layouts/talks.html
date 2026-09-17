@@ -5,12 +5,14 @@
   <body>
     {% include nav.html %}
 
-    <main>
+    <main id="main">
       <article id="view-talks" class="view">
-        <section>
+        <section data-reveal>
           <h2>Charlas</h2>
+          <p class="talks-subtitle">Todas las charlas que pasaron por la comunidad, buscables por título, speaker o tema.</p>
 
           <input type="search" id="talks-search" class="talks-search" placeholder="Buscar charla o speaker..." autocomplete="off">
+          <p class="talks-count" data-talks-count aria-live="polite"></p>
         </section>
 
         <section>
@@ -23,9 +25,10 @@
               {% assign year_count = year_count | plus: meetup.talks.size %}
             {% endfor %}
 
-            <h3 class="talks-year">{{ year.name }} ({{ year_count }})</h3>
+            <h3 class="talks-year" data-reveal>{{ year.name }} ({{ year_count }})</h3>
 
             {% for meetup in year.items %}
+              {% assign talk_host = site.data.companies[meetup.host].name | default: meetup.host %}
               {% for talk in meetup.talks %}
               {% assign speakers = "" | split: ',' %}
               {% for speaker in talk.speakers %}
@@ -34,24 +37,35 @@
 
               {% capture search_text %}{{ talk.title }} {{ meetup.title }} {{ speakers | join: ' ' }} {{ talk.description }}{% endcapture %}
 
-              <div class="talk" data-search="{{ search_text | downcase | strip_html | strip_newlines }}">
-                <h4 id="{{ talk.title | slugify }}">
+              <article class="talk" data-search="{{ search_text | downcase | strip_html | strip_newlines }}" data-reveal>
+                <h4 class="talk__title" id="{{ talk.title | slugify }}">
                   <a href="{{ meetup.url }}#{{ talk.title | slugify }}">
                     <span class="talk-title">{{ talk.title }}</span>
                   </a>
                 </h4>
-                <p>
+
+                <ul class="talk__speakers">
                   {% for speaker in talk.speakers %}
                     {% assign person = site.data.people[speaker] %}
-                    {% if person.github %}
-                      <img src="https://github.com/{{ person.github }}.png?size=30" alt="{{ person.name }}" loading="lazy" width="30" height="30" style="border-radius: 50%; width: 30px; vertical-align: middle;"/>
-                    {% endif %}
-                    {{ person.name }}{% unless forloop.last %}, {% endunless %}
+                    <li class="talk__speaker">
+                      {% if person.github %}
+                        <img class="talk__avatar" src="https://github.com/{{ person.github }}.png?size=48" alt="" width="26" height="26" loading="lazy">
+                      {% endif %}
+                      <span>{{ person.name }}</span>
+                    </li>
                   {% endfor %}
-                </p>
+                </ul>
 
-                <p>{{ talk.description }}</p>
-              </div>
+                {% if talk.description %}
+                  <p class="talk__description">{{ talk.description }}</p>
+                {% endif %}
+
+                <p class="talk__meta">
+                  <span class="talk__meta-host">{{ talk_host }}</span>
+                  <span aria-hidden="true">&middot;</span>
+                  <time datetime="{{ meetup.date | date: '%Y-%m-%d' }}">{{ meetup.date | date: "%-d/%-m/%Y" }}</time>
+                </p>
+              </article>
               {% endfor %}
             {% endfor %}
           {% endfor %}

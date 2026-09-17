@@ -3,7 +3,9 @@
   {% include head.html %}
 
   <body>
-    <main> {{ content }} </main>
+    {% include nav.html %}
+
+    <main id="main"> {{ content }} </main>
 
     {% include footer.html %}
   </body>

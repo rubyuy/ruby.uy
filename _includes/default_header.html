@@ -1,23 +1,61 @@
-<header class="header__default">
-  <div>
-    <h1>
-      COMUNIDAD RUBY EN URUGUAY
-    </h1>
-    <img src="{{ "logo.svg" | image_asset | buster }}" aria-hidden="true" focuseable="false"/>
+<header class="hero" data-hero>
+  <div class="hero__inner">
+    <div class="hero__text">
+      <h1 class="hero__title">
+        <span class="hero__title-line">Comunidad</span>
+        <span class="hero__title-line">Ruby en</span>
+        <span class="hero__title-line">Uruguay</span>
+      </h1>
+    </div>
+
+    <div class="hero__art" aria-hidden="true">
+      <img class="hero__mark" src="{{ "logo.svg" | image_asset | buster }}" alt="" width="584" height="426">
+    </div>
   </div>
-  <div id="about">
-    <div>
+
+  <div class="hero__band" id="about">
+    <div class="hero__band-lead">
       <h2>Sé parte_</h2>
     </div>
-    <div>
-      {% for service in site.data.socials %}
-        <a href="{{ service[1] }}" target="_blank" rel="noopener noreferrer">
-          {{ service[0] }}<img src='/assets/images/arrow.svg' width="30" height="27" aria-hidden="true" focuseable="false"/>
-        </a>
-      {% endfor %}
-      <a href="/community">Community<img src='/assets/images/arrow.svg' aria-hidden="true" focuseable="false"/></a>
-      <a href="/primera-vez/">Primera vez<img src='/assets/images/arrow.svg' aria-hidden="true" focuseable="false"/></a>
-      <a href="/stats">Stats<img src='/assets/images/arrow.svg' aria-hidden="true" focuseable="false"/></a>
+
+    <div class="hero__band-links">
+      <div class="hero__link-group">
+        <span class="hero__link-label">Seguinos</span>
+        <ul class="hero__pill-list">
+          {% for service in site.data.socials %}
+            <li>
+              <a class="hero__pill" href="{{ service[1] }}" target="_blank" rel="noopener noreferrer">
+                {{ service[0] }}
+                <img src="/assets/images/arrow.svg" width="20" height="18" alt="" aria-hidden="true">
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="hero__link-group">
+        <span class="hero__link-label">Explorá</span>
+        <ul class="hero__pill-list">
+          <li>
+            <a class="hero__pill" href="/community">
+              Community
+              <img src="/assets/images/arrow.svg" width="20" height="18" alt="" aria-hidden="true">
+            </a>
+          </li>
+          <li>
+            <a class="hero__pill" href="/primera-vez/">
+              Primera vez
+              <img src="/assets/images/arrow.svg" width="20" height="18" alt="" aria-hidden="true">
+            </a>
+          </li>
+          <li>
+            <a class="hero__pill" href="/stats">
+              Stats
+              <img src="/assets/images/arrow.svg" width="20" height="18" alt="" aria-hidden="true">
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </header>

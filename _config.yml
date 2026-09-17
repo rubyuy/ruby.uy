@@ -35,6 +35,11 @@ defaults:
     values:
       description: "Comunidad Ruby en Uruguay: meetups, charlas y contenido de Ruby y Ruby on Rails para desarrolladores."
       keywords: "comunidad ruby uruguay, meetup ruby uruguay, ruby on rails uruguay, charlas ruby"
+      image:
+        path: /assets/images/og.png
+        alt: "Ruby UY: comunidad Ruby en Uruguay"
+        width: 1200
+        height: 630
   - scope:
       path: "index.md"
     values:

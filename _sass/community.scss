@@ -3,7 +3,7 @@
     overflow-wrap: break-word;
 
     @media (max-width: 480px) {
-      font-size: 1.75rem;
+      font-size: var(--text-2xl);
     }
   }
 
@@ -24,7 +24,7 @@
     border: 3px solid #2E2E2E;
     box-shadow: 6px 6px 0 #3967D1;
     color: #3967D1;
-    font: 700 1rem 'Syncopate', sans-serif;
+    font: 700 var(--text-md) var(--font-display);
     letter-spacing: 0.05em;
     padding: 1rem 1.25rem;
     text-transform: uppercase;
@@ -53,7 +53,7 @@
       border: 3px solid #2E2E2E;
       box-shadow: 4px 4px 0 #2E2E2E;
       cursor: pointer;
-      font: 700 0.75rem 'Syncopate', sans-serif;
+      font: 700 var(--text-xs) var(--font-display);
       letter-spacing: 0.05em;
       padding: 0.5rem 1rem;
       text-transform: uppercase;
@@ -61,7 +61,7 @@
       white-space: nowrap;
 
       @media (max-width: 480px) {
-        font-size: 0.65rem;
+        font-size: var(--text-2xs);
         letter-spacing: 0.02em;
         padding: 0.5rem 0.75rem;
       }
@@ -82,7 +82,8 @@
 
   .community-updated {
     color: #2E2E2E;
-    font-size: 0.8rem;
+    font-family: var(--font-display);
+    font-size: var(--text-xs);
     font-weight: bold;
     letter-spacing: 0.05em;
     margin-top: 1rem;
@@ -93,7 +94,7 @@
   .community-user-group {
     border-bottom: 2px solid #3967D1;
     color: #3967D1;
-    font-size: 1.5rem;
+    font-size: var(--text-2xl);
     font-weight: bold;
     margin: 2rem 0 1rem;
     padding-bottom: 0.5rem;
