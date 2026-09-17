@@ -2,18 +2,30 @@
   <meta charset='utf-8' />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="view-transition" content="same-origin" />
+  <script>
+    document.documentElement.classList.add('js');
+    // Safety net: if motion.js never loads, show every [data-reveal] block on load.
+    window.addEventListener('load', function () {
+      if (window.__piMotionReady) return;
+      document.querySelectorAll('[data-reveal]').forEach(function (el) {
+        el.classList.add('is-revealed');
+      });
+    });
+  </script>
   <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
   {% seo %}
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml">
   <script async src="https://analytics.umami.is/script.js" data-website-id="209b35e2-b972-4bf5-8a88-09cedbc740f8" data-domains="ruby.uy"></script>
 
   <link rel="stylesheet" href="{{ "styles" | css_asset | buster }}">
   <script defer src="{{ "application" | js_asset | buster }}"></script>
   <script defer src="{{ "nav" | js_asset | buster }}"></script>
+  <script defer src="{{ "motion" | js_asset | buster }}"></script>
   {% for script_name in page.page_scripts %}
     <script defer src="{{ script_name | js_asset | buster }}"></script>
   {% endfor %}

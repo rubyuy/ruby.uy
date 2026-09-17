@@ -1,17 +1,15 @@
 body {
-  font-family: 'Syncopate', sans-serif;
   background-color: #F6EEEC;
 }
 
 h1 {
-  font-size: 24pt;
+  font-size: var(--text-3xl);
   margin-bottom: 0;
 }
 
 h2 {
   margin-top: 0;
-  font-size: 13pt;
-  font-weight: normal;
+  font-size: var(--text-2xl);
 }
 
 iframe {

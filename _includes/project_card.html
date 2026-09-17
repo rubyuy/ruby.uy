@@ -1,4 +1,5 @@
 <div class="project {{ medal_class }}"
+  data-reveal
   data-search="{{ search_text | downcase | strip_html | strip_newlines }}"
   data-user="{{ project.github_user }}"
   data-stars="{{ project.stars }}"
@@ -12,9 +13,9 @@
 
   <div class="project-body">
     <div class="project-header">
-      <h4>
+      <h3>
         <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.name }}</a>
-      </h4>
+      </h3>
       <span class="project-stars">★ {{ project.stars }}</span>
     </div>
 

@@ -3,7 +3,7 @@
     width: 100%;
     background: #ABC2FB;
     display: flex;
-    font-weight: 900;
+    font-weight: 700;
     padding: 16px 0;
     overflow: hidden;
 
@@ -15,10 +15,10 @@
       margin: 0;
 
       &__title {
-        font-size: 2rem;
+        font-size: var(--text-3xl);
 
         @media (max-width: 992px) {
-          font-size: 1.5rem;
+          font-size: var(--text-2xl);
         }
       }
 
@@ -31,17 +31,10 @@
       }
 
       &--infinite-horizontal-animation {
-        animation: scroll-horizontal 30s linear infinite;
+        animation: marquee-x 32s linear infinite;
+        will-change: transform;
 
-        @keyframes scroll-horizontal {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-
+        &:hover { animation-play-state: paused; }
       }
     }
   }
@@ -79,9 +72,9 @@
       }
 
       h2 {
-        font-weight: 900;
+        font-weight: 700;
         color: #3967D1;
-        font-size: 1.8rem;
+        font-size: var(--text-3xl);
       }
 
       ul {
@@ -141,8 +134,8 @@
           z-index: 1;
 
           h1 {
-            font-size: 1.2rem;
-            font-weight: 900;
+            font-size: var(--text-xl);
+            font-weight: 700;
             border-bottom: 1px solid black;
             padding-bottom: 0.5rem;
             margin-bottom: 0.5rem;

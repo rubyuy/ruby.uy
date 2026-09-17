@@ -1,5 +1,5 @@
 <section id="meetups">
-  <header>
+  <header data-reveal>
     <h1>EDICIONES PASADAS</h1>
     <p>Conocé el contenido de las ediciones pasadas.</p>
     <a href="/charlas" class="meetup-event__search-link">
@@ -17,9 +17,9 @@
         | reverse %}
 
   {% for year in meetups_by_year | reverse %}
-    <h2 class="meetup-event__date_year" id="meetups-{{ year.name }}">{{ year.name }}</h2>
+    <h2 class="meetup-event__date_year" id="meetups-{{ year.name }}" data-reveal>{{ year.name }}</h2>
 
-    <ul>
+    <ul data-reveal>
       {% for meetup in year.items %}
         {% assign meetup_host = site.data.companies[meetup.host] %}
         {% assign meetup_sponsor_name = meetup_host.name | default: meetup.title %}
