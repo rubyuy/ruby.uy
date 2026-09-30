@@ -1,0 +1,75 @@
+// ============================================================
+// Design tokens — the single source of truth for the Ruby UY world.
+// ============================================================
+
+:root {
+  // Palette
+  --blue: #3967D1;
+  --blue-deep: #2851AE;
+  --blue-soft: #ABC2FB;
+  --amber: #FFC24D;
+  --amber-deep: #E0A22F;
+  --cream: #F6EEEC;
+  --cream-deep: #EDE2DE;
+  --teal: #397E78;
+  --teal-deep: #2C625D;
+  --ink: #2E2E2E;
+  --red: #F83E3E;
+  --white: #ffffff;
+
+  --ink-70: rgba(46, 46, 46, 0.7);
+  --ink-50: rgba(46, 46, 46, 0.5);
+  --ink-12: rgba(46, 46, 46, 0.12);
+  --ink-08: rgba(46, 46, 46, 0.08);
+
+  // Depth — offset block shadows belong to this world, never a blur halo.
+  --shadow-xs: 2px 2px 0 var(--ink);
+  --shadow-sm: 4px 4px 0 var(--ink);
+  --shadow-md: 6px 6px 0 var(--ink);
+  --shadow-lg: 8px 8px 0 var(--ink);
+  --shadow-blue: 6px 6px 0 var(--blue);
+  --shadow-amber: 6px 6px 0 var(--amber);
+
+  // Geometry
+  --radius-sm: 10px;
+  --radius: 16px;
+  --radius-pill: 999px;
+  --maxw: 1600px;
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+
+  // Motion
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-1: 140ms;
+  --dur-2: 280ms;
+  --dur-3: 520ms;
+  --dur-4: 900ms;
+
+  // Type — one authored ramp on a 16px base. Steps are ~1.25–1.33
+  // apart so adjacent roles stay distinct. Roles, never one-off values.
+  --font-display: 'Syncopate', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  --text-2xs: 0.6875rem; // 11px — micro label; the floor
+  --text-xs: 0.75rem;    // 12px — label, meta
+  --text-sm: 0.875rem;   // 14px — secondary copy
+  --text-md: 1rem;       // 16px — body
+  --text-lg: 1.125rem;   // 18px — lead
+  --text-xl: 1.25rem;    // 20px — entry title
+  --text-2xl: 1.5rem;    // 24px — section title
+  --text-3xl: 2rem;      // 32px — page title
+  --text-4xl: 2.5rem;    // 40px — display
+  --text-5xl: 3.5rem;    // 56px — stat number
+  --text-6xl: 6rem;      // 96px — oversized numeral
+
+  // Fluid display roles — these may respond to viewport width.
+  --text-title: clamp(1.5rem, 4vw, 2.5rem);      // page title
+  --text-title-lg: clamp(2rem, 4vw, 3.375rem);   // meetup hero
+  --text-headline: clamp(2rem, 4.6vw, 3.75rem);  // band headline
+  --text-display: clamp(2.5rem, 7.2vw, 6rem);    // hero
+
+  // Leading — tuned to the role, not one universal ratio.
+  --leading-tight: 0.96;
+  --leading-body: 1.6;
+}

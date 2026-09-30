@@ -5,9 +5,9 @@
   <body>
     {% include nav.html %}
 
-    <main>
+    <main id="main">
       <article id="view-community" class="view">
-        <section>
+        <section data-reveal>
           <h2>Community</h2>
           <p class="community-subtitle">Ruby & Rails open source projects built by our community</p>
 
@@ -24,7 +24,7 @@
           <p class="community-updated">Last updated: {{ site.data.community.last_updated | date: "%B %-d, %Y" }}</p>
         </section>
 
-        <section id="community-list">
+        <section id="community-list" data-reveal-stagger>
           {% assign projects_sorted = site.data.community.projects | sort: "stars" | reverse %}
           {% assign medals = "medal-gold,medal-silver,medal-bronze" | split: "," %}
 

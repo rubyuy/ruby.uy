@@ -1,0 +1,108 @@
+// ============================================================
+// Motion — one authored moment (the homepage overture) plus
+// restrained scroll reveals. Every effect yields to
+// prefers-reduced-motion through base.scss.
+// ============================================================
+
+// --- Scroll reveal ---------------------------------------------------------
+// Add [data-reveal] to a block; add [data-reveal-stagger] to a parent and JS
+// assigns --reveal-index so siblings cascade instead of popping together.
+
+[data-reveal] {
+  opacity: 1;
+}
+
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity var(--dur-3) var(--ease-out-expo),
+    transform var(--dur-3) var(--ease-out-expo);
+  transition-delay: calc(var(--reveal-index, 0) * 55ms);
+  will-change: opacity, transform;
+}
+
+.js [data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+// --- Homepage overture -----------------------------------------------------
+// The hero lines lift out of a soft blur, the sun mask-wipes, the band settles.
+
+@keyframes hero-line-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.7em);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes hero-mark-in {
+  from {
+    opacity: 0;
+    transform: translateY(2.5rem) scale(0.86) rotate(-9deg);
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0);
+    clip-path: inset(-24px);
+  }
+}
+
+@keyframes hero-mark-float {
+  0%,
+  100% { transform: translateY(0) rotate(0); }
+  50%  { transform: translateY(-12px) rotate(1.4deg); }
+}
+
+@keyframes hero-band-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes squeeze-arrow {
+  from { transform: translateX(-42%); }
+  to   { transform: translateX(0); }
+}
+
+html.is-ready {
+  .hero__title-line {
+    animation: hero-line-in var(--dur-4) var(--ease-out-expo) both;
+  }
+
+  .hero__title-line:nth-child(1) { animation-delay: 80ms; }
+  .hero__title-line:nth-child(2) { animation-delay: 180ms; }
+  .hero__title-line:nth-child(3) { animation-delay: 280ms; }
+
+  .hero__mark {
+    animation:
+      hero-mark-in 1.05s var(--ease-out-expo) 200ms both,
+      hero-mark-float 7s ease-in-out 1.4s infinite;
+  }
+
+  .hero__band {
+    animation: hero-band-in 0.8s var(--ease-out-expo) 460ms both;
+  }
+}
+
+// --- Marquee ---------------------------------------------------------------
+// Seamless by construction: the track holds repeated copies and slides exactly
+// one copy-width. Pauses on hover; global reduced-motion disables it.
+
+@keyframes marquee-x {
+  to { transform: translateX(-100%); }
+}

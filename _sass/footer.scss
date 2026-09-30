@@ -20,7 +20,7 @@ footer {
   div {
     &:first-child {
       h1 {
-        font-size: 2rem;
+        font-size: var(--text-3xl);
         font-weight: bold;
         margin-bottom: 3rem;
         text-align: center;
@@ -30,7 +30,7 @@ footer {
         }
 
         @media (max-width: 768px) {
-          font-size: 1.5rem;
+          font-size: var(--text-2xl);
         }
       }
 

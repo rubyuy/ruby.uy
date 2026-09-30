@@ -13,7 +13,7 @@
 
     {% include nav.html %}
 
-    <main>
+    <main id="main">
       <article id="view-meetup">
         <nav class="view-meetup__breadcrumb" aria-label="breadcrumb">
           <div class="breadcrumb__inner">
@@ -29,7 +29,7 @@
           </div>
         </nav>
 
-        <section class="view-meetup__hero">
+        <section class="view-meetup__hero" data-reveal>
           <div class="hero__inner">
             <div class="hero__left">
               <div class="hero__heading">
@@ -57,9 +57,9 @@
 
         <section class="view-meetup__grid-section">
           <div class="grid-section__inner">
-            <div class="view-meetup__grid">
+            <div class="view-meetup__grid" data-reveal-stagger>
               <div class="view-meetup__col view-meetup__col--left">
-                <section class="card host-card">
+                <section class="card host-card" data-reveal>
                   <span class="card__label card__label--host">HOST</span>
                   <div class="host-card__body">
                     {% if host.image %}
@@ -93,7 +93,7 @@
                 {% endfor %}
 
                 {% if any_speakers %}
-                <section class="card speakers-card">
+                <section class="card speakers-card" data-reveal>
                   <span class="card__label card__label--speakers">SPEAKERS</span>
                   <ul class="speakers-list">
                     {% for speaker_key in seen_speakers %}
@@ -145,7 +145,7 @@
               </div>
 
               <div class="view-meetup__col view-meetup__col--right">
-                <section class="card charla-destacada" id="charla-destacada">
+                <section class="card charla-destacada" id="charla-destacada" data-reveal>
                   {% if page.talks.size > 0 %}
                   <header class="charla-destacada__header">
                     <span class="charla-destacada__counter" data-counter aria-live="polite">

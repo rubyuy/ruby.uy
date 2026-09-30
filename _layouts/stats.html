@@ -5,7 +5,7 @@
   <body>
     {% include nav.html %}
 
-    <main>
+    <main id="main">
       <article id="view-stats" class="view">
         <section>
           <h2>Stats</h2>
@@ -45,34 +45,34 @@
         {% assign all_topics = projects | flat_map: "topics" | compact %}
         {% assign top_topics = all_topics | group_by_exp: "item", "item" | sort: "size" | reverse | slice: 0, 8 %}
 
-        <section class="stats-stamps">
-          <div class="stats-stamp stats-stamp--1">
-            <div class="stats-stamp-num">{{ meetups.size }}</div>
+        <section class="stats-stamps" data-reveal-stagger>
+          <div class="stats-stamp stats-stamp--1" data-reveal>
+            <div class="stats-stamp-num" data-count="{{ meetups.size }}">{{ meetups.size }}</div>
             <div class="stats-stamp-label">Meetups</div>
           </div>
-          <div class="stats-stamp stats-stamp--2">
-            <div class="stats-stamp-num">{{ all_talks_count }}</div>
+          <div class="stats-stamp stats-stamp--2" data-reveal>
+            <div class="stats-stamp-num" data-count="{{ all_talks_count }}">{{ all_talks_count }}</div>
             <div class="stats-stamp-label">Talks</div>
           </div>
-          <div class="stats-stamp stats-stamp--3">
-            <div class="stats-stamp-num">{{ site.data.people.size }}</div>
+          <div class="stats-stamp stats-stamp--3" data-reveal>
+            <div class="stats-stamp-num" data-count="{{ site.data.people.size }}">{{ site.data.people.size }}</div>
             <div class="stats-stamp-label">Members</div>
           </div>
-          <div class="stats-stamp stats-stamp--4">
-            <div class="stats-stamp-num">{{ projects.size }}</div>
+          <div class="stats-stamp stats-stamp--4" data-reveal>
+            <div class="stats-stamp-num" data-count="{{ projects.size }}">{{ projects.size }}</div>
             <div class="stats-stamp-label">Projects</div>
           </div>
-          <div class="stats-stamp stats-stamp--5">
-            <div class="stats-stamp-num">{{ total_stars }}</div>
+          <div class="stats-stamp stats-stamp--5" data-reveal>
+            <div class="stats-stamp-num" data-count="{{ total_stars }}">{{ total_stars }}</div>
             <div class="stats-stamp-label">Stars</div>
           </div>
-          <div class="stats-stamp stats-stamp--6">
-            <div class="stats-stamp-num">{{ unique_authors.size }}</div>
+          <div class="stats-stamp stats-stamp--6" data-reveal>
+            <div class="stats-stamp-num" data-count="{{ unique_authors.size }}">{{ unique_authors.size }}</div>
             <div class="stats-stamp-label">Authors</div>
           </div>
         </section>
 
-        <section>
+        <section data-reveal>
           <h3>Meetups</h3>
 
           <h4 class="stats-subheading">Per year — each square = one meetup</h4>
@@ -100,7 +100,7 @@
           </ol>
         </section>
 
-        <section>
+        <section data-reveal>
           <h3>Talks</h3>
 
           <h4 class="stats-subheading">Per year — each dot = one talk</h4>
@@ -141,10 +141,10 @@
           </ol>
         </section>
 
-        <section>
+        <section data-reveal>
           <h3>Projects</h3>
           <div class="stats-hero">
-            <div class="stats-hero-number">{{ total_stars }}</div>
+            <div class="stats-hero-number" data-count="{{ total_stars }}">{{ total_stars }}</div>
             <div class="stats-hero-label">GitHub stars across our community's projects</div>
           </div>
 
@@ -181,7 +181,7 @@
           </div>
         </section>
 
-        <section>
+        <section data-reveal>
           <h3>Here's your receipt</h3>
           <div class="stats-receipt">
             <div class="stats-receipt-header">
@@ -195,7 +195,7 @@
             <div class="stats-receipt-row"><span>Open source projects</span><span>{{ projects.size }}</span></div>
             <div class="stats-receipt-row"><span>Total GitHub stars</span><span>{{ total_stars }}</span></div>
             <div class="stats-receipt-row"><span>Unique authors</span><span>{{ unique_authors.size }}</span></div>
-            <div class="stats-receipt-divider">— — — — — — — — — —</div>
+            <div class="stats-receipt-divider" aria-hidden="true"></div>
             <div class="stats-receipt-row stats-receipt-total"><span>TOTAL IMPACT</span><span>∞</span></div>
             <div class="stats-receipt-footer">THANK YOU FOR BEING PART OF THE COMMUNITY</div>
           </div>

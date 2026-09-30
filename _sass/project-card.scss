@@ -19,7 +19,7 @@
     &.project--medal-silver { box-shadow: 6px 6px 0 #C0C0C0; }
     &.project--medal-bronze { box-shadow: 6px 6px 0 #CD7F32; }
 
-    .project-header h4 a::after {
+    .project-header h3 a::after {
       content: "";
       inset: 0;
       position: absolute;
@@ -63,7 +63,10 @@
     justify-content: space-between;
     gap: 1rem;
 
-    h4 {
+    h3 {
+      font-size: var(--text-lg);
+      line-height: 1.25;
+      margin: 0;
       min-width: 0;
       overflow-wrap: break-word;
 
@@ -80,7 +83,7 @@
     background-color: #FFC24D;
     border: 2px solid #2E2E2E;
     color: #2E2E2E;
-    font: 700 0.9rem 'Syncopate', sans-serif;
+    font: 700 var(--text-sm) 'Syncopate', sans-serif;
     padding: 0.2rem 0.6rem;
     white-space: nowrap;
   }
@@ -102,7 +105,7 @@
 
   .project-author {
     color: #2E2E2E;
-    font-size: 0.85rem;
+    font-size: var(--text-sm);
     opacity: 0.7;
   }
 
@@ -116,7 +119,8 @@
   .project-topic {
     background-color: #F6EEEC;
     border: 2px solid #2E2E2E;
-    font-size: 0.7rem;
+    font-family: var(--font-display);
+    font-size: var(--text-2xs);
     letter-spacing: 0.03em;
     padding: 0.15rem 0.4rem;
     text-transform: uppercase;

@@ -13,16 +13,10 @@
     background-color: #F6EEEC;
 
     &.infinite-horizontal-animation {
-      animation: scroll-horizontal 20s linear infinite;
+      animation: marquee-x 26s linear infinite;
+      will-change: transform;
 
-      @keyframes scroll-horizontal {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-100%);
-        }
-      }
+      &:hover { animation-play-state: paused; }
     }
 
     li {

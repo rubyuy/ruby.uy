@@ -3,7 +3,7 @@
     overflow-wrap: break-word;
 
     @media (max-width: 480px) {
-      font-size: 1.75rem;
+      font-size: var(--text-2xl);
     }
   }
 
@@ -16,19 +16,18 @@
   h3 {
     border-bottom: 2px solid #3967D1;
     color: #3967D1;
-    font-size: 1.5rem;
+    font-size: var(--text-2xl);
     margin: 3rem 0 1.5rem;
     padding-bottom: 0.5rem;
   }
 
   .stats-subheading {
     color: #2E2E2E;
-    font-size: 0.85rem;
+    font-size: var(--text-sm);
     font-weight: bold;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
     margin: 2rem 0 0.75rem;
     opacity: 0.75;
-    text-transform: uppercase;
   }
 
   .stats-ranking {
@@ -42,6 +41,7 @@
       box-shadow: 4px 4px 0 #2E2E2E;
       counter-increment: rank;
       display: flex;
+      flex-wrap: wrap;
       gap: 0.75rem;
       margin: 0.75rem 0;
       padding: 1rem 1.25rem;
@@ -60,7 +60,7 @@
         content: counter(rank);
         display: flex;
         flex: none;
-        font: 700 0.9rem 'Syncopate', sans-serif;
+        font: 700 var(--text-sm) 'Syncopate', sans-serif;
         height: 2rem;
         justify-content: center;
         line-height: 1;
@@ -82,7 +82,7 @@
 
   .stats-author {
     color: #2E2E2E;
-    font-size: 0.85rem;
+    font-size: var(--text-sm);
     opacity: 0.6;
   }
 
@@ -91,7 +91,7 @@
     background-color: #FFC24D;
     border: 2px solid #2E2E2E;
     color: #2E2E2E;
-    font: 700 0.85rem 'Syncopate', sans-serif;
+    font: 700 var(--text-sm) 'Syncopate', sans-serif;
     margin-left: auto;
     padding: 0.25rem 0.5rem;
   }
@@ -116,7 +116,8 @@
     th {
       background-color: #3967D1;
       color: #fff;
-      font-size: 0.75rem;
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
       font-weight: bold;
       letter-spacing: 0.05em;
       text-transform: uppercase;
@@ -158,20 +159,19 @@
   }
 
   .stats-hero-number {
-    font: 700 6rem 'Syncopate', sans-serif;
+    font: 700 var(--text-6xl) 'Syncopate', sans-serif;
     line-height: 1;
 
     @media (max-width: 480px) {
-      font-size: 3.5rem;
+      font-size: var(--text-5xl);
     }
   }
 
   .stats-hero-label {
-    font-size: 0.9rem;
-    letter-spacing: 0.05em;
+    font-size: var(--text-sm);
+    letter-spacing: 0.01em;
     margin-top: 1rem;
-    opacity: 0.85;
-    text-transform: uppercase;
+    opacity: 0.9;
   }
 
   .stats-visualcount {
@@ -189,7 +189,7 @@
 
   .stats-visualcount-year {
     color: #2E2E2E;
-    font: 700 0.85rem 'Syncopate', sans-serif;
+    font: 700 var(--text-sm) 'Syncopate', sans-serif;
     letter-spacing: 0.05em;
     width: 3rem;
   }
@@ -279,12 +279,13 @@
   }
 
   .stats-stamp-num {
-    font: 700 2rem 'Syncopate', sans-serif;
+    font: 700 var(--text-3xl) 'Syncopate', sans-serif;
     line-height: 1;
   }
 
   .stats-stamp-label {
-    font-size: 0.7rem;
+    font-family: var(--font-display);
+    font-size: var(--text-2xs);
     letter-spacing: 0.05em;
     margin-top: 0.5rem;
     text-transform: uppercase;
@@ -294,7 +295,7 @@
     background-color: #fff;
     border: 3px solid #2E2E2E;
     box-shadow: 4px 4px 0 #2E2E2E;
-    font-family: 'Courier New', monospace;
+    font-family: var(--font-mono);
     margin: 1rem auto;
     max-width: 24rem;
     padding: 2rem 1.75rem;
@@ -307,12 +308,12 @@
     text-align: center;
 
     div:first-child {
-      font: 700 1.25rem 'Syncopate', sans-serif;
+      font: 700 var(--text-xl) 'Syncopate', sans-serif;
       letter-spacing: 0.1em;
     }
 
     div {
-      font-size: 0.75rem;
+      font-size: var(--text-xs);
       margin-top: 0.25rem;
       text-transform: uppercase;
     }
@@ -320,7 +321,7 @@
 
   .stats-receipt-row {
     display: flex;
-    font-size: 0.85rem;
+    font-size: var(--text-sm);
     justify-content: space-between;
     padding: 0.4rem 0;
 
@@ -330,22 +331,19 @@
   }
 
   .stats-receipt-divider {
-    color: #2E2E2E;
-    font-size: 0.85rem;
-    letter-spacing: 0.2em;
-    margin: 0.5rem 0;
-    text-align: center;
+    border-top: 2px dashed #2E2E2E;
+    margin: 1rem 0;
   }
 
   .stats-receipt-total {
-    font-size: 1rem;
+    font-size: var(--text-md);
     font-weight: bold;
     text-transform: uppercase;
   }
 
   .stats-receipt-footer {
     border-top: 2px dashed #2E2E2E;
-    font-size: 0.7rem;
+    font-size: var(--text-2xs);
     letter-spacing: 0.05em;
     margin-top: 1rem;
     padding-top: 1rem;
@@ -357,7 +355,8 @@
     background-color: #F6EEEC;
     border: 2px solid #2E2E2E;
     color: #2E2E2E;
-    font-size: 0.75rem;
+    font-family: var(--font-display);
+    font-size: var(--text-xs);
     letter-spacing: 0.05em;
     padding: 0.4rem 0.7rem;
     text-transform: uppercase;
