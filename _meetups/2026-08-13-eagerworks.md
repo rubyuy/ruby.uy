@@ -9,7 +9,7 @@ talks:
      - carlos_musetti
    recording: https://www.youtube.com/embed/3dFaRkG6aKs?si=M39Mwu_VyP_1-RqF
 
- - title: "Play Star Battle Puzzles wherever you go"
+ - title: "Beyond the Prompt: Tracing AI Agents"
    speakers:
      - santiago_bartesaghi
    recording: https://www.youtube.com/embed/TbyWOtB2ojo?si=ORZh6AlncjwYU7VT

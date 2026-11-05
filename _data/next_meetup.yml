@@ -1,9 +1,9 @@
 show: true
-date: Martes 23 de Junio
-date_iso: "2026-06-23"
+date: Jueves 22 de Octubre
+date_iso: "2026-10-22"
 time: 19 hs
-host: mimiquate
-location: Bv. España 2480
+host: effectussoftware
+location: Av. Luis Alberto de Herrera 1609
 # Use the following format for talks
 # talks:
 #   - name: Talk name
@@ -13,9 +13,9 @@ location: Bv. España 2480
 # Or if the speakers are TBD
 # talks: []
 talks:
-  - name: 'El camino que no tomé: Rails + Phoenix'
+  - name: 'Hardcore PostgreSQL: procesando millones de registros en Ruby, sin Rails'
     speakers:
-    - juan_azambuja
-  - name: 'Spec Driven Development: dando un poco de orden al vibe coding'
+    - mauricio_szabo
+  - name: 'Active Storage: The Anatomy of an Attachment'
     speakers:
-    - diego_salido  
+    - nicolas_estefan
