@@ -1,9 +1,9 @@
 show: true
-date: Jueves 22 de Octubre
-date_iso: "2026-10-22"
+date: Jueves 19 de Noviembre
+date_iso: "2026-11-19"
 time: 19 hs
-host: effectussoftware
-location: Av. Luis Alberto de Herrera 1609
+host: rootstrap
+location: Juncal 1327 (Edificio Ciudadela - Entrepiso)
 # Use the following format for talks
 # talks:
 #   - name: Talk name
@@ -13,9 +13,9 @@ location: Av. Luis Alberto de Herrera 1609
 # Or if the speakers are TBD
 # talks: []
 talks:
-  - name: 'Hardcore PostgreSQL: procesando millones de registros en Ruby, sin Rails'
+  - name: 'Lo que no sabemos'
     speakers:
-    - mauricio_szabo
-  - name: 'Active Storage: The Anatomy of an Attachment'
+    - martin_moron
+  - name: '¿Quién entiende el código que escribe la IA?'
     speakers:
-    - nicolas_estefan
+    - jorge_bejar
