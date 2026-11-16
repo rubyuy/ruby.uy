@@ -23,6 +23,9 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
+          # Latest 3.2.x: ubuntu-latest (now 26.04) only ships the newest patch
+          # of each series, so pinning 3.2.2 via .ruby-version breaks the build.
+          ruby-version: '3.2'
           bundler-cache: true
 
       - name: Build the website
