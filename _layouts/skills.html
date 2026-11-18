@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+
+  <body>
+    {% include nav.html %}
+
+    <main>
+      <article id="view-skills" class="view">
+        <section>
+          <h2>Skills &amp; Rules</h2>
+          <p class="skills-subtitle">The best Ruby on Rails skills and rules built by our community, for coding agents</p>
+
+          <input type="search" id="skills-search" class="skills-search" placeholder="Search skills..." autocomplete="off">
+
+          <p class="skills-updated">Last updated: {{ site.data.skills.last_updated | date: "%B %-d, %Y" }}</p>
+
+          <p class="skills-contribute">Missing one? <a href="https://github.com/rubyuy/ruby.uy/tree/main/_skills">Contribute a skill or rule</a> — anyone can add one.</p>
+        </section>
+
+        <section id="skills-list">
+          {% assign skills = site.data.skills.skills %}
+
+          {% if skills.size == 0 %}
+            <p class="skills-empty">No skills published yet — be the first to add one.</p>
+          {% endif %}
+
+          {% assign categories = skills | group_by: "category" %}
+          {% for category in categories %}
+            <h3 class="skills-category">{{ category.name | default: "Other" }}</h3>
+
+            {% for skill in category.items %}
+              {% capture search_text %}{{ skill.name }} {{ skill.description }} {{ skill.topics | join: ' ' }}{% endcapture %}
+
+              {% include skill_card.html %}
+            {% endfor %}
+          {% endfor %}
+        </section>
+      </article>
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>
